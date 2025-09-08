@@ -1,0 +1,55 @@
+---
+import Layout from "../components/Layout.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Homepage">
+  <!-- Homepage Sections -->
+  <section
+    class="hero relative h-[100svh] max-h-[1000px] flex flex-col justify-center gap-8"
+  >
+    <div
+      class="overlay-container absolute top-0 left-0 w-full h-full overflow-hidden"
+    >
+      <div
+        class="overlay absolute top-0 left-0 w-full h-full | bg-[#070B1E] bg-gradient-to-b from-[#070B1E] via-[#070B1E] to-[#080C20]"
+      >
+      </div>
+      <video
+        id="herovid"
+        src="/HB - Hero-Video.mp4"
+        poster="/hero-poster.webp"
+        autoplay=""
+        loop=""
+        muted=""
+        playsinline=""
+        disablepictureinpicture=""
+        webkit-playsinline=""
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
+      <div
+        class="overlay absolute top-0 left-0 w-full h-full | bg-gradient-to-b from-transparent to-[#080C20]"
+      >
+      </div>
+    </div>
+    <div class="container w-[90vw] max-w-[1500px] mx-auto z-1">
+      <h1
+        class="hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] grandientHeading uppercase"
+      >
+        High Performance. <br class="hidden sm:inline" />
+        Low Power. Built For <br class="hidden sm:inline" /> Blockchain & AI.
+      </h1>
+    </div>
+    <div
+      class="container w-[90vw] max-w-[1500px] mx-auto z-1 flex flex-col md:flex-row justify-between gap-4 md:absolute md:bottom-16 md:left-1/2 md:-translate-x-1/2"
+    >
+      <p
+        class="md:max-w-[30ch] text-white opacity-80 clamp-p leading-[25px] tracking-[-1px]"
+      >
+        Auradine develops high-performance, energy-efficient compute for
+        blockchain and AI—engineered in the U.S. for secure, scalable, and
+        sustainable operations.
+      </p>
+      <Link href="/about" text="Learn More" />
+    </div>
+  </section>
+</Layout>
