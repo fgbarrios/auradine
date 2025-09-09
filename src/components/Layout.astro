@@ -2,8 +2,7 @@
 import "../styles/global.css";
 import "../styles/starwind.css";
 import Header from "./Header.astro";
-//import Logo from './Logo.astro';
-//import Footer from './Footer.astro';
+import Footer from "./Footer.astro";
 
 const { title = "Homepage" } = Astro.props;
 ---
@@ -93,5 +92,6 @@ const { title = "Homepage" } = Astro.props;
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

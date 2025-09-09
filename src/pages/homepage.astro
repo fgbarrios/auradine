@@ -36,6 +36,12 @@ let posts = [
     link: "/",
   },
 ];
+
+const categoryClass = {
+  Video: "text-[#42C1FF]",
+  Blog: "text-[#025FF8]",
+  News: "text-[#41E7BD]",
+};
 ---
 
 <Layout title="Homepage">
@@ -201,11 +207,66 @@ let posts = [
         class="relative w-full h-full bottom-0 object-cover opacity-80 z-0"
       ></video>
     </div>
+
     <div
-      class="container flex flex-col justify-center items-center gap-16 text-center mx-auto h-full relative z-1"
+      class="overlay-glow | absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full pointer-events-none z-1"
+    >
+      <svg
+        class="w-full h-full object-cover"
+        width="1512"
+        height="743"
+        viewBox="0 0 1512 743"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_f_595_53)">
+          <ellipse
+            cx="755.5"
+            cy="395"
+            rx="752.5"
+            ry="200"
+            transform="rotate(180 755.5 395)"
+            fill="url(#paint0_radial_595_53)"></ellipse>
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_595_53"
+            x="-397"
+            y="-205"
+            width="2305"
+            height="1200"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"></feBlend>
+            <feGaussianBlur
+              stdDeviation="200"
+              result="effect1_foregroundBlur_595_53"></feGaussianBlur>
+          </filter>
+          <radialGradient
+            id="paint0_radial_595_53"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(756.589 265.52) rotate(90) scale(250.289 941.713)"
+          >
+            <stop stop-color="#025FF8"></stop>
+            <stop offset="1" stop-color="#00161F"></stop>
+          </radialGradient>
+        </defs>
+      </svg>
+    </div>
+    <div
+      class="container flex flex-col justify-center items-center gap-16 text-center mx-auto h-full relative z-2"
     >
       <h2
-        class="font-medium text-[40px] leading-[60px] lg:text-[70px] lg:leading-[99%] tracking-[-1.04px] text-center align-middle uppercase grandientHeading"
+        class="font-medium text-[40px] leading-[50px] md:leading-[60px] lg:text-[70px] lg:leading-[99%] tracking-[-1.04px] text-center align-middle uppercase grandientHeading"
       >
         High Tech. Low Power. <br class="hidden sm:inline" />Built For
         Blockchain & AI.
@@ -216,13 +277,13 @@ let posts = [
 
   <section class="featured-news | bg-[#070B1E] py-32 relative z-1">
     <div class="container mx-auto">
-      <h2 class="gradientSmallHeading text-4xl mb-16">
+      <h2 class="gradientSmallHeading text-4xl mb-16 font-medium">
         Featured News & Insights
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {
           posts.map((post) => (
-            <div class="post-item | grid grid-rows-[1fr_250px] gap-4">
+            <div class="post-item | grid grid-rows-[1fr_150px] md:grid-rows-[1fr_250px] gap-4">
               <div class="image-wrapper | overflow-hidden relative border border-white/10">
                 <a href={post.link} class="relative group block">
                   {post.category == "Video" ? (
@@ -250,12 +311,14 @@ let posts = [
                     alt={post.title}
                     class="w-full h-auto aspect-[11/8] object-cover md:mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-300 ease-in-out"
                   />
-                  <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#070B1E] opacity-80 group-hover:opacity-0 transition-opacity duration-300 ease-in-out hidden md:block" />
+                  <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#070B1E] opacity-20 group-hover:opacity-0 transition-opacity duration-300 ease-in-out hidden md:block" />
                 </a>
               </div>
-              <div class="content grid grid-rows-[40px_4lh_40px] justify-between">
-                <div class="info flex items-center gap-1">
-                  <p class={`text-[${post.categoryColor}] uppercase text-sm`}>
+              <div class="content grid grid-rows-[40px_1fr_40px] md:grid-rows-[40px_4lh_40px] justify-between">
+                <div class="info flex items-center gap-2">
+                  <p
+                    class={`${categoryClass[post.category]} uppercase text-sm`}
+                  >
                     {post.category}
                   </p>
                   <span class="text-sm text-white opacity-50">/</span>

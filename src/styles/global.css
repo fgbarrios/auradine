@@ -276,8 +276,7 @@ main.open-menu { filter: blur(4px); }
   background: white;
   filter: blur(10px);
 
-
-  transform: translateX(-3rem);
+  transform: translateX(-4rem);
 }
 
 .liquidGlass-text a:hover::before{
