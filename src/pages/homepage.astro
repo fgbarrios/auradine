@@ -258,6 +258,26 @@ let posts = [
               <div class="image-wrapper | overflow-hidden relative">
                 <a href={post.link} class="relative group block">
                   <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#070B1E] opacity-80 group-hover:opacity-0 transition-opacity duration-300 ease-in-out" />
+                  {post.category == "Video" ? (
+                    <div class="video-icon | absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="44"
+                        height="44"
+                        viewBox="0 0 44 44"
+                      >
+                        <circle
+                          cx="22"
+                          cy="22"
+                          r="20"
+                          stroke="#fff"
+                          stroke-width="3"
+                          fill="none"
+                        />
+                        <polygon points="18,15 28,22 18,29" fill="#fff" />
+                      </svg>
+                    </div>
+                  ) : null}
                   <img
                     src={post.image}
                     alt={post.title}
