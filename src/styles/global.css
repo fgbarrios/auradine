@@ -251,7 +251,7 @@ main.open-menu { filter: blur(4px); }
 
   box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
     inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
-    
+
   box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.1), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
  border-radius: inherit;
 }
@@ -262,6 +262,35 @@ main.open-menu { filter: blur(4px); }
   color: white;
   width: fit-content;
   height: fit-content;
+}
+
+.liquidGlass-text a{
+    position: relative;
+}
+.liquidGlass-text a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: white;
+  filter: blur(10px);
+
+
+  transform: translateX(-3rem);
+}
+
+.liquidGlass-text a:hover::before{
+  transform: translateX(10rem);
+    transition: transform 1000ms ease;
+}
+
+.liquidGlass-text a svg{
+    transition: transform 500ms ease;
+}
+.liquidGlass-text a:hover svg{
+    transform: translateX(5px);
+    transition: transform 500ms ease;
 }
 }
 
