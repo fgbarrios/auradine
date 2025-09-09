@@ -38,43 +38,6 @@ let posts = [
 ];
 ---
 
-<script>
-  import Lenis from "lenis";
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-  const lenis = new Lenis();
-  lenis.on("scroll", ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  //sections animations
-  /*
-  const pinnedSection = document.querySelector(".features-wrapper");
-  const sectionsContainer = document.querySelector(".inner-sections-container");
-
-  //move the "inner-sections-container" up as we scroll down (100vh per section)
-  gsap.to(sectionsContainer, {
-    y: "-100%",
-    ease: "none",
-    scrollTrigger: {
-      trigger: pinnedSection,
-      start: "top top",
-      end: "+=" + window.innerHeight * 3, //3 sections
-      pin: true,
-      pinSpacing: false,
-      scrub: 1,
-      markers: true,
-    },
-  });
-  */
-</script>
-
 <Layout title="Homepage">
   <!-- Homepage Sections -->
 
@@ -90,7 +53,7 @@ let posts = [
       </div>
       <video
         id="herovid"
-        src="/HB - Hero-Video.mp4"
+        src="/HB-Hero-Video.mp4"
         poster="/hero-poster.webp"
         autoplay=""
         loop=""
@@ -221,11 +184,13 @@ let posts = [
   <section
     class="bg-[#070B1E] min-h-screen relative z-1 max-h-[800px] overflow-hidden flex flex-col justify-center items-center"
   >
-    <div class="overlayVideo absolute top-0 left-0 w-full h-full z-0">
+    <div
+      class="overlayVideo absolute top-0 left-0 w-full h-[150%] opacity-60 z-0"
+    >
       <video
         id=""
         preload="metadata"
-        src="/HB - tech.mp4"
+        src="/HB-tech.mp4"
         poster="/hero-poster.webp"
         autoplay=""
         loop=""
@@ -237,25 +202,28 @@ let posts = [
       ></video>
     </div>
     <div
-      class="container flex flex-col justify-center items-center gap-8 text-center mx-auto h-full relative z-1"
+      class="container flex flex-col justify-center items-center gap-16 text-center mx-auto h-full relative z-1"
     >
-      <h2 class="gradientHeading text-4xl">
-        High Tech. Low Power. Built For Blockchain & AI.
+      <h2
+        class="font-medium text-[40px] leading-[60px] lg:text-[70px] lg:leading-[99%] tracking-[-1.04px] text-center align-middle uppercase grandientHeading"
+      >
+        High Tech. Low Power. <br class="hidden sm:inline" />Built For
+        Blockchain & AI.
       </h2>
       <Link href="/contact" text="Learn More" />
     </div>
   </section>
 
-  <section class="featured-news | bg-[#070B1E] py-16 relative z-1">
+  <section class="featured-news | bg-[#070B1E] py-32 relative z-1">
     <div class="container mx-auto">
-      <h2 class="gradientSmallHeading text-4xl mb-8">
+      <h2 class="gradientSmallHeading text-4xl mb-16">
         Featured News & Insights
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {
           posts.map((post) => (
             <div class="post-item | grid grid-rows-[1fr_250px] gap-4">
-              <div class="image-wrapper | overflow-hidden relative">
+              <div class="image-wrapper | overflow-hidden relative border border-white/10">
                 <a href={post.link} class="relative group block">
                   {post.category == "Video" ? (
                     <div class="video-icon | absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
@@ -280,7 +248,7 @@ let posts = [
                   <img
                     src={post.image}
                     alt={post.title}
-                    class="w-full h-auto cover aspect-[11/8] mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-300 ease-in-out"
+                    class="w-full h-auto aspect-[11/8] object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-300 ease-in-out"
                   />
                   <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#070B1E] opacity-80 group-hover:opacity-0 transition-opacity duration-300 ease-in-out" />
                 </a>
@@ -293,7 +261,7 @@ let posts = [
                   <span class="text-sm text-white opacity-50">/</span>
                   <p class="text-sm text-white opacity-80">{post.date}</p>
                 </div>
-                <h3 class="text-lg font-semibold mb-2 text-white">
+                <h3 class="text-lg font-semibold mb-2 text-white lg:max-w-[80%]">
                   {post.title}
                 </h3>
                 <div class="mt-4">
@@ -329,5 +297,7 @@ let posts = [
     </div>
   </section>
 
-  <section class="min-h-screen bg-black relative z-1"></section>
+  <!--<section class="min-h-screen bg-black relative z-1"></section> -->
 </Layout>
+
+<script type="module" client:load src="./src/js/init.js"></script>

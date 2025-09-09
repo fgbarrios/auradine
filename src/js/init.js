@@ -1,35 +1,34 @@
-import Lenis from "lenis";
-import { gsap } from "gsap";
-import { ScrollTrigger, ScrollToPlugin, SplitText } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
+  import Lenis from "lenis";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Initialize Lenis smooth scroll
-const lenis = new Lenis({
-  smooth: true,
-  lerp: 0.1,
-});
+  const lenis = new Lenis();
+  lenis.on("scroll", ScrollTrigger.update);
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
+  gsap.ticker.lagSmoothing(0);
 
-// Sync Lenis with ScrollTrigger
-lenis.on("scroll", ScrollTrigger.update);
+  gsap.registerPlugin(ScrollTrigger);
 
-// Example ScrollTrigger animation
-gsap.utils.toArray(".section").forEach((section) => {
-  gsap.from(section, {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out",
+  //sections animations
+  
+  const pinnedSection = document.querySelector(".features-wrapper");
+  const sectionsContainer = document.querySelector(".inner-sections-container");
+
+  //move the "inner-sections-container" up as we scroll down (100vh per section)
+  gsap.to(sectionsContainer, {
+    y: "-100%",
+    ease: "none",
     scrollTrigger: {
-      trigger: section,
-      start: "top 80%",
-      toggleActions: "play none none reverse",
+      trigger: pinnedSection,
+      start: "top top",
+      end: "+=" + window.innerHeight * 3, //3 sections
+      pin: true,
+      pinSpacing: false,
+      scrub: 1,
+      markers: true,
     },
   });
-});
