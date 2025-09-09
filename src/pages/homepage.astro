@@ -257,7 +257,6 @@ let posts = [
             <div class="post-item | grid grid-rows-[1fr_250px] gap-4">
               <div class="image-wrapper | overflow-hidden relative">
                 <a href={post.link} class="relative group block">
-                  <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#070B1E] opacity-80 group-hover:opacity-0 transition-opacity duration-300 ease-in-out" />
                   {post.category == "Video" ? (
                     <div class="video-icon | absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                       <svg
@@ -283,6 +282,7 @@ let posts = [
                     alt={post.title}
                     class="w-full h-auto cover aspect-[11/8] mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-300 ease-in-out"
                   />
+                  <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#070B1E] opacity-80 group-hover:opacity-0 transition-opacity duration-300 ease-in-out" />
                 </a>
               </div>
               <div class="content grid grid-rows-[40px_4lh_40px] justify-between">
