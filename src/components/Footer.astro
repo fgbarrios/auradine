@@ -1,9 +1,9 @@
 <footer class="relative overflow-hidden">
   <div
-    class="footer-container pt-32 h-[80vh] max-h-[1500px] flex flex-col gap-4"
+    class="footer-container pt-32 min-h-[80svh] max-h-[1500px] flex flex-col gap-4"
     style="background: linear-gradient(180deg, #143C99 0%, #040C21 100%);"
   >
-    <div class="container mx-auto grid gap2">
+    <div class="container mx-auto grid gap-16">
       <div class="footer-top
     grid
     grid-cols-1
@@ -26,7 +26,13 @@
             </li>
           </ul>
           <ul class="flex flex-col gap-2">
-            <li><p class="text-white uppercase text-sm">CONTACT US</p></li>
+            <li>
+              <p
+                class="text-white uppercase text-sm leading-[20.9px] tracking-0"
+              >
+                CONTACT US
+              </p>
+            </li>
             <li>
               <p class="text-white text-sm">
                 3200 Coronado Drive <br class="hidden sm:inline" />
@@ -42,9 +48,136 @@
             </li>
           </ul>
         </div>
-        <div class="rigth">SUBSCRIBE FORM</div>
+        <div class="rigth">
+          <div
+            class="form grid gap-4 | md:max-w-[60ch] md:ml-auto md:translate-x-[2rem]"
+          >
+            <p class="text-white uppercase text-sm leading-[20.9px] tracking-0">
+              SIGN UP FOR EMAIL UPDATES
+            </p>
+            <div class="input-group flex flex-col sm:flex-row">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="py-2 rounded-full bg-[#222C5A] border border-transparent focus:border-white/20 focus:outline-none text-white placeholder-white/50 w-full sm:w-auto flex-grow px-8"
+              />
+              <button
+                type="button"
+                class="cta flex items-center gap-2 w-fit px-8 py-2 rounded-full text-[14px] leading-[19.6px] tracking-[0] text-center align-middle font-normal group -translate-x-[2rem]"
+                style="background: linear-gradient(90deg, #35AFED 0%, rgba(65, 186, 231, 0.1) 100%);"
+              >
+                Subscribe
+                <svg
+                  class="group-hover:translate-x-1 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <p
+              class="text-white/80 text-sm md:max-w-[30ch] tracking-[0%] leading-[20px]"
+            >
+              Sing Up with your email address to receive news and updates
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="footer-below"></div>
+      <div
+        class="footer-below flex gap-4 flex-col md:flex-row justify-between mt-auto mb-8"
+      >
+        <div class="left">
+          <ul class="flex flex-col md:flex-row gap-8">
+            <li>
+              <a href="" class="text-white text-sm gradient-overline"
+                >Privacy Notice</a
+              >
+            </li>
+            <li>
+              <a href="" class="text-white text-sm gradient-overline"
+                >Terms of Use</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="socials flex gap-4 items-center">
+            <ul class="flex flex-row items-center gap-2">
+              <li>
+                <a
+                  href="https://twitter.com/Auradine_Inc"
+                  target="_blank"
+                  class="bg-[#121939] w-[46px] h-[46px] rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300"
+                  ><svg
+                    width="20"
+                    height="17"
+                    viewBox="0 0 20 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.8014 0H18.867L12.136 7.21402L20 17H13.8287L8.997 11.0531L3.46551 17H0.399867L7.53082 9.28413L0 0H6.32456L10.6898 5.43247L15.8014 0ZM14.7284 15.3063H16.4279L5.43152 1.631H3.60546L14.7284 15.3063Z"
+                      fill="#0E75FF"></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/auradine/about/"
+                  target="_blank"
+                  class="bg-[#121939] w-[46px] h-[46px] rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300"
+                  ><svg
+                    width="14"
+                    height="15"
+                    viewBox="0 0 14 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.94727 14.7363H0V4.78906H2.94727V14.7363ZM8.10352 4.78906V5.40918C8.56441 5.24628 9.06048 5.15724 9.57715 5.15723C12.0187 5.15723 13.9978 7.13663 13.998 9.57812V14.7363H11.0508V9.57812C11.0506 8.76442 10.3909 8.10449 9.57715 8.10449C8.76346 8.10457 8.10373 8.76447 8.10352 9.57812V14.7363H5.15625V4.78906H8.10352ZM1.47363 0C2.28751 0 2.94724 0.659763 2.94727 1.47363C2.94727 2.28753 2.28753 2.94727 1.47363 2.94727C0.659763 2.94724 0 2.28751 0 1.47363C2.67998e-05 0.65978 0.65978 2.67998e-05 1.47363 0Z"
+                      fill="#0E75FF"></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://youtube.com/@auradine_inc"
+                  target="
+                  _blank"
+                  class="bg-[#121939] w-[46px] h-[46px] rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300"
+                  ><svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.9997 18.7918C12.6586 18.7918 14.2494 18.6279 15.7236 18.3274C17.5651 17.9521 18.4859 17.7643 19.3261 16.684C20.1663 15.6038 20.1663 14.3637 20.1663 11.8834V10.117C20.1663 7.63667 20.1663 6.39654 19.3261 5.31625C18.4859 4.23597 17.5651 4.04828 15.7236 3.6729C14.2494 3.37237 12.6586 3.2085 10.9997 3.2085C9.34078 3.2085 7.74999 3.37237 6.27569 3.6729C4.4342 4.04828 3.51345 4.23597 2.67322 5.31625C1.83301 6.39654 1.83301 7.63667 1.83301 10.117V11.8834C1.83301 14.3637 1.83301 15.6038 2.67322 16.684C3.51345 17.7643 4.4342 17.9521 6.27569 18.3274C7.74999 18.6279 9.34078 18.7918 10.9997 18.7918Z"
+                      stroke="#0E75FF"
+                      stroke-width="1.375"></path>
+                    <path
+                      d="M14.6319 11.2867C14.4959 11.842 13.7721 12.2408 12.3245 13.0386C10.7499 13.9061 9.9627 14.34 9.32507 14.1729C9.1091 14.1162 8.91018 14.0167 8.74316 13.8817C8.25 13.483 8.25 12.6552 8.25 10.9998C8.25 9.34443 8.25 8.5167 8.74316 8.118C8.91018 7.98296 9.1091 7.88343 9.32507 7.82683C9.9627 7.65969 10.7499 8.0935 12.3245 8.9611C13.7721 9.75885 14.4959 10.1577 14.6319 10.713C14.6782 10.902 14.6782 11.0976 14.6319 11.2867Z"
+                      stroke="#0E75FF"
+                      stroke-width="1.375"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="auradine-logo | mx-auto max-w-[1800px] w-[97vw] mt-auto">
       <div class="letters flex items-end justify-between w-full">
