@@ -63,6 +63,8 @@ main.open-menu { filter: blur(4px); }
          @apply  font-bold text-[14px] leading-[19.6px] tracking-[0%];
     }
   
+    
+
 
 .GlassContainer {
     --corner-radius: 24px;
