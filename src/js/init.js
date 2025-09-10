@@ -26,7 +26,7 @@ function homeSectionsAnimation() {
 
   const totalSections = sections.length;
 
-  const totalScrollHeight = sectionsContainer.scrollHeight - window.innerHeight;
+  const totalScrollHeight = (sectionsContainer.scrollHeight - window.innerHeight) + 200;
 
   gsap.to(sectionsContainer, {
     y: -totalScrollHeight,
@@ -38,7 +38,7 @@ function homeSectionsAnimation() {
       scrub: 1,
       pin: true,
       pinSpacing: false,
-      markers: true,
+      //markers: true,
     },
   });
 
