@@ -127,6 +127,7 @@ const categoryClass = {
               class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
             >
               <svg
+                class="animated-orbit"
                 width="310"
                 height="360"
                 viewBox="0 0 310 360"
@@ -134,10 +135,10 @@ const categoryClass = {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  id="orbit-path"
+                  class="orbit-path"
                   d="M155 3.5C240.264 3.5 309.5 83.1247 309.5 181.5C309.5 279.875 240.264 359.5 155 359.5C69.7359 359.5 0.5 279.875 0.5 181.5C0.5 83.1247 69.7359 3.5 155 3.5Z"
                   stroke="url(#paint0_linear_2048_112)"></path>
-                <circle id="moving-dot" r="3.5" fill="white"></circle>
+                <circle class="moving-dot" r="3.5" fill="white"></circle>
                 <defs>
                   <linearGradient
                     id="paint0_linear_2048_112"
@@ -160,20 +161,23 @@ const categoryClass = {
               alt="Blockchain"
               class="z-10"
             />
-            <!-- <div
-              class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-2"
+            <div
+              class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
             >
               <svg
+                class="animated-orbit"
                 width="310"
                 height="360"
                 viewBox="0 0 310 360"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                style="transform: rotateZ(90deg);"
               >
                 <path
+                  class="orbit-path"
                   d="M155 3.5C240.264 3.5 309.5 83.1247 309.5 181.5C309.5 279.875 240.264 359.5 155 359.5C69.7359 359.5 0.5 279.875 0.5 181.5C0.5 83.1247 69.7359 3.5 155 3.5Z"
                   stroke="url(#paint0_linear_2048_112)"></path>
-                <circle cx="151.5" cy="3.5" r="3.5" fill="white"></circle>
+                <circle class="moving-dot" r="3.5" fill="white"></circle>
                 <defs>
                   <linearGradient
                     id="paint0_linear_2048_112"
@@ -189,7 +193,7 @@ const categoryClass = {
                   </linearGradient>
                 </defs>
               </svg>
-            </div> -->
+            </div>
           </div>
         </div>
         <div class="right flex flex-col gap-8">
@@ -209,8 +213,73 @@ const categoryClass = {
         class="section min-h-[80svh] grid grid-cols-1 md:grid-cols-2 justify-center items-center px-8 relative z-2"
       >
         <div class="left flex flex-col items-center gap-4">
-          <div class="md:max-w-[70%] m-auto">
+          <div class="md:max-w-[70%] m-auto relative">
+            <div
+              class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
+            >
+              <svg
+                class="animated-orbit"
+                width="310"
+                height="360"
+                viewBox="0 0 310 360"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="orbit-path"
+                  d="M155 3.5C240.264 3.5 309.5 83.1247 309.5 181.5C309.5 279.875 240.264 359.5 155 359.5C69.7359 359.5 0.5 279.875 0.5 181.5C0.5 83.1247 69.7359 3.5 155 3.5Z"
+                  stroke="url(#paint0_linear_2048_112)"></path>
+                <circle class="moving-dot" r="3.5" fill="white"></circle>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_2048_112"
+                    x1="65.5"
+                    y1="28"
+                    x2="161.5"
+                    y2="138"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="white"></stop>
+                    <stop offset="1" stop-color="#091631" stop-opacity="0"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
             <Picture src={Slide2} formats={["avif", "webp"]} alt="Blockchain" />
+            <div
+              class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
+            >
+              <svg
+                class="animated-orbit"
+                width="310"
+                height="360"
+                viewBox="0 0 310 360"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="transform: rotateZ(90deg);"
+              >
+                <path
+                  class="orbit-path"
+                  d="M155 3.5C240.264 3.5 309.5 83.1247 309.5 181.5C309.5 279.875 240.264 359.5 155 359.5C69.7359 359.5 0.5 279.875 0.5 181.5C0.5 83.1247 69.7359 3.5 155 3.5Z"
+                  stroke="url(#paint0_linear_2048_112)"></path>
+                <circle class="moving-dot" r="3.5" fill="white"></circle>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_2048_112"
+                    x1="65.5"
+                    y1="28"
+                    x2="161.5"
+                    y2="138"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="white"></stop>
+                    <stop offset="1" stop-color="#091631" stop-opacity="0"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="right flex flex-col gap-8">
@@ -231,8 +300,73 @@ const categoryClass = {
         class="section min-h-[80svh] grid grid-cols-1 md:grid-cols-2 justify-center items-center px-8 relative z-2"
       >
         <div class="left flex flex-col items-center gap-4">
-          <div class="md:max-w-[70%] m-auto">
+          <div class="md:max-w-[70%] m-auto relative">
+            <div
+              class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
+            >
+              <svg
+                class="animated-orbit"
+                width="310"
+                height="360"
+                viewBox="0 0 310 360"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="orbit-path"
+                  d="M155 3.5C240.264 3.5 309.5 83.1247 309.5 181.5C309.5 279.875 240.264 359.5 155 359.5C69.7359 359.5 0.5 279.875 0.5 181.5C0.5 83.1247 69.7359 3.5 155 3.5Z"
+                  stroke="url(#paint0_linear_2048_112)"></path>
+                <circle class="moving-dot" r="3.5" fill="white"></circle>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_2048_112"
+                    x1="65.5"
+                    y1="28"
+                    x2="161.5"
+                    y2="138"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="white"></stop>
+                    <stop offset="1" stop-color="#091631" stop-opacity="0"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
             <Picture src={Slide3} formats={["avif", "webp"]} alt="Blockchain" />
+            <div
+              class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
+            >
+              <svg
+                class="animated-orbit"
+                width="310"
+                height="360"
+                viewBox="0 0 310 360"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="transform: rotateZ(120deg);"
+              >
+                <path
+                  class="orbit-path"
+                  d="M155 3.5C240.264 3.5 309.5 83.1247 309.5 181.5C309.5 279.875 240.264 359.5 155 359.5C69.7359 359.5 0.5 279.875 0.5 181.5C0.5 83.1247 69.7359 3.5 155 3.5Z"
+                  stroke="url(#paint0_linear_2048_112)"></path>
+                <circle class="moving-dot" r="3.5" fill="white"></circle>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_2048_112"
+                    x1="65.5"
+                    y1="28"
+                    x2="161.5"
+                    y2="138"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="white"></stop>
+                    <stop offset="1" stop-color="#091631" stop-opacity="0"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="right flex flex-col gap-8">

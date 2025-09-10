@@ -12,13 +12,15 @@
 
   gsap.ticker.lagSmoothing(0);
 
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-  //sections animations
-  
+  function homeSectionsAnimation() {
+
+  //HOME - sections animations  
   const pinnedSection = document.querySelector(".features-wrapper");
-  const sectionsContainer = document.querySelector(".inner-sections-container");
-  
+  const sectionsContainer = document.querySelector(".inner-sections-container");  
+
+  if (!pinnedSection || !sectionsContainer) return;
 
   //move the "inner-sections-container" up as we scroll down (100vh per section)
   gsap.to(sectionsContainer, {
@@ -34,30 +36,41 @@
       markers: true,
     },
   });
+} 
 
 
-// Dot orbit animation
-gsap.registerPlugin(MotionPathPlugin);
+// HOME - Dot orbit animation
+function homeDotOrbitAnimation() {
+  if (!document.querySelector(".animated-orbit")) return;
 
-// === 1. Path motion ===
-gsap.to("#moving-dot", {
-  duration: 8,
-  repeat: -1,
-  ease: "none",
-  motionPath: {
-    path: "#orbit-path",
-    align: "#orbit-path",
-    alignOrigin: [0.5, 0.5],
-    autoRotate: false,
-    markers: true
-  }
-});
+  document.querySelectorAll(".animated-orbit").forEach((svg, index) => {
+    const dot = svg.querySelector(".moving-dot");
+    const path = svg.querySelector(".orbit-path");
 
-// === 2. Opacity animation (separate timeline) ===
-gsap.set("#moving-dot", { opacity: 1 }); // start visible
+    // Motion path animation
+    gsap.to(dot, {
+      duration: 8,
+      repeat: -1,
+      ease: "none",
+      motionPath: {
+        path: path,
+        align: path,
+        alignOrigin: [0.5, 0.5],
+        autoRotate: false
+      }
+    });
 
-gsap.timeline({ repeat: -1, defaults: { ease: "power1.inOut" } })
-  .to("#moving-dot", { opacity: 0, duration: 1 }) // fade out
-  .to({}, { duration: 3 })                        // stay hidden
-  .to("#moving-dot", { opacity: 1, duration: 1 }) // fade in
-  .to({}, { duration: 3 });                       // stay visible
+    // Opacity animation
+    gsap.set(dot, { opacity: 1 });
+
+    gsap.timeline({ repeat: -1, defaults: { ease: "power1.inOut" } })
+      .to(dot, { opacity: 0, duration: 1 })
+      .to({}, { duration: 3 })
+      .to(dot, { opacity: 1, duration: 1 })
+      .to({}, { duration: 3 });
+  });
+}
+
+// Initialize animations
+homeSectionsAnimation();
+homeDotOrbitAnimation();
