@@ -211,7 +211,9 @@ const categoryClass = {
           </div>
         </div>
         <div class="right flex flex-col gap-8">
-          <h2 class="text-4xl font-bold | gradientSmallHeading">Blockchain</h2>
+          <h2 class="text-4xl font-bold | gradientSmallHeading w-fit">
+            Blockchain
+          </h2>
           <p class="bigger max-w-[40ch]">
             Auradine is a U.S.-based Bitcoin solutions manufacturer delivering
             high-performance, energy-efficient systems for industrial scale. Our
@@ -302,7 +304,7 @@ const categoryClass = {
           </div>
         </div>
         <div class="right flex flex-col gap-8">
-          <h2 class="text-4xl font-bold | gradientSmallHeading">
+          <h2 class="text-4xl font-bold | gradientSmallHeading w-fit">
             Industry-Leading Miner <br class="hidden sm:inline" /> Economics
           </h2>
           <p class="bigger max-w-[40ch]">
@@ -394,7 +396,7 @@ const categoryClass = {
           </div>
         </div>
         <div class="right flex flex-col gap-8">
-          <h2 class="text-4xl font-bold | gradientSmallHeading">
+          <h2 class="text-4xl font-bold | gradientSmallHeading w-fit">
             Low Power AI Compute
           </h2>
           <p class="bigger max-w-[40ch]">
@@ -891,7 +893,7 @@ const categoryClass = {
 
         if (splitType === "words") {
           split = new SplitText(target, {
-            type: "words",
+            type: "words, ",
             wordsClass: "word",
           });
         } else {
