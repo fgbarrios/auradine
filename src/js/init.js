@@ -452,22 +452,25 @@ function stackFooter() {
   const featuredNews = document.querySelector('.featured-news');
   if (!footer || !featuredNews) return;
 
-  gsap.to(
-    footer,
-    {
-      marginTop: -300,    
-      duration: 4,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: featuredNews, 
-        start: "center center",
-        endTrigger: footerContainer,     
-        end: "center center",
-        scrub: true,
-        anticipatePin: 1,
-      }
+
+  const footerAuradinelogo = document.querySelectorAll('footer .auradine-logo');
+  const letters = document.querySelectorAll('footer .letters svg g path');
+
+  let start = window.innerWidth > 1024 ? "center center" : "bottom bottom";
+
+  gsap.to(footer, {
+  marginTop: -300,
+  duration: 4,
+    ease: "none",
+    scrollTrigger: {
+      trigger: featuredNews, 
+      start: start,
+      endTrigger: footerContainer,     
+      end: "center center",
+      scrub: true,
+      //anticipatePin: 1,
     }
-  );
+  });
 
   gsap.to(
     main,
@@ -477,7 +480,7 @@ function stackFooter() {
       ease: "power3.out",
       scrollTrigger: {
         trigger: featuredNews, 
-        start: "center center",
+        start: start,
         endTrigger: footerContainer,     
         end: "center bottom",
         scrub: true,
@@ -485,33 +488,6 @@ function stackFooter() {
       }
     }
   );
-
-  //animate letters
-  const letters = document.querySelectorAll('footer .letters svg g path');
-
-  gsap.fromTo(letters,
-    { opacity: 0, y: 100 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      stagger:{
-        each: 0.1,
-        from: "center"
-      },
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: 'footer .letters',
-        start: "top 80%",
-        endTrigger: footerContainer,     
-        end: "center center",
-        scrub: true,
-        anticipatePin: 1,
-        markers: true
-      }
-    }
-  );
-
 
 }
 

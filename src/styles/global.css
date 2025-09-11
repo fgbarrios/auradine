@@ -356,3 +356,19 @@ header .anim-wrapper,
 
     
 }
+
+@media(min-width:1800px){
+    /* make all the things bigger */
+    .clamp-h1{
+        font-size: clamp(40px, 5vw, 90px);
+        line-height: 1.05;
+    }
+    .clamp-p{
+        font-size: clamp(16px, 2vw, 20px);
+        line-height: 1.5;
+    }
+    p,li,a{
+        font-size: clamp(16px, 2vw, 20px);
+        line-height: 1.5;
+    }
+}
