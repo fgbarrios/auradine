@@ -303,3 +303,52 @@ header .anim-wrapper,
     opacity: 0;
 }
 
+.line-container{
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+.line-container.active{
+    opacity: 1;
+    transition: opacity 1000ms ease;
+}
+
+.line-container .line{
+  height: 100%;
+  background: white;
+  z-index: 10;
+  position: relative;
+  width: 2px;
+  opacity: .2;
+  border-radius: 6px;
+}
+
+.line-container .circle{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transform: translateX(-50%);
+
+    height: 10%;
+}
+
+.line-container .circle svg{
+    margin-top: auto;
+    transform: translate(-4px, -2px);
+}
+
+.line-container .circle .complete-line{
+    height: 100%;
+    width: 4px;
+    transform: translateX(-1px);
+
+  border-radius: 6px;
+
+  background: #78a5cc;
+  background: linear-gradient(180deg, #000E12 0%, #46C7FF 100%);
+
+
+    
+}

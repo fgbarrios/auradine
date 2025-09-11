@@ -114,6 +114,23 @@ const categoryClass = {
         class="h-full cover absolute w-1/2 top-1/2 left-0 transform -translate-y-1/2"
         alt=""
       />
+      <div
+        class="line-container | absolute top-1/2 -translate-y-1/2 left-[2rem] w-[5px] h-[50%] hidden md:block"
+      >
+        <div class="line"></div>
+        <div class="circle">
+          <div class="complete-line"></div>
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 7 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="3.5" cy="4.42383" r="3.5" fill="white"></circle>
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="inner-sections-container |">
       <section
@@ -153,12 +170,6 @@ const categoryClass = {
                 </defs>
               </svg>
             </div>
-            <Picture
-              src={Slide1}
-              formats={["avif", "webp"]}
-              alt="Blockchain"
-              class="z-10"
-            />
             <div
               class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
             >
@@ -192,6 +203,12 @@ const categoryClass = {
                 </defs>
               </svg>
             </div>
+            <Picture
+              src={Slide1}
+              formats={["avif", "webp"]}
+              alt="Blockchain"
+              class="relative z-10"
+            />
           </div>
         </div>
         <div class="right flex flex-col gap-8">
@@ -244,7 +261,6 @@ const categoryClass = {
                 </defs>
               </svg>
             </div>
-            <Picture src={Slide2} formats={["avif", "webp"]} alt="Blockchain" />
             <div
               class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
             >
@@ -278,11 +294,17 @@ const categoryClass = {
                 </defs>
               </svg>
             </div>
+            <Picture
+              src={Slide2}
+              formats={["avif", "webp"]}
+              alt="Blockchain"
+              class="relative z-10"
+            />
           </div>
         </div>
         <div class="right flex flex-col gap-8">
           <h2 class="text-4xl font-bold | gradientSmallHeading">
-            Industry-Leading Miner Economics
+            Industry-Leading Miner <br class="hidden sm:inline" /> Economics
           </h2>
           <p class="bigger max-w-[40ch]">
             Auradine delivers industry-leading miner economics by maximizing
@@ -331,7 +353,6 @@ const categoryClass = {
                 </defs>
               </svg>
             </div>
-            <Picture src={Slide3} formats={["avif", "webp"]} alt="Blockchain" />
             <div
               class="overlay-gif | absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-fit h-fit pointer-events-none z-10"
             >
@@ -365,6 +386,12 @@ const categoryClass = {
                 </defs>
               </svg>
             </div>
+            <Picture
+              src={Slide3}
+              formats={["avif", "webp"]}
+              alt="Blockchain"
+              class="relative z-10"
+            />
           </div>
         </div>
         <div class="right flex flex-col gap-8">

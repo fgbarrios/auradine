@@ -20,40 +20,152 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, SplitText);
 function homeSectionsAnimation() {
   const pinnedSection = document.querySelector(".features-wrapper");
   const sectionsContainer = document.querySelector(".inner-sections-container");
-  const sections = gsap.utils.toArray(".inner-sections-container .section");
+  const circle = document.querySelector(".line-container .circle");
+  const lineContainer = document.querySelector(".line-container");
+  const sections = gsap.utils.toArray(".inner-sections-container section");
 
   if (!pinnedSection || !sectionsContainer || sections.length === 0) return;
 
-  const totalSections = sections.length;
-
   const totalScrollHeight = (sectionsContainer.scrollHeight - window.innerHeight) + 200;
 
-  gsap.to(sectionsContainer, {
-    y: -totalScrollHeight,
-    ease: "none",
-    scrollTrigger: {
-      trigger: pinnedSection,
-      start: "top top",
-      end: "+=" + totalScrollHeight,
-      scrub: 1,
-      pin: true,
-      pinSpacing: false,
-      //markers: true,
+  //blur all elements in the sections
+  sections.forEach((section) => {
+    let leftContent = section.querySelector(".left");
+    let rightContent = section.querySelector(".right");
+
+     gsap.set([leftContent, rightContent], { filter: "blur(4px)" });
+
+     let title = section.querySelector("h2");
+     gsap.set(title, { filter: "blur(4px)" });
+
+     let p = section.querySelector("p");
+     gsap.set(p, { opacity: 0 });
+  })
+  
+  ScrollTrigger.create({
+    trigger: pinnedSection,
+    start: "top 20%", 
+    end: "bottom top",
+    onEnter: () => {
+      lineContainer?.classList.add("active");
     },
+    onLeaveBack: () => {
+      lineContainer?.classList.remove("active");
+    }
   });
 
 
-  sections.forEach((section, i) => {
+
+  ScrollTrigger.create({
+    trigger: pinnedSection,
+    start: "top top",
+    end: "+=" + totalScrollHeight,
+    scrub: 1,
+    pin: true,
+    pinSpacing: false,
+    //markers: true,
+    animation: gsap.to(sectionsContainer, {
+      y: -totalScrollHeight,
+      ease: "none",
+    }),
+    onEnter: () => {
+      lineContainer?.classList.add("active");
+    },
+    onLeave: () => {
+      lineContainer?.classList.remove("active");
+    },
+    onEnterBack: () => {
+      lineContainer?.classList.add("active");
+    },
+    onLeaveBack: () => {
+      lineContainer?.classList.remove("active");
+    },
+    onUpdate: (self) => {
+      const progress = self.progress;
+      const heightPercent = 10 + (progress * 90); // from 10% to 100%
+      gsap.to(circle, {
+        height: `${heightPercent}%`,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    },
+  });
+
+    // Track and update active section
+  sections.forEach((section) => {
     ScrollTrigger.create({
       trigger: section,
       start: "top center",
       end: "bottom center",
-      onEnter: () => section.classList.add("active"),
-      onLeaveBack: () => section.classList.remove("active"),
+      //markers:true,
+      onEnter: () => {
+        sections.forEach(s => s.classList.remove("active"));
+
+        //animate the title, paragraph and link
+        let title = section.querySelector("h2");
+        let p = section.querySelector("p");
+        let link = section.querySelector(".anim-wrapper");
+        gsap.to(title, {filter: "blur(0px)", duration: 1 });
+
+        //we use split text to animate the words of the paragraph
+        gsap.set(p, { opacity: 1 });
+        const split = new SplitText(p, { type: "words" });
+        gsap.fromTo(split.words, { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 1, delay: 0.1, stagger: 0.05 });
+
+        gsap.fromTo(link, { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 1, delay: 0.6 });
+        
+        //unblur the left and right content
+        let leftContent = section.querySelector(".left");
+        let rightContent = section.querySelector(".right");
+        gsap.to([leftContent, rightContent], { filter: "blur(0px)" });
+      
+        
+      },
+      onEnterBack: () => {
+        sections.forEach(s => s.classList.remove("active"));
+        section.classList.add("active");
+
+        //animate the title, paragraph and link
+        let title = section.querySelector("h2");
+        let p = section.querySelector("p");
+        let link = section.querySelector(".anim-wrapper");
+        gsap.to(title, {filter: "blur(0px)", duration: 1 });
+
+        //we use split text to animate the words of the paragraph
+        gsap.set(p, { opacity: 1 });
+        const split = new SplitText(p, { type: "words" });
+        gsap.fromTo(split.words, { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 1, delay: 0.1, stagger: 0.05 });
+
+        gsap.fromTo(link, { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 1, delay: 0.6 });
+        
+        //unblur the left and right content
+        let leftContent = section.querySelector(".left");
+        let rightContent = section.querySelector(".right");
+        gsap.to([leftContent, rightContent], { filter: "blur(0px)" });
+
+        
+      },
+      onLeave: () => {
+        sections.forEach(s => s.classList.remove("active"));
+
+        let leftContent = section.querySelector(".left");
+        let rightContent = section.querySelector(".right");
+
+        gsap.set([leftContent, rightContent], { filter: "blur(4px)", duration: 0.5 });
+
+      },onLeaveBack: () => {
+         sections.forEach(s => s.classList.remove("active"));
+
+        let leftContent = section.querySelector(".left");
+        let rightContent = section.querySelector(".right");
+
+        gsap.set([leftContent, rightContent], { filter: "blur(4px)", duration: 0.5 });
+      },
     });
   });
-
 }
+
+
 
 
 
