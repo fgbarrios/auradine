@@ -1,6 +1,6 @@
 
-import Lenis from "lenis";
-import { gsap, ScrollTrigger, SplitText, MotionPathPlugin } from "gsap/all";
+//import Lenis from "lenis";
+//import { gsap, ScrollTrigger, SplitText, MotionPathPlugin } from "gsap/all";
 
 
 const lenis = new Lenis();
