@@ -75,7 +75,7 @@ const categoryClass = {
     </div>
     <div class="container mx-auto z-1">
       <h1
-        class="hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] grandientHeading uppercase"
+        class="hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] uppercase grandientHeading"
       >
         High Performance. <br class="hidden sm:inline" />
         Low Power. Built For <br class="hidden sm:inline" /> Blockchain & AI.
@@ -901,6 +901,8 @@ const categoryClass = {
             charsClass: "char",
           });
         }
+
+        console.log(split.lines);
 
         // Select the parts to animate based on split type
         const elementsToAnimate =
