@@ -293,6 +293,10 @@ main.open-menu { filter: blur(4px); }
         }
 }
 
+html{
+    background: #070b1e;
+}
+
 /* prepare for animations */
 header .logo-container > *,
 #nav-menu li,

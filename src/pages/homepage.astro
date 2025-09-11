@@ -492,7 +492,7 @@ const categoryClass = {
       class="container flex flex-col justify-center items-center gap-16 text-center mx-auto h-full relative z-2"
     >
       <h2
-        class="font-medium text-[40px] leading-[50px] md:leading-[60px] lg:text-[70px] lg:leading-[99%] tracking-[-1.04px] text-center align-middle uppercase grandientHeading"
+        class="highTech | font-medium text-[40px] leading-[50px] md:leading-[60px] lg:text-[70px] lg:leading-[99%] tracking-[-1.04px] text-center align-middle uppercase grandientHeading"
       >
         High Tech. Low Power. <br class="hidden sm:inline" />Built For
         Blockchain & AI.
@@ -506,7 +506,9 @@ const categoryClass = {
       <h2 class="gradientSmallHeading text-4xl mb-16 font-medium">
         Featured News & Insights
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div
+        class="posts-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
         {
           posts.map((post) => (
             <div class="post-item | grid grid-rows-[1fr_150px] md:grid-rows-[1fr_250px] gap-4">
@@ -537,7 +539,7 @@ const categoryClass = {
                     alt={post.title}
                     class="w-full h-auto aspect-[11/8] object-cover md:mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-300 ease-in-out"
                   />
-                  <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#070B1E] opacity-20 group-hover:opacity-0 transition-opacity duration-300 ease-in-out hidden md:block" />
+                  <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#093B98] opacity-20 group-hover:opacity-0 transition-opacity duration-300 ease-in-out hidden md:block" />
                 </a>
               </div>
               <div class="content grid grid-rows-[40px_1fr_40px] md:grid-rows-[40px_4lh_40px] justify-between">

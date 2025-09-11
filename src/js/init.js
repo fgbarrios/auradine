@@ -339,6 +339,182 @@ function textShowFromTheBottomAnimation(element, stack = false, duration = 2, sp
   });
 }
 
+function stackedText(element) {
+  if (!document.querySelector(element)) return;
+
+  document.fonts.ready.then(() => {
+    gsap.utils.toArray(document.querySelector(element)).forEach(el => {
+      const split = new SplitText(el, { type: "words" });
+      const targets = split.words;
+
+      gsap.fromTo(targets,
+        { opacity: 0, x: 100 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.2,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 65%",
+            end: "center bottom",
+            toggleActions: "play none none none",
+          }
+        }
+      );
+    });
+  });
+}
+
+function animateChildrens(element) {
+  if (!document.querySelector(element)) return;
+
+    //get the direct children
+    const targets = document.querySelector(element).children;
+
+      gsap.fromTo(targets,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: document.querySelector(element),
+            start: "top 65%",
+            end: "center bottom",
+            toggleActions: "play none none none",
+          }
+        }
+      );
+
+}
+
+function animateChildrensContent(parent, element) {
+  if (!document.querySelector(parent)) return;
+
+    //get the elements to animate from the parent
+    const targets = document.querySelector(parent).querySelectorAll(element);
+
+      gsap.fromTo(targets,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: parent,
+            start: "top 45%",
+            end: "center bottom",
+            toggleActions: "play none none none",
+          }
+        }
+      );
+
+}
+
+
+
+function animateChildrensFromRight(element) {
+  if (!document.querySelector(element)) return;
+
+    //get the direct children
+    const targets = document.querySelector(element).children;
+
+      gsap.fromTo(targets,
+        { opacity: 0, x: 100 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.5,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: document.querySelector(element),
+            start: "top 65%",
+            end: "center bottom",
+            toggleActions: "play none none none",
+          }
+        }
+      );
+
+}
+
+
+function stackFooter() {
+  const footer = document.querySelector('footer');
+  const main = document.querySelector('main');
+  const footerContainer = document.querySelector('footer .footer-container');
+  const featuredNews = document.querySelector('.featured-news');
+  if (!footer || !featuredNews) return;
+
+  gsap.to(
+    footer,
+    {
+      marginTop: -300,    
+      duration: 4,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: featuredNews, 
+        start: "center center",
+        endTrigger: footerContainer,     
+        end: "center center",
+        scrub: true,
+        anticipatePin: 1,
+      }
+    }
+  );
+
+  gsap.to(
+    main,
+    {
+      opacity: .6,    
+      duration: 4,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: featuredNews, 
+        start: "center center",
+        endTrigger: footerContainer,     
+        end: "center bottom",
+        scrub: true,
+        anticipatePin: 1,
+      }
+    }
+  );
+
+  //animate letters
+  const letters = document.querySelectorAll('footer .letters svg g path');
+
+  gsap.fromTo(letters,
+    { opacity: 0, y: 100 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      stagger:{
+        each: 0.1,
+        from: "center"
+      },
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: 'footer .letters',
+        start: "top 80%",
+        endTrigger: footerContainer,     
+        end: "center center",
+        scrub: true,
+        anticipatePin: 1,
+        markers: true
+      }
+    }
+  );
+
+
+}
+
 
 
 /* ----------------------- FUNCTION CALLS ----------------------- */
@@ -353,6 +529,13 @@ textShowFromTheRightAnimation('.hero p', true, 1.5);
 clipShowFromTheRightAnimation('header .anim-wrapper');
 clipShowFromTheRightAnimation('.hero .anim-wrapper');
 
+stackedText('.highTech');
+stackedText('.featured-news h2');
+
+animateChildrensContent('.featured-news .container .posts-container', '.post-item .content');
 
 homeSectionsAnimation();
 homeDotOrbitAnimation();
+
+
+stackFooter();
