@@ -116,4 +116,617 @@ const { title = "Homepage" } = Astro.props;
     </main>
     <Footer />
   </body>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lenis = new Lenis();
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+
+      gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, SplitText);
+
+      /* ------------------------  FUNCTIONS ------------------------ */
+      /* ------------------------  FUNCTIONS ------------------------ */
+      /* ------------------------  FUNCTIONS ------------------------ */
+      function homeSectionsAnimation() {
+        const pinnedSection = document.querySelector(".features-wrapper");
+        const sectionsContainer = document.querySelector(
+          ".inner-sections-container"
+        );
+        const circle = document.querySelector(".line-container .circle");
+        const lineContainer = document.querySelector(".line-container");
+        const sections = gsap.utils.toArray(
+          ".inner-sections-container section"
+        );
+
+        if (!pinnedSection || !sectionsContainer || sections.length === 0)
+          return;
+
+        const totalScrollHeight =
+          sectionsContainer.scrollHeight - window.innerHeight + 200;
+
+        //blur all elements in the sections
+        sections.forEach((section) => {
+          let leftContent = section.querySelector(".left");
+          let rightContent = section.querySelector(".right");
+
+          gsap.set([leftContent, rightContent], { filter: "blur(4px)" });
+
+          let title = section.querySelector("h2");
+          gsap.set(title, { filter: "blur(4px)" });
+
+          let p = section.querySelector("p");
+          gsap.set(p, { opacity: 0 });
+        });
+
+        ScrollTrigger.create({
+          trigger: pinnedSection,
+          start: "top 20%",
+          end: "bottom top",
+          onEnter: () => {
+            lineContainer?.classList.add("active");
+          },
+          onLeaveBack: () => {
+            lineContainer?.classList.remove("active");
+          },
+        });
+
+        ScrollTrigger.create({
+          trigger: pinnedSection,
+          start: "top top",
+          end: "+=" + totalScrollHeight,
+          scrub: 1,
+          pin: true,
+          pinSpacing: false,
+          //markers: true,
+          animation: gsap.to(sectionsContainer, {
+            y: -totalScrollHeight,
+            ease: "none",
+          }),
+          onEnter: () => {
+            lineContainer?.classList.add("active");
+          },
+          onLeave: () => {
+            lineContainer?.classList.remove("active");
+          },
+          onEnterBack: () => {
+            lineContainer?.classList.add("active");
+          },
+          onLeaveBack: () => {
+            lineContainer?.classList.remove("active");
+          },
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const heightPercent = 10 + progress * 90; // from 10% to 100%
+            gsap.to(circle, {
+              height: `${heightPercent}%`,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          },
+        });
+
+        // Track and update active section
+        sections.forEach((section) => {
+          ScrollTrigger.create({
+            trigger: section,
+            start: "top center",
+            end: "bottom center",
+            //markers:true,
+            onEnter: () => {
+              sections.forEach((s) => s.classList.remove("active"));
+
+              //animate the title, paragraph and link
+              let title = section.querySelector("h2");
+              let p = section.querySelector("p");
+              let link = section.querySelector(".anim-wrapper");
+              gsap.to(title, { filter: "blur(0px)", duration: 1 });
+
+              //we use split text to animate the words of the paragraph
+              gsap.set(p, { opacity: 1 });
+              const split = new SplitText(p, { type: "words" });
+              gsap.fromTo(
+                split.words,
+                { x: 100, opacity: 0 },
+                { x: 0, opacity: 1, duration: 1, delay: 0.1, stagger: 0.05 }
+              );
+
+              gsap.fromTo(
+                link,
+                { x: 100, opacity: 0 },
+                { x: 0, opacity: 1, duration: 1, delay: 0.6 }
+              );
+
+              //unblur the left and right content
+              let leftContent = section.querySelector(".left");
+              let rightContent = section.querySelector(".right");
+              gsap.to([leftContent, rightContent], { filter: "blur(0px)" });
+            },
+            onEnterBack: () => {
+              sections.forEach((s) => s.classList.remove("active"));
+              section.classList.add("active");
+
+              //animate the title, paragraph and link
+              let title = section.querySelector("h2");
+              let p = section.querySelector("p");
+              let link = section.querySelector(".anim-wrapper");
+              gsap.to(title, { filter: "blur(0px)", duration: 1 });
+
+              //we use split text to animate the words of the paragraph
+              gsap.set(p, { opacity: 1 });
+              const split = new SplitText(p, { type: "words" });
+              gsap.fromTo(
+                split.words,
+                { x: 100, opacity: 0 },
+                { x: 0, opacity: 1, duration: 1, delay: 0.1, stagger: 0.05 }
+              );
+
+              gsap.fromTo(
+                link,
+                { x: 100, opacity: 0 },
+                { x: 0, opacity: 1, duration: 1, delay: 0.6 }
+              );
+
+              //unblur the left and right content
+              let leftContent = section.querySelector(".left");
+              let rightContent = section.querySelector(".right");
+              gsap.to([leftContent, rightContent], { filter: "blur(0px)" });
+            },
+            onLeave: () => {
+              sections.forEach((s) => s.classList.remove("active"));
+
+              let leftContent = section.querySelector(".left");
+              let rightContent = section.querySelector(".right");
+
+              gsap.set([leftContent, rightContent], {
+                filter: "blur(4px)",
+                duration: 0.5,
+              });
+            },
+            onLeaveBack: () => {
+              sections.forEach((s) => s.classList.remove("active"));
+
+              let leftContent = section.querySelector(".left");
+              let rightContent = section.querySelector(".right");
+
+              gsap.set([leftContent, rightContent], {
+                filter: "blur(4px)",
+                duration: 0.5,
+              });
+            },
+          });
+        });
+      }
+
+      // HOME - Dot orbit animation
+      function homeDotOrbitAnimation() {
+        if (!document.querySelector(".animated-orbit")) return;
+
+        document.querySelectorAll(".animated-orbit").forEach((svg, index) => {
+          const dot = svg.querySelector(".moving-dot");
+          const path = svg.querySelector(".orbit-path");
+
+          if (!dot || !path) return;
+
+          let randomDelay = Math.random() * 2; // Random delay between 0 and 2 seconds
+
+          setTimeout(() => {
+            // Motion path animation
+            gsap.to(dot, {
+              duration: 8,
+              repeat: -1,
+              ease: "none",
+              motionPath: {
+                path: path,
+                align: path,
+                alignOrigin: [0.5, 0.5],
+                autoRotate: false,
+              },
+            });
+
+            // Opacity animation
+            gsap.set(dot, { opacity: 1 });
+
+            gsap
+              .timeline({ repeat: -1, defaults: { ease: "power1.inOut" } })
+              .to(dot, { opacity: 0, duration: 1 })
+              .to({}, { duration: 3 })
+              .to(dot, { opacity: 1, duration: 1 })
+              .to({}, { duration: 3 });
+          }, randomDelay * 1000); // ⬅️ delay in milliseconds
+        });
+      }
+
+      function showFromTheRightAnimation(
+        element,
+        stack = false,
+        duration = 1.5
+      ) {
+        if (!document.querySelector(element)) return;
+
+        if (stack) {
+          gsap.fromTo(
+            element,
+            { x: 100, autoAlpha: 0, filter: "blur(10px)" },
+            {
+              x: 0,
+              autoAlpha: 1,
+              filter: "blur(0px)",
+              duration: duration,
+              stagger: 0.2,
+            }
+          );
+          return;
+        }
+
+        gsap.fromTo(
+          element,
+          { x: 100, autoAlpha: 0, filter: "blur(10px)" },
+          { x: 0, autoAlpha: 1, filter: "blur(0px)", duration: duration }
+        );
+      }
+
+      function clipShowFromTheRightAnimation(element, duration = 1.5) {
+        if (!document.querySelector(element)) return;
+
+        gsap.fromTo(
+          element,
+          {
+            x: 100,
+            autoAlpha: 0,
+            clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+          },
+          {
+            x: 0,
+            autoAlpha: 1,
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+            duration: duration,
+          }
+        );
+      }
+
+      function showFromTheBottomAnimation(
+        element,
+        stack = false,
+        duration = 2
+      ) {
+        if (!document.querySelector(element)) return;
+
+        if (stack) {
+          gsap.fromTo(
+            element,
+            { y: 100, opacity: 0, filter: "blur(10px)" },
+            {
+              y: 0,
+              opacity: 1,
+              filter: "blur(0px)",
+              duration: duration,
+              stagger: 0.2,
+            }
+          );
+          return;
+        }
+
+        gsap.fromTo(
+          element,
+          { y: 100, opacity: 0, filter: "blur(10px)" },
+          { y: 0, opacity: 1, filter: "blur(0px)", duration: duration }
+        );
+      }
+
+      function textShowFromTheRightAnimation(
+        element,
+        stack = false,
+        duration = 1.5,
+        splitType = "lines",
+        gradient = false
+      ) {
+        const target = document.querySelector(element);
+        if (!target) return;
+
+        // Interpolation function from white to blue
+        const color = gsap.utils.interpolate("#ffffff", "#0475FF");
+
+        document.fonts.ready.then(() => {
+          const split = new SplitText(target, {
+            type: "lines, words",
+            linesClass: "line",
+          });
+
+          // Set gradient color from left to right across each line
+          if (gradient) {
+            split.lines.forEach((line) => {
+              const chars = line.textContent.split(""); // split into chars
+              line.innerHTML = ""; // clear original text
+              chars.forEach((char, i) => {
+                const span = document.createElement("span");
+                span.textContent = char;
+                const t = i / (chars.length - 1); // position from 0 to 1
+                span.style.color = color(t);
+                line.appendChild(span);
+              });
+            });
+          }
+
+          // Animate each line
+          const elementsToAnimate = split.lines;
+
+          gsap.fromTo(
+            elementsToAnimate,
+            {
+              x: 100,
+              filter: "blur(20px)",
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              filter: "blur(0px)",
+              autoAlpha: 1,
+              duration: duration,
+              stagger: stack ? 0.2 : 0,
+              ease: "power2.out",
+            }
+          );
+        });
+      }
+
+      function textShowFromTheBottomAnimation(
+        element,
+        stack = false,
+        duration = 2,
+        splitType = "words",
+        useClipPath = false
+      ) {
+        const target = document.querySelector(element);
+        if (!target) return;
+
+        document.fonts.ready.then(() => {
+          let split;
+
+          if (splitType === "words") {
+            split = new SplitText(target, {
+              type: "words",
+              wordsClass: "word",
+            });
+          } else {
+            split = new SplitText(target, {
+              type: splitType,
+              wordsClass: "word",
+              charsClass: "char",
+            });
+          }
+
+          // Select the parts to animate based on split type
+          const elementsToAnimate =
+            splitType === "chars" ? split.chars : split.words;
+
+          gsap.fromTo(
+            elementsToAnimate,
+            {
+              y: 100,
+              filter: "blur(20px)",
+              opacity: 0,
+              clipPath: useClipPath ? "polygon(0 0, 0 0, 0 100%, 0% 100%)" : "",
+            },
+            {
+              y: 0,
+              filter: "blur(0px)",
+              opacity: 1,
+              clipPath: useClipPath
+                ? "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
+                : "",
+              duration: duration,
+              stagger: stack ? 0.2 : 0,
+              ease: "power2.out",
+            }
+          );
+        });
+      }
+
+      function stackedText(element, gradient = false) {
+        if (!document.querySelector(element)) return;
+
+        // Interpolation function from white to blue
+        const color = gsap.utils.interpolate("#ffffff", "#0475FF");
+
+        document.fonts.ready.then(() => {
+          gsap.utils.toArray(document.querySelector(element)).forEach((el) => {
+            //const split = new SplitText(el, { type: "words" });
+
+            const split = new SplitText(element, {
+              type: "lines",
+              linesClass: "line",
+            });
+
+            // Set gradient color from left to right across each line
+            if (gradient) {
+              split.lines.forEach((line) => {
+                const chars = line.textContent.split(""); // split into chars
+                line.innerHTML = ""; // clear original text
+                chars.forEach((char, i) => {
+                  const span = document.createElement("span");
+                  span.textContent = char;
+                  const t = i / (chars.length - 1); // position from 0 to 1
+                  span.style.color = color(t);
+                  line.appendChild(span);
+                });
+              });
+            }
+
+            const targets = split.words;
+
+            gsap.fromTo(
+              targets,
+              { opacity: 0, x: 100 },
+              {
+                opacity: 1,
+                x: 0,
+                duration: 1.2,
+                stagger: 0.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                  trigger: el,
+                  start: "top 65%",
+                  end: "center bottom",
+                  toggleActions: "play none none none",
+                },
+              }
+            );
+          });
+        });
+      }
+
+      function animateChildrens(element) {
+        if (!document.querySelector(element)) return;
+
+        //get the direct children
+        const targets = document.querySelector(element).children;
+
+        gsap.fromTo(
+          targets,
+          { opacity: 0, y: 100 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: document.querySelector(element),
+              start: "top 65%",
+              end: "center bottom",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      function animateChildrensContent(parent, element) {
+        if (!document.querySelector(parent)) return;
+
+        //get the elements to animate from the parent
+        const targets = document
+          .querySelector(parent)
+          .querySelectorAll(element);
+
+        gsap.fromTo(
+          targets,
+          { opacity: 0, y: 100 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: parent,
+              start: "top 45%",
+              end: "center bottom",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      function animateChildrensFromRight(element) {
+        if (!document.querySelector(element)) return;
+
+        //get the direct children
+        const targets = document.querySelector(element).children;
+
+        gsap.fromTo(
+          targets,
+          { opacity: 0, x: 100 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: document.querySelector(element),
+              start: "top 65%",
+              end: "center bottom",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+
+      function stackFooter() {
+        const footer = document.querySelector("footer");
+        const main = document.querySelector("main");
+        const footerContainer = document.querySelector(
+          "footer .footer-container"
+        );
+        const featuredNews = document.querySelector(".featured-news");
+        if (!footer || !featuredNews) return;
+
+        const footerAuradinelogo = document.querySelectorAll(
+          "footer .auradine-logo"
+        );
+        const letters = document.querySelectorAll("footer .letters svg g path");
+
+        let start =
+          window.innerWidth > 1024 ? "center center" : "bottom bottom";
+
+        gsap.to(footer, {
+          marginTop: -300,
+          duration: 4,
+          ease: "none",
+          scrollTrigger: {
+            trigger: featuredNews,
+            start: start,
+            endTrigger: footerContainer,
+            end: "center center",
+            scrub: true,
+            //anticipatePin: 1,
+          },
+        });
+
+        gsap.to(main, {
+          opacity: 0.6,
+          duration: 4,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: featuredNews,
+            start: start,
+            endTrigger: footerContainer,
+            end: "center bottom",
+            scrub: true,
+            anticipatePin: 1,
+          },
+        });
+      }
+
+      /* ----------------------- FUNCTION CALLS ----------------------- */
+      /* ----------------------- FUNCTION CALLS ----------------------- */
+      /* ----------------------- FUNCTION CALLS ----------------------- */
+      showFromTheRightAnimation(".logo-container > *", true);
+      showFromTheRightAnimation("#nav-menu li", true);
+      textShowFromTheRightAnimation("h1", true, 1.5, "words", true, true);
+      textShowFromTheRightAnimation(".hero p", true, 1.5);
+
+      //buttons animation (text + svg)
+      clipShowFromTheRightAnimation("header .anim-wrapper");
+      clipShowFromTheRightAnimation(".hero .anim-wrapper");
+
+      stackedText(".highTech", true);
+      stackedText(".featured-news h2");
+
+      animateChildrensContent(
+        ".featured-news .container .posts-container",
+        ".post-item .content"
+      );
+
+      homeSectionsAnimation();
+      homeDotOrbitAnimation();
+
+      stackFooter();
+    });
+  </script>
 </html>

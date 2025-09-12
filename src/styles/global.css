@@ -29,14 +29,19 @@ main.open-menu { filter: blur(4px); }
 }
 
 @layer utilities {
-
+    
     .grandientHeading {
         @apply text-transparent bg-gradient-to-r from-[#ffffff] to-[#0475FF] bg-clip-text;
     }
+
+    .grandientHeading *{
+        will-change: transform;
+        backface-visibility: hidden;
+    }
     
     .grandientHeading > div{
-        @apply text-transparent bg-gradient-to-r from-[#ffffff] to-[#7da2cf] bg-clip-text;
-    }
+        @apply text-transparent bg-gradient-to-r from-[#ffffff] to-[#0475FF] bg-clip-text;
+    }    
 
     .gradientSmallHeading {
         @apply text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#42C1FF];
@@ -48,7 +53,7 @@ main.open-menu { filter: blur(4px); }
 
 
   .clamp-h1 {
-    font-size: clamp(40px, 5vw, 90px);
+    font-size: clamp(35px, 5vw, 90px);
     line-height: 1.05;
   }
 
@@ -56,6 +61,14 @@ main.open-menu { filter: blur(4px); }
     font-size: clamp(16px, 2vw, 20px);
     line-height: 1.5;
   }
+
+  @media(min-width:2000px){
+        .home-hero .container{
+            padding-bottom: 0 !important;
+            margin: auto !important;
+        }
+   }
+
 
     p {
      @apply  font-medium text-[16px] leading-[20px] tracking-[-1px] text-white opacity-80;
@@ -214,83 +227,83 @@ main.open-menu { filter: blur(4px); }
 
 
         .liquidGlass-wrapper {
-        position: relative;
-        display: flex;
-        font-weight: 600;
-        overflow: hidden;
+            position: relative;
+            display: flex;
+            font-weight: 600;
+            overflow: hidden;
 
-        color: black;
-        cursor: pointer;
+            color: black;
+            cursor: pointer;
 
-        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
 
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 
-        border-radius: 32px;
+            border-radius: 32px;
             width: fit-content;
-        height: fit-content;
+            height: fit-content;
         }
 
         .liquidGlass-effect {
-        position: absolute;
-        z-index: 0;
-        inset: 0;
+            position: absolute;
+            z-index: 0;
+            inset: 0;
 
-        backdrop-filter: blur(3px);
-        filter: url(#glass-distortion);
-        overflow: hidden;
-        isolation: isolate;
+            backdrop-filter: blur(3px);
+            filter: url(#glass-distortion);
+            overflow: hidden;
+            isolation: isolate;
 
-        border-radius: inherit;
+            border-radius: inherit;
         }
 
         .liquidGlass-tint {
-        z-index: 1;
-        position: absolute;
-        inset: 0;
-        /*background: rgba(255, 255, 255, 0.1);*/
-        border-radius: inherit;
+            z-index: 1;
+            position: absolute;
+            inset: 0;
+            /*background: rgba(255, 255, 255, 0.1);*/
+            border-radius: inherit;
         }
 
         .liquidGlass-shine {
-        position: absolute;
-        inset: 0;
-        z-index: 2;
+            position: absolute;
+            inset: 0;
+            z-index: 2;
 
-        overflow: hidden;
+            overflow: hidden;
 
-        box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
-            inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+            box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+                inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
 
-        box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.1), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
-        border-radius: inherit;
+            box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.1), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.1);
+            border-radius: inherit;
         }
 
         .liquidGlass-text {
-        z-index: 3;
-        border-radius: inherit;
-        color: white;
-        width: fit-content;
-        height: fit-content;
+            z-index: 3;
+            border-radius: inherit;
+            color: white;
+            width: fit-content;
+            height: fit-content;
         }
 
         .liquidGlass-text a{
             position: relative;
         }
         .liquidGlass-text a::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 3px;
-        height: 100%;
-        background: white;
-        filter: blur(10px);
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: white;
+            filter: blur(10px);
 
-        transform: translateX(-4rem);
+            transform: translateX(-4rem);
         }
 
         .liquidGlass-text a:hover::before{
-        transform: translateX(10rem);
+            transform: translateX(10rem);
             transition: transform 1000ms ease;
         }
 
@@ -314,7 +327,7 @@ header .anim-wrapper,
 .hero h1 *,
 .hero p *,
 .hero .anim-wrapper{
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 
