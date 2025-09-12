@@ -314,7 +314,7 @@ header .anim-wrapper,
 .hero h1 *,
 .hero p *,
 .hero .anim-wrapper{
-    opacity: 0;
+    visibility: hidden;
 }
 
 

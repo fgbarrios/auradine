@@ -213,17 +213,27 @@ function showFromTheRightAnimation(element, stack = false, duration = 1.5) {
   if (!document.querySelector(element)) return;
 
   if (stack) {
-    gsap.fromTo(element, 
-      { x: 100, opacity: 0, filter: "blur(10px)" },
-      { x: 0, opacity: 1, filter: "blur(0px)", duration: duration, stagger: 0.2 }
+    /*
+    gsap.to(element, 
+      { x: 100, filter: "blur(10px)" },
+      { x: 0, autoAlpha: 1, filter: "blur(0px)", duration: duration, stagger: 0.2 }
     );
+    */
+   gsap.to(element, {
+    autoAlpha: 1,
+   });
     return;
   }
 
+  /*
   gsap.fromTo(element, 
-    { x: 100, opacity: 0, filter: "blur(10px)" },
-    { x: 0, opacity: 1, filter: "blur(0px)", duration: duration }
+    { x: 100, filter: "blur(10px)" },
+    { x: 0, autoAlpha: 1, filter: "blur(0px)", duration: duration }
   );
+  */
+   gsap.to(element, {
+    autoAlpha: 1,
+   });
 }
 
 function clipShowFromTheRightAnimation(element, duration = 1.5) {

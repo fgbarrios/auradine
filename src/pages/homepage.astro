@@ -819,10 +819,10 @@ const categoryClass = {
       if (stack) {
         gsap.fromTo(
           element,
-          { x: 100, opacity: 0, filter: "blur(10px)" },
+          { x: 100, autoAlpha: 0, filter: "blur(10px)" },
           {
             x: 0,
-            opacity: 1,
+            autoAlpha: 1,
             filter: "blur(0px)",
             duration: duration,
             stagger: 0.2,
@@ -833,8 +833,8 @@ const categoryClass = {
 
       gsap.fromTo(
         element,
-        { x: 100, opacity: 0, filter: "blur(10px)" },
-        { x: 0, opacity: 1, filter: "blur(0px)", duration: duration }
+        { x: 100, autoAlpha: 0, filter: "blur(10px)" },
+        { x: 0, autoAlpha: 1, filter: "blur(0px)", duration: duration }
       );
     }
 
@@ -843,10 +843,14 @@ const categoryClass = {
 
       gsap.fromTo(
         element,
-        { x: 100, opacity: 0, clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+        {
+          x: 100,
+          autoAlpha: 0,
+          clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+        },
         {
           x: 0,
-          opacity: 1,
+          autoAlpha: 1,
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
           duration: duration,
         }
@@ -904,7 +908,7 @@ const categoryClass = {
           });
         }
 
-        console.log(split.lines);
+        //console.log(split.lines);
 
         // Select the parts to animate based on split type
         const elementsToAnimate =
@@ -915,13 +919,13 @@ const categoryClass = {
           {
             x: 100,
             filter: "blur(20px)",
-            opacity: 0,
+            autoAlpha: 0,
             clipPath: useClipPath ? "polygon(0 0, 0 0, 0 100%, 0% 100%)" : "",
           },
           {
             x: 0,
             filter: "blur(0px)",
-            opacity: 1,
+            autoAlpha: 1,
             clipPath: useClipPath
               ? "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
               : "",
