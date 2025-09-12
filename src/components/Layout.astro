@@ -715,8 +715,15 @@ const { title = "Homepage" } = Astro.props;
       clipShowFromTheRightAnimation("header .anim-wrapper");
       clipShowFromTheRightAnimation(".hero .anim-wrapper");
 
-      stackedText(".highTech", true);
-      stackedText(".featured-news h2");
+      textShowFromTheRightAnimation(
+        ".highTech",
+        true,
+        1.5,
+        "words",
+        true,
+        true
+      );
+      //stackedText(".featured-news h2");
 
       animateChildrensContent(
         ".featured-news .container .posts-container",

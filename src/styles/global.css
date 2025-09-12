@@ -44,7 +44,7 @@ main.open-menu { filter: blur(4px); }
     }    
 
     .gradientSmallHeading {
-        @apply text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#42C1FF];
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#42C1FF] w-fit;
     }
 
     .gradientSmallHeading > div{
