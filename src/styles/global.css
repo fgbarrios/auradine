@@ -406,6 +406,13 @@ header .anim-wrapper,
 }
 }
 
+.flickity-page-dots .dot{
+    background: #dddbdb !important;
+}
+.flickity-page-dots{
+    bottom: -40px !important;
+}
+
 
 @media(min-width:1800px){
     /* make all the things bigger
