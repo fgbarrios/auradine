@@ -423,13 +423,16 @@ const { title = "Homepage" } = Astro.props;
         stack = false,
         duration = 1.5,
         splitType = "lines",
-        gradient = false
+        gradient = false,
+        title = false
       ) {
         const target = document.querySelector(element);
         if (!target) return;
 
         // Interpolation function from white to blue
-        const color = gsap.utils.interpolate("#ffffff", "#0475FF");
+        const color = title
+          ? gsap.utils.interpolate("#ffffff", "#0475FF")
+          : gsap.utils.interpolate("rgb(218, 235, 255)", "#0475FF");
 
         document.fonts.ready.then(() => {
           const split = new SplitText(target, {
@@ -720,6 +723,7 @@ const { title = "Homepage" } = Astro.props;
         true,
         1.5,
         "words",
+        true,
         true,
         true
       );

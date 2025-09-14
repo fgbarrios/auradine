@@ -3,6 +3,9 @@
 body {
   @apply bg-[#070B1E] text-white;
   font-family: 'Inter', sans-serif;
+
+     --animate-marquee: marquee 15s linear infinite;
+    --animate-marquee2: marquee2 15s linear infinite;
 }
 main{transition: filter 1500ms ease;}
 main.open-menu { filter: blur(4px); }
@@ -225,7 +228,7 @@ main.open-menu { filter: blur(4px); }
             mask-composite: exclude, exclude;
         }
 
-
+        .anim-wrapper{border-radius: 32px;}
         .liquidGlass-wrapper {
             position: relative;
             display: flex;
@@ -379,8 +382,33 @@ header .anim-wrapper,
     
 }
 
+.animate-marquee{
+    animation: marquee 30s linear infinite;
+}
+.animate-marquee2{
+    animation: marquee2 30s linear infinite;
+}
+@keyframes marquee {
+0% {
+    transform: translateX(0%);
+}
+100% {
+    transform: translateX(-100%);
+}
+}
+
+@keyframes marquee2 {
+0% {
+    transform: translateX(100%);
+}
+100% {
+    transform: translateX(0%);
+}
+}
+
+
 @media(min-width:1800px){
-    /* make all the things bigger */
+    /* make all the things bigger
     .clamp-h1{
         font-size: clamp(40px, 5vw, 90px);
         line-height: 1.05;
@@ -393,4 +421,5 @@ header .anim-wrapper,
         font-size: clamp(16px, 2vw, 20px);
         line-height: 1.5;
     }
+         */
 }

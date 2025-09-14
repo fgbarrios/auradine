@@ -7,9 +7,12 @@ import Link from "../components/Link.astro";
 <Layout title="Solutions">
   <!-- Solutions Sections -->
 
-  <section class="hero">
+  <section class="hero solutions-hero relative">
+    <div class="overlay absolute top-0 left-0 w-full h-full z-1">
+      <img src="/solutions.png" class="w-full h-full object-cover" alt="" />
+    </div>
     <div
-      class="container mx-auto flex flex-col items-center justify-center gap-8 min-h-[500px] mt-20"
+      class="container mx-auto flex flex-col items-center justify-center gap-8 min-h-[500px] pt-20 md:pt-40 relative z-2"
     >
       <div class="gradient-container grandientHeading">
         <h1
@@ -20,7 +23,7 @@ import Link from "../components/Link.astro";
         </h1>
       </div>
       <div class="notice flex items-center gap-4">
-        <p>Designed and Engineered in the USA</p><svg
+        <p class="text-[20px]">Designed and Engineered in the USA</p><svg
           width="23"
           height="17"
           viewBox="0 0 23 17"
@@ -54,4 +57,10 @@ import Link from "../components/Link.astro";
       </div>
     </div>
   </section>
+
+  <div class="solutions-slides">
+    <section class="">
+      <div class="container">SLIDE 1</div>
+    </section>
+  </div>
 </Layout>

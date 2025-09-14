@@ -1,0 +1,476 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "../components/Layout.astro";
+import Link from "../components/Link.astro";
+import AuradineAbout from "../images/auradine2.png";
+import Member from "../components/Member.astro";
+
+let leadershipMembers = [
+  {
+    name: "Rajiv Khemani",
+    title: "Co-founder, President & CEO",
+    image: "/member1.png",
+    linkedIn: "https://www.linkedin.com/in/rajivkhemani/",
+  },
+  {
+    name: "Rajiv Khemani",
+    title: "Co-founder, President & CEO",
+    image: "/member1.png",
+    linkedIn: "https://www.linkedin.com/in/rajivkhemani/",
+  },
+  {
+    name: "Rajiv Khemani",
+    title: "Co-founder, President & CEO",
+    image: "/member1.png",
+  },
+  {
+    name: "Rajiv Khemani",
+    title: "Co-founder, President & CEO",
+    image: "/member1.png",
+  },
+  {
+    name: "Rajiv Khemani",
+    title: "Co-founder, President & CEO",
+    image: "/member1.png",
+  },
+];
+---
+
+<Layout title="About">
+  <!-- About -->
+
+  <section class="hero about-hero relative">
+    <div class="overlay absolute top-0 left-0 w-full h-full z-1">
+      <img src="/solutions.png" class="w-full h-full object-cover" alt="" />
+    </div>
+    <div
+      class="container mx-auto flex flex-col items-center justify-center gap-8 min-h-[500px] pt-20 md:pt-40 relative z-2"
+    >
+      <div class="gradient-container grandientHeading">
+        <h1
+          class="hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] text-center"
+        >
+          About
+        </h1>
+      </div>
+      <div class="breadcrumps flex items-center gap-2 mt-4 text-white/60">
+        <a href="/" class="hover:text-white transtion duration-300">Home</a>
+        <span>/</span>
+        <span>About</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="about-slides">
+    <div class="slide know">
+      <div class="content-wrapper">
+        <div class="content">
+          <section
+            class="min-h-[800px] max-h-[1000px] relative flex flex-col items-center justify-center overflow-x-hidden"
+          >
+            <div
+              class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0032a1]"
+            >
+              <video
+                src="/HB-About.mp4"
+                class="w-full h-full object-cover mix-blend-color-burn opacity-60"
+                autoplay
+                loop
+                muted
+                playsinline
+                webkit-playsinline
+                disablepictureinpicture></video>
+            </div>
+            <div
+              class="overlay absolute top-0 left-0 w-full h-full z-2"
+              style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #080C20 100%);"
+            >
+            </div>
+            <div
+              class="container mx-auto relative z-3 grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
+              <div class="left flex flex-col gap-8">
+                <div class="relative flex items-center justify-center">
+                  <div class="ml-auto">
+                    <Picture
+                      src={AuradineAbout}
+                      formats={["avif", "webp"]}
+                      alt="Auradine"
+                      class="relative z-10 max-w-[450px] ml-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="right flex flex-col gap-8 justify-center">
+                <h2 class="text-4xl font-bold | gradientSmallHeading w-fit">
+                  Get to Know <br class="hidden sm:inline" />Auradine
+                </h2>
+                <p class="bigger max-w-[40ch]">
+                  Founded in 2022 by industry veterans from Palo Alto Networks,
+                  Marvell, NVIDIA, Intel, Block, Google, and more, Auradine
+                  brings deep expertise in delivering low-power,
+                  high-performance solutions for blockchain and AI compute.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative flex overflow-x-hidden z-3 opacity-10">
+              <div class="animate-marquee py-12 whitespace-nowrap">
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >High Performance.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Low Power.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Built For Blockchain & AI.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >High Performance.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Low Power.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Built For Blockchain & AI.</span
+                >
+              </div>
+
+              <div
+                class="absolute top-0 animate-marquee2 py-12 whitespace-nowrap"
+              >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >High Performance.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Low Power.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Built For Blockchain & AI.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >High Performance.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Low Power.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Built For Blockchain & AI.</span
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide leadership">
+      <div class="content-wrapper">
+        <div class="content">
+          <section
+            class="min-h-[800px] max-h-[1000px] relative flex flex-col pt-20 overflow-x-hidden bg-[#080C20]"
+          >
+            <div class="container mx-auto relative z-3 flex flex-col gap-8">
+              <div class="flex flex-col gap-8 md:gap-16 justify-center">
+                <h2 class="text-4xl font-semibold | gradientSmallHeading w-fit">
+                  Leadership
+                </h2>
+                <div
+                  class="leadership-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+                  {
+                    leadershipMembers.map((member) => (
+                      <Member
+                        name={member.name}
+                        title={member.title}
+                        image={member.image}
+                        linkedIn={member.linkedIn}
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide board">
+      <div class="content-wrapper">
+        <div class="content">
+          <section
+            class="min-h-[800px] max-h-[1000px] relative flex flex-col pt-20 overflow-x-hidden"
+            style="background: linear-gradient(180deg, #0D1335 0%, #080C20 100%);
+background-blend-mode: multiply;
+"
+          >
+            <div class="container mx-auto relative z-3 flex flex-col gap-8">
+              <div class="flex flex-col gap-8 md:gap-16 justify-center">
+                <h2 class="text-4xl font-semibold | gradientSmallHeading w-fit">
+                  Board of Directors
+                </h2>
+                <div
+                  class="leadership-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+                  {
+                    leadershipMembers.map((member) => (
+                      <Member
+                        name={member.name}
+                        title={member.title}
+                        image={member.image}
+                        linkedIn={member.linkedIn}
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide know">
+      <div class="content-wrapper">
+        <div class="content">
+          <section
+            class="min-h-[800px] max-h-[1000px] relative flex flex-col items-center justify-center overflow-x-hidden"
+          >
+            <div
+              class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0032a1]"
+            >
+              <video
+                src="/HB-About.mp4"
+                class="w-full h-full object-cover mix-blend-color-burn opacity-60"
+                autoplay
+                loop
+                muted
+                playsinline
+                webkit-playsinline
+                disablepictureinpicture></video>
+            </div>
+            <div
+              class="overlay absolute top-0 left-0 w-full h-full z-2"
+              style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #080C20 100%);"
+            >
+            </div>
+            <div
+              class="container mx-auto relative z-3 grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
+              <div class="left flex flex-col gap-8">
+                <div class="relative flex items-center justify-center">
+                  <div class="ml-auto">
+                    <Picture
+                      src={AuradineAbout}
+                      formats={["avif", "webp"]}
+                      alt="Auradine"
+                      class="relative z-10 max-w-[450px] ml-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="right flex flex-col gap-8 justify-center">
+                <h2 class="text-4xl font-bold | gradientSmallHeading w-fit">
+                  Get to Know <br class="hidden sm:inline" />Auradine
+                </h2>
+                <p class="bigger max-w-[40ch]">
+                  Founded in 2022 by industry veterans from Palo Alto Networks,
+                  Marvell, NVIDIA, Intel, Block, Google, and more, Auradine
+                  brings deep expertise in delivering low-power,
+                  high-performance solutions for blockchain and AI compute.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative flex overflow-x-hidden z-3 opacity-10">
+              <div class="animate-marquee py-12 whitespace-nowrap">
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >High Performance.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Low Power.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Built For Blockchain & AI.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >High Performance.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Low Power.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Built For Blockchain & AI.</span
+                >
+              </div>
+
+              <div
+                class="absolute top-0 animate-marquee2 py-12 whitespace-nowrap"
+              >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >High Performance.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Low Power.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Built For Blockchain & AI.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >High Performance.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Low Power.</span
+                >
+                <span
+                  class="mx-2 text-5xl uppercase tracking-[-1.04px] leading-[99%]"
+                  >Built For Blockchain & AI.</span
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div><!-- close about slides -->
+</Layout>
+
+<style>
+  .about-slides {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #0f0f0f;
+  }
+  .about-slides .slide {
+    height: 80vh;
+    height: 80svh;
+    max-height: 750px;
+
+    height: 100vh;
+    height: 100svh;
+    max-height: 1000px;
+  }
+  @media (max-width: 800px) {
+    .about-slides .slide {
+      height: 100%;
+      max-height: 100%;
+    }
+  }
+  .about-slides .slide .content-wrapper {
+    width: 100%;
+    height: 100%;
+    /*/perspective: 250vw;*/
+  }
+  @media (min-width: 800px) {
+    .about-slides .slide .content {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d; /* inherits the perspective from the parent*/
+      transform-origin: 50% 10%;
+    }
+  }
+</style>
+<script is:inline>
+  function aboutSlides() {
+    // Run only if viewport is wider than 800px
+    if (window.innerWidth < 800) return;
+
+    const slidesContainer = document.querySelector(".about-slides");
+    //const slidesContainerInsideSection = document.querySelector('.platform');
+
+    if (!slidesContainer) return;
+
+    const slides = slidesContainer.querySelectorAll(".slide");
+
+    // Hide all .fade-up elements initially
+    /*/slides.forEach(slide => {
+    const fadeUpItems = slide.querySelectorAll('.fade-up');
+    gsap.set(fadeUpItems, { opacity: 0, y: 50 });
+  });
+    */
+    //const fadeUpItemsIS = slidesContainerInsideSection.querySelectorAll('.fade-up');
+    //gsap.set(fadeUpItemsIS, { opacity: 0, y: 50 });
+
+    setTimeout(() => {
+      slides.forEach((slide) => {
+        const contentWrapper = slide.querySelector(".content-wrapper");
+        //const fadeUpItems = slide.querySelectorAll(".fade-up");
+
+        // Pin the slide
+        ScrollTrigger.create({
+          trigger: slide,
+          pin: contentWrapper,
+          start: "top top",
+          end: "+=" + window.innerHeight,
+          markers: false, // optional: turn on for debugging
+        });
+
+        // Trigger fade-up once when slide enters
+        ScrollTrigger.create({
+          trigger: slide,
+          start: "top 20%", // adjust as needed
+          once: true, // only trigger once
+          onEnter: () => {
+            /*
+            gsap.to(fadeUpItems, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              stagger: 0.1,
+              ease: "power2.out",
+            });
+            */
+          },
+        });
+
+        /* last section with slide
+     const contentWrapperIS = slidesContainerInsideSection.querySelector('.content-wrapper');
+     const fadeUpItemsIS = slidesContainerInsideSection.querySelectorAll('.fade-up');
+
+      // Trigger fade-up once when slide enters
+      ScrollTrigger.create({
+        trigger: slidesContainerInsideSection,
+        start: "top 20%", // adjust as needed
+        once: true, // only trigger once
+        onEnter: () => {
+          gsap.to(fadeUpItemsIS, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power2.out"
+          });
+        }
+      });
+        */
+      });
+    }, 200);
+  }
+
+  aboutSlides();
+</script>
