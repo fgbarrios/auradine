@@ -10,21 +10,49 @@ body {
 main{transition: filter 1500ms ease;}
 main.open-menu { filter: blur(4px); }
 
-.gradient-overline{  position:relative;}
-.gradient-overline::after{
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  border-bottom: 2px solid;
-  border-image-source: linear-gradient(90deg, rgba(0, 14, 18, 0) 0%, #46C7FF 100%);
-  bottom: -10px;
-  left: 0;
-  height: 2px;
-  border-image-slice: 1;
-  transition: width 0.5s ease-in-out; 
+
+@media(min-width:800px){
+    .gradient-overline{  position:relative;}
+    .gradient-overline::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-image-source: linear-gradient(90deg, rgba(0, 14, 18, 0) 0%, #46C7FF 100%);
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    border-image-slice: 1;
+    transition: width 0.5s ease-in-out; 
+    }
+    .gradient-overline:hover::after, .gradient-overline.current::after{  width: 100%; }
 }
-.gradient-overline:hover::after{  width: 100%; }
+
+
+.filters button{
+    position:relative;
+    opacity: .8;
+}
+.filters button::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-image-source: linear-gradient(90deg, rgba(0, 14, 18, 0) 0%, #46C7FF 100%);
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    border-image-slice: 1;
+    transition: width 0.5s ease-in-out; 
+}
+.filters button:hover,
+.filters button.active{  opacity: 1; }
+
+.filters button:hover::after,
+.filters button.active::after{  width: 100%; }
+
 
 .container {
   width: 90vw !important;

@@ -726,6 +726,7 @@ const { title = "Homepage" } = Astro.props;
           trigger: auradineLogo,
           start: "top 85%",
           end: "center center",
+          markers: true,
           onEnter: () => {
             gsap.to(auradineLogoLetters, {
               opacity: 1,
@@ -799,7 +800,7 @@ const { title = "Homepage" } = Astro.props;
       stackFooter();
 
       setTimeout(() => {
-        animateFooterLetters(); //wait for other anim to run
+        //animateFooterLetters(); //wait for other anim to run
       }, 2000);
     });
   </script>

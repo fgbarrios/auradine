@@ -92,4 +92,15 @@ import Link from "./Link.astro";
       hamburger.setAttribute("aria-expanded", !isExpanded);
     });
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll("#nav-menu a");
+
+    navLinks.forEach((link) => {
+      if (link.getAttribute("href") === currentPath) {
+        link.classList.add("current");
+      }
+    });
+  });
 </script>

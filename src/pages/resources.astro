@@ -2,6 +2,41 @@
 import { Picture } from "astro:assets";
 import Layout from "../components/Layout.astro";
 import Link from "../components/Link.astro";
+
+let posts = [
+  {
+    title:
+      "Live from MarketSite – Auradine: Reimagining Blockchain and AI Security",
+    date: "July 3, 2025",
+    category: "Video",
+    categoryColor: "#42C1FF",
+    image: "/post1.jpg",
+    link: "/",
+  },
+  {
+    title: "Bitcoin and Quantum Computing: Should We Be Worried?",
+    date: "July 3, 2025",
+    category: "Blog",
+    categoryColor: "#025FF8",
+    image: "/post2.png",
+    link: "/",
+  },
+  {
+    title:
+      "Auradine Raises $80 Million in Oversubscribed Series B Financing and Achieves $80 Million in Bookings",
+    date: "July 3, 2025",
+    category: "News",
+    categoryColor: "#41E7BD",
+    image: "/post3.png",
+    link: "/",
+  },
+];
+
+const categoryClass = {
+  Video: "text-[#42C1FF]",
+  Blog: "text-[#025FF8]",
+  News: "text-[#41E7BD]",
+};
 ---
 
 <Layout title="Resources">
@@ -25,6 +60,98 @@ import Link from "../components/Link.astro";
         <a href="/" class="hover:text-white transtion duration-300">Home</a>
         <span>/</span>
         <span>Resources</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="posts">
+    <div class="container mx-auto flex flex-col gap-8 md:gap-16 py-20">
+      <div class="filters flex items-center gap-8">
+        <button class="active">All</button>
+        <button>News</button>
+        <button>Blogs</button>
+        <button>Documents</button>
+        <button>Video</button>
+      </div>
+      <div
+        id="posts"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        {
+          posts.map((post) => (
+            <div class="post-item | grid grid-rows-[1fr_150px] md:grid-rows-[1fr_250px] gap-4">
+              <div class="image-wrapper | overflow-hidden relative border border-white/10">
+                <a href={post.link} class="relative group block">
+                  {post.category == "Video" ? (
+                    <div class="video-icon | absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="44"
+                        height="44"
+                        viewBox="0 0 44 44"
+                      >
+                        <circle
+                          cx="22"
+                          cy="22"
+                          r="20"
+                          stroke="#fff"
+                          stroke-width="3"
+                          fill="none"
+                        />
+                        <polygon points="18,15 28,22 18,29" fill="#fff" />
+                      </svg>
+                    </div>
+                  ) : null}
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    class="w-full h-auto aspect-[11/8] object-cover md:mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-300 ease-in-out"
+                  />
+                  <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#093B98] opacity-20 group-hover:opacity-0 transition-opacity duration-300 ease-in-out hidden md:block" />
+                </a>
+              </div>
+              <div class="content grid grid-rows-[40px_1fr_40px] md:grid-rows-[40px_4lh_40px] justify-between">
+                <div class="info flex items-center gap-2">
+                  <p
+                    class={`${categoryClass[post.category]} font-bold text-[14px] leading-[19.6px] tracking-[0%] uppercase`}
+                  >
+                    {post.category}
+                  </p>
+                  <span class="text-sm text-white opacity-50">/</span>
+                  <p class="text-sm text-white opacity-80">{post.date}</p>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-white lg:max-w-[80%]">
+                  {post.title}
+                </h3>
+                <div class="mt-4">
+                  <a
+                    href={post.link}
+                    class="text-[#42C1FF] smaller font-bold leading-[19.6px] tracking-normal text-center align-middle uppercase group flex items-center gap-1"
+                  >
+                    {post.category == "Video" ? "Watch video" : "Read more"}{" "}
+                    <svg
+                      class="group-hover:translate-x-1 transition-transform duration-300 ease-in-out"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                    >
+                      <g fill="none">
+                        <>
+                          <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                          <path
+                            fill="#41C4ED"
+                            d="m14.707 5.636l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l3.95-3.95H4a1 1 0 1 1 0-2h13.243l-3.95-3.95a1 1 0 1 1 1.414-1.414"
+                          />
+                        </>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
