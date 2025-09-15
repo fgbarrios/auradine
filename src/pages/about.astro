@@ -367,7 +367,7 @@ background-blend-mode: multiply;
                 {
                     investors.map(({name, url, image}) => (
                          <div
-                            class="inversor-item p-4 mr-4 md:mr-0 aspect-square flex items-center justify-center relative bg-[#030c35] group border-[1.2px] border-solid backdrop-filter:blur(0px) hover:[backdrop-filter:blur(48px)] hover:bg-transparent transition-all transition-500"
+                            class="fade-up | inversor-item p-4 mr-4 md:mr-0 aspect-square flex items-center justify-center relative bg-[#030c35] group border-[1.2px] border-solid backdrop-filter:blur(0px) hover:[backdrop-filter:blur(48px)] hover:bg-transparent transition-all transition-500"
                             style="border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1;"
                         >
                             <!--<a
@@ -416,10 +416,12 @@ background-blend-mode: multiply;
               class="container mx-auto relative z-3 grid gap-8 pb-40 pt-40 lg:pb-60 lg:pt-0"
             >
               <div class="flex flex-col gap-8 justify-center items-center">
-                <h2 class="hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] text-center lg:text-left ">
+                <h2 class="fade-up hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] text-center lg:text-left ">
                   Come Build the <br class="hidden sm:inline" />Future with Us
                 </h2>
-                <Link href="/careers/" text="Careers" />
+                <div class="fade-up">
+                    <Link href="/careers/" text="Careers" />
+                </div>
               </div>
             </div>        
           </section>
@@ -467,25 +469,21 @@ background-blend-mode: multiply;
     if (window.innerWidth < 1100) return;
 
     const slidesContainer = document.querySelector(".about-slides");
-    //const slidesContainerInsideSection = document.querySelector('.platform');
 
     if (!slidesContainer) return;
 
     const slides = slidesContainer.querySelectorAll(".slide");
 
     // Hide all .fade-up elements initially
-    /*/slides.forEach(slide => {
+    slides.forEach(slide => {
     const fadeUpItems = slide.querySelectorAll('.fade-up');
     gsap.set(fadeUpItems, { opacity: 0, y: 50 });
   });
-    */
-    //const fadeUpItemsIS = slidesContainerInsideSection.querySelectorAll('.fade-up');
-    //gsap.set(fadeUpItemsIS, { opacity: 0, y: 50 });
-
+    
     setTimeout(() => {
       slides.forEach((slide) => {
         const contentWrapper = slide.querySelector(".content-wrapper");
-        //const fadeUpItems = slide.querySelectorAll(".fade-up");
+        const fadeUpItems = slide.querySelectorAll(".fade-up");
 
         // Pin the slide
         ScrollTrigger.create({
@@ -502,7 +500,7 @@ background-blend-mode: multiply;
           start: "top 20%", // adjust as needed
           once: true, // only trigger once
           onEnter: () => {
-            /*
+            
             gsap.to(fadeUpItems, {
               opacity: 1,
               y: 0,
@@ -510,30 +508,10 @@ background-blend-mode: multiply;
               stagger: 0.1,
               ease: "power2.out",
             });
-            */
+            
           },
         });
 
-        /* last section with slide
-     const contentWrapperIS = slidesContainerInsideSection.querySelector('.content-wrapper');
-     const fadeUpItemsIS = slidesContainerInsideSection.querySelectorAll('.fade-up');
-
-      // Trigger fade-up once when slide enters
-      ScrollTrigger.create({
-        trigger: slidesContainerInsideSection,
-        start: "top 20%", // adjust as needed
-        once: true, // only trigger once
-        onEnter: () => {
-          gsap.to(fadeUpItemsIS, {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            stagger: 0.1,
-            ease: "power2.out"
-          });
-        }
-      });
-        */
       });
     }, 200);
   }
@@ -560,5 +538,15 @@ background-blend-mode: multiply;
 
 
 investorsSlider();
-  aboutSlides();
+aboutSlides();
+
+ textShowFromTheRightAnimation(
+        "p.bigger",
+        true,
+        1.5,
+        "words",
+        true,
+        true,
+        true
+      );
 </script>
