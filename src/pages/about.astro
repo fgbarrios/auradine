@@ -155,7 +155,7 @@ let investors = [
       <div class="content-wrapper">
         <div class="content">
           <section
-            class="lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col lg:items-center lg:justify-center lg:overflow-x-hidden"
+            class="fade-up-section lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col lg:items-center lg:justify-center lg:overflow-x-hidden"
           >
             <div
               class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0032a1]"
@@ -180,7 +180,7 @@ let investors = [
             >
               <div class="left flex flex-col gap-8">
                 <div class="relative flex items-center justify-center">
-                  <div class="ml-auto">
+                  <div class="ml-auto fade-up fade-up-mobile">
                     <Picture
                       src={AuradineAbout}
                       formats={["avif", "webp"]}
@@ -191,7 +191,7 @@ let investors = [
                 </div>
               </div>
               <div class="right flex flex-col gap-8 justify-center">
-                <h2 class="text-4xl font-semibold | gradientSmallHeading w-fit">
+                <h2 class="text-4xl font-semibold | gradientSmallHeading w-fit fade-up fade-up-mobile">
                   Get to Know <br class="hidden sm:inline" />Auradine
                 </h2>
                 <p class="bigger max-w-[40ch]">
@@ -269,7 +269,7 @@ let investors = [
       <div class="content-wrapper">
         <div class="content">
           <section
-            class="lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col py-20 md:pb-0 overflow-x-hidden bg-[#080C20]"
+            class="fade-up-section lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col py-20 md:pb-0 overflow-x-hidden bg-[#080C20]"
           >
             <div class="container mx-auto relative z-3 flex flex-col gap-8">
               <div class="flex flex-col gap-8 md:gap-16 justify-center">
@@ -301,7 +301,7 @@ let investors = [
       <div class="content-wrapper">
         <div class="content">
           <section
-            class="lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col py-20 md:pb-0 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col py-20 md:pb-0 overflow-x-hidden"
             style="background: linear-gradient(180deg, #0D1335 0%, #080C20 100%);
 background-blend-mode: multiply;
 "
@@ -336,7 +336,7 @@ background-blend-mode: multiply;
       <div class="content-wrapper">
         <div class="content">
           <section
-            class="lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col py-20 md:pb-0 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col py-20 md:pb-0 overflow-x-hidden"
           >
             <div
               class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0032a1]"
@@ -394,7 +394,7 @@ background-blend-mode: multiply;
       <div class="content-wrapper">
         <div class="content">
           <section
-            class="lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col items-center justify-center overflow-x-hidden"
+            class="fade-up-section lg:min-h-[1000px] lg:max-h-[1200px] relative flex flex-col items-center justify-center overflow-x-hidden"
           >
             <div
               class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0051D9]"
@@ -468,7 +468,7 @@ background-blend-mode: multiply;
 <script is:inline>
   function aboutSlides() {
     // Run only if viewport is wider than 800px
-    if (window.innerWidth < 1100) return;
+    if (window.innerWidth < 1100){return;}    
 
     const slidesContainer = document.querySelector(".about-slides");
 
@@ -516,6 +516,7 @@ background-blend-mode: multiply;
 
       });
     }, 200);
+    
   }
 
   /* IF WINDOW IS SMALLER THAN 800 PX, MAKE A SLIDER FOR THE INVESTORS (using flickity) */

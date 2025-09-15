@@ -705,6 +705,66 @@ const { title = "Homepage" } = Astro.props;
         });
       }
 
+      function animateFooterLetters() {
+        const auradineLogo = document.querySelector(".auradine-logo");
+        const auradineLogoLetters = auradineLogo?.querySelectorAll(
+          ".letters svg g path"
+        );
+
+        if (!auradineLogo || !auradineLogoLetters?.length) return;
+
+        if (window.innerWidth < 800) {
+          return;
+        }
+
+        gsap.set(auradineLogoLetters, {
+          opacity: 0,
+          y: 50,
+        });
+
+        ScrollTrigger.create({
+          trigger: auradineLogo,
+          start: "top 85%",
+          end: "center center",
+          onEnter: () => {
+            gsap.to(auradineLogoLetters, {
+              opacity: 1,
+              y: 0,
+              stagger: {
+                each: 0.1,
+                from: "center",
+              },
+              duration: 1,
+              ease: "power3.out",
+            });
+          },
+          onLeave: () => {
+            gsap.set(auradineLogoLetters, {
+              opacity: 0,
+              y: 50,
+            });
+          },
+          onEnterBack: () => {
+            gsap.to(auradineLogoLetters, {
+              opacity: 1,
+              y: 0,
+              stagger: {
+                each: 0.1,
+                from: "center",
+              },
+              duration: 1,
+              ease: "power3.out",
+            });
+          },
+          onLeaveBack: () => {
+            gsap.set(auradineLogoLetters, {
+              opacity: 0,
+              y: 50,
+            });
+          },
+        });
+      }
+
       /* ----------------------- FUNCTION CALLS ----------------------- */
       /* ----------------------- FUNCTION CALLS ----------------------- */
       /* ----------------------- FUNCTION CALLS ----------------------- */
@@ -737,6 +797,10 @@ const { title = "Homepage" } = Astro.props;
       homeDotOrbitAnimation();
 
       stackFooter();
+
+      setTimeout(() => {
+        animateFooterLetters(); //wait for other anim to run
+      }, 2000);
     });
   </script>
 </html>
