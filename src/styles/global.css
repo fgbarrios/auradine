@@ -53,6 +53,22 @@ main.open-menu { filter: blur(4px); }
 .filters button:hover::after,
 .filters button.active::after{  width: 100%; }
 
+.pagination a, span{  opacity: .8;}
+.pagination a:hover, span.active{ opacity: 1; }
+
+.pagination a{
+    position: relative;
+}
+.pagination a::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400%;
+    height: 150%;
+    transform: translate(-50%, -50%);
+}
+
 
 .container {
   width: 90vw !important;

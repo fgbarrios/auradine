@@ -1,0 +1,31 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "../components/Layout.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Careers">
+  <!-- Careers -->
+
+  <section class="hero about-hero relative">
+    <div class="overlay absolute top-0 left-0 w-full h-full z-1">
+      <img src="/careers.png" class="w-full h-full object-cover" alt="" />
+    </div>
+    <div
+      class="container mx-auto flex flex-col items-center justify-center gap-8 lg:gap-16 min-h-[500px] pt-20 md:pt-40 relative z-2"
+    >
+      <div class="gradient-container grandientHeading">
+        <h1
+          class="hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] text-center"
+        >
+          Careers
+        </h1>
+      </div>
+      <div class="breadcrumps flex items-center gap-2 mt-4 text-white/60">
+        <a href="/" class="hover:text-white transtion duration-300">Home</a>
+        <span>/</span>
+        <span>Careers</span>
+      </div>
+    </div>
+  </section>
+</Layout>

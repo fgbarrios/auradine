@@ -30,12 +30,39 @@ let posts = [
     image: "/post3.png",
     link: "/",
   },
+  {
+    title: "Teraflux™ AH3880 – Data Sheet",
+    date: "July 3, 2025",
+    category: "Download",
+    categoryColor: "#9B96EA",
+    image: "/post4.png",
+    link: "/",
+  },
+  {
+    title:
+      "The Critical Importance of Customer Success and Support for Bitcoin Miners and Fleet Management",
+    date: "July 3, 2025",
+    category: "News",
+    categoryColor: "#41E7BD",
+    image: "/post5.png",
+    link: "/",
+  },
+  {
+    title:
+      "Auradine Partners with CPower and Voltus to Enable Rapid Energy Demand Response and Grid Stability Through...",
+    date: "July 3, 2025",
+    category: "Blog",
+    categoryColor: "#025FF8",
+    image: "/post6.png",
+    link: "/",
+  },
 ];
 
 const categoryClass = {
   Video: "text-[#42C1FF]",
   Blog: "text-[#025FF8]",
   News: "text-[#41E7BD]",
+  Download: "text-[#9B96EA]",
 };
 ---
 
@@ -75,11 +102,11 @@ const categoryClass = {
       </div>
       <div
         id="posts"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
       >
         {
           posts.map((post) => (
-            <div class="post-item | grid grid-rows-[1fr_150px] md:grid-rows-[1fr_250px] gap-4">
+            <div class="post-item | grid grid-rows-[1fr_150px] md:grid-rows-[1fr_fit-content] gap-4">
               <div class="image-wrapper | overflow-hidden relative border border-white/10">
                 <a href={post.link} class="relative group block">
                   {post.category == "Video" ? (
@@ -110,7 +137,7 @@ const categoryClass = {
                   <div class="overlay | absolute top-0 left-0 w-full h-full bg-[#093B98] opacity-20 group-hover:opacity-0 transition-opacity duration-300 ease-in-out hidden md:block" />
                 </a>
               </div>
-              <div class="content grid grid-rows-[40px_1fr_40px] md:grid-rows-[40px_4lh_40px] justify-between">
+              <div class="content grid grid-rows-[40px_1fr_40px] md:grid-rows-[40px_auto_40px] justify-between">
                 <div class="info flex items-center gap-2">
                   <p
                     class={`${categoryClass[post.category]} font-bold text-[14px] leading-[19.6px] tracking-[0%] uppercase`}
@@ -152,6 +179,12 @@ const categoryClass = {
             </div>
           ))
         }
+      </div>
+
+      <div class="pagination flex justify-center gap-8 items-center mt-20">
+        <a href="#">1</a>
+        <span class="active">2</span>
+        <a href="#">3</a>
       </div>
     </div>
   </section>
