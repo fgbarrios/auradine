@@ -2,6 +2,33 @@
 import { Picture } from "astro:assets";
 import Layout from "../components/Layout.astro";
 import Link from "../components/Link.astro";
+
+let jobs = [
+  {
+    title: "System Architect – Hardware-Software Co-Design (AI Rack)",
+    excerpt:
+      "Why join Auradine? You want to be part of something groundbreaking, where every day you can see the impact of your work. At Auradine, you will join a talent-rich group of problem solvers and doers; in a culture that focuses on team, growth, innovation, and creativity.",
+    location: "Santa Clara, CA - Part Time",
+    link: "/",
+    category: "ENGINEER",
+  },
+  {
+    title: "RTL design engineer – AI Networking",
+    excerpt:
+      "We seek a dynamic and analytical RTL design engineer – AI Networking to join our team.",
+    location: "Santa Clara, CA - Part Time",
+    link: "/",
+    category: "RTL DESIGN ENGINEER – AI NETWORKING - Full time ",
+  },
+  {
+    title: "Lead Design Verification – AI Networking",
+    excerpt:
+      "We seek a dynamic and analytical Lead Design Verification JD – AI Networking to join our team.",
+    location: "Santa Clara, CA - Part Time",
+    link: "/",
+    category: "ENGINEER",
+  },
+];
 ---
 
 <Layout title="Careers">
@@ -25,6 +52,98 @@ import Link from "../components/Link.astro";
         <a href="/" class="hover:text-white transtion duration-300">Home</a>
         <span>/</span>
         <span>Careers</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="job-listing">
+    <div class="inner-container mx-auto flex flex-col gap-8 md:gap-16 py-20">
+      <div
+        class="title flex flex-col md:flex-row items-center justify-between gap-8"
+      >
+        <h2 class="gradientSmallHeading text-4xl font-medium leading-[50px]">
+          Job Openings
+        </h2>
+        <div class="filters"><!-- FILTERS HERE --></div>
+      </div>
+      <div class="search-form">
+        <div class="input-group flex flex-row relative">
+          <input
+            type="search"
+            placeholder="Search"
+            class="py-2 rounded-full bg-[#222C5A] border border-transparent focus:border-white/20 focus:outline-none text-white placeholder-white/20 w-full sm:w-auto flex-grow px-8 md:pr-[8em]"
+          />
+          <button
+            type="button"
+            class="cta flex items-center gap-2 w-fit px-8 py-2 md:py-[10px] rounded-full text-[14px] leading-[19.6px] tracking-[0] text-center align-middle font-normal group md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 z-4"
+            style="background: linear-gradient(90deg, #35AFED 0%, rgba(65, 186, 231, 0.1) 100%);"
+          >
+            Search
+            <svg
+              class="group-hover:translate-x-1 transition-transform duration-300"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                fill="#fff"
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="listing">
+        <div class="grid">
+          {
+            jobs.map((job) => (
+              <div
+                class="job-card mb-4 p-8 relative border border-solid w-full overflow-hidden | fade-up fade-up-mobile"
+                style="background: radial-gradient(46.4% 75.18% at 46.98% 49.55%, rgba(0, 97, 255, 0.12) 0%, rgba(1, 97, 255, 0) 100%); border-image-source: linear-gradient(299.52deg, #093B98 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1;
+"
+              >
+                <div class="job-card-inner grid grid-rows-[30px_auto_auto_40px] gap-1 md:gap-0 md:grid-rows-[30px_40px_4lh_20px]">
+                  <p class="job-category opacity-70 text-sm font-regular">
+                    {job.category}
+                  </p>
+                  <h3 class="job-title">{job.title}</h3>
+                  <p class="job-excerpt opacity-70 text-sm mb-4 font-regular">
+                    {job.excerpt}
+                  </p>
+                  <p class="job-location opacity-70 text-sm font-medium">
+                    {job.location}
+                  </p>
+                  <a
+                    href={job.link}
+                    class="job-link flex items-center text-sm gap-4 text-[#41BAE7] group sm:absolute sm:right-8 sm:bottom-8"
+                  >
+                    Apply to position
+                    <svg
+                      class="group-hover:translate-x-1 transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        fill="#41BAE7"
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
   </section>

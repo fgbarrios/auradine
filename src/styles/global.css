@@ -75,6 +75,11 @@ main.open-menu { filter: blur(4px); }
   max-width: 1500px !important;
 }
 
+.inner-container{
+ width: 90vw !important;
+  max-width: 850px !important;
+}
+
 @layer utilities {
     
     .grandientHeading {
