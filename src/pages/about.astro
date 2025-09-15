@@ -366,8 +366,9 @@ background-blend-mode: multiply;
                 >
                 {
                     investors.map(({name, url, image}) => (
+                        <div class="fade-up">
                          <div
-                            class="fade-up | inversor-item p-4 mr-4 md:mr-0 aspect-square flex items-center justify-center relative bg-[#030c35] group border-[1.2px] border-solid backdrop-filter:blur(0px) hover:[backdrop-filter:blur(48px)] hover:bg-transparent transition-all transition-500"
+                            class="inversor-item p-4 mr-4 md:mr-0 aspect-square flex items-center justify-center relative bg-[#030c35] group border-[1.2px] border-solid backdrop-filter:blur(0px) hover:[backdrop-filter:blur(48px)] hover:bg-transparent transition-all transition-500"
                             style="border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1;"
                         >
                             <!--<a
@@ -375,6 +376,7 @@ background-blend-mode: multiply;
                             target="_blank"
                             class="absolute top-0 left-0 w-full h-full"></a>  -->
                             <img src={image} alt={name} />
+                        </div>
                         </div>
                     ))
                 }
