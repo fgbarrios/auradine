@@ -7,6 +7,15 @@ const { name, title, image, linkedIn } = Astro.props;
   style="background: radial-gradient(46.4% 75.18% at 46.98% 49.55%, rgba(0, 97, 255, 0.24) 0%, rgba(1, 97, 255, 0.06) 100%);
 "
 >
+  {
+    linkedIn && (
+      <a
+        href={linkedIn}
+        class="absolute top-0 left-0 w-full h-full z-5 lg:hidden"
+        target="_blank"
+      />
+    )
+  }
   <div
     class="overlay-logo absolute top-1/2 transform -translate-y-1/2 right-0 w-fit h-full z-0"
   >
@@ -19,20 +28,19 @@ const { name, title, image, linkedIn } = Astro.props;
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-2">
     <div class="img-container relative group">
       <div
-        class="overlay absolute top-0 left-0 w-full h-full z-1"
-        style="background: radial-gradient(46.4% 75.18% at 46.98% 49.55%, rgba(0, 97, 255, 0.12) 0%, rgba(1, 97, 255, 0) 100%);
-"
+        class="overlay absolute top-0 left-0 w-full h-full z-1 bg-[#071940] opacity-50"
+        style="backdrop-filter: blur(40px);"
+      >
+      </div>
+      <div
+        class="overlay z-3 | absolute top-0 left-0 w-full h-full bg-[#071b4a] group-hover:opacity-0 transition-opacity duration-300 ease-in-out hidden md:block"
       >
       </div>
       <img
         src={image}
         alt={name}
-        class="w-full min-w-[170px] min-h-[170px] aspect-square h-auto object-cover md:mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-300 ease-in-out z-2"
+        class="w-full min-w-[170px] min-h-[170px] aspect-square h-auto object-cover md:mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-300 ease-in-out z-4 relative"
       />
-      <div
-        class="overlay z-3 | absolute top-0 left-0 w-full h-full bg-[#093B98] opacity-20 group-hover:opacity-0 transition-opacity duration-300 ease-in-out hidden md:block"
-      >
-      </div>
     </div>
     <div class="info flex flex-col mt-auto pb-2">
       <h3
@@ -51,10 +59,11 @@ const { name, title, image, linkedIn } = Astro.props;
     linkedIn && (
       <a
         href={linkedIn}
-        class="absolute top-4 right-4 opacity-60 hover:opacity-100 z-4"
+        class="linkedIn absolute top-4 right-4 opacity-60 hover:opacity-100 z-4"
         target="_blank"
       >
         <svg
+          class=""
           width="16"
           height="17"
           viewBox="0 0 16 17"
@@ -70,3 +79,16 @@ const { name, title, image, linkedIn } = Astro.props;
     )
   }
 </div>
+
+<style>
+  @media (min-width: 800px) {
+    a.linkedIn::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      width: 300%;
+      height: 300%;
+    }
+  }
+</style>

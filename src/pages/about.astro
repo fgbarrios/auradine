@@ -13,27 +13,116 @@ let leadershipMembers = [
     linkedIn: "https://www.linkedin.com/in/rajivkhemani/",
   },
   {
+    name: "Barun Kar",
+    title: "Co-founder & Advisor",
+    image: "/barun.png",
+    linkedIn: "https://www.linkedin.com/in/barun-k-ba48b01/",
+  },
+  {
+    name: "Sanjay Gupta",
+    title: "Chief Strategy Officer",
+    image: "/Sanjay.png",
+    linkedIn: "https://www.linkedin.com/in/sanjay-gupta-9b018b19/",
+  },
+  {
+    name: "Lisa Sidel",
+    title: "VP & General Counsel",
+    image: "/lisa.png",
+    linkedIn: "https://www.linkedin.com/in/lisa-raffetto-sidel-737547b/",
+  },
+  {
+    name: " Atul Dhablania",
+    title: "Chief Systems Operations Officer",
+    image: "/atul.png",
+  },
+];
+
+let boardMembers = [
+  {
+    name: "Sriram Viswanathan",
+    title: "Chairman, Managing Partner, Celesta Capital",
+    image: "/sriram.png",
+    linkedIn: "https://www.celesta.vc/people/sriram-viswanathan",
+  },
+  {
+    name: "Navin Chaddha",
+    title: "Managing Director, Mayfield",
+    image: "/navin.png",
+    linkedIn: "https://www.mayfield.com/team/navin-chaddha/",
+  },
+  {
+    name: "Lip-Bu Tan",
+    title: "Chairman, Walden International",
+    image: "/lip-bu.png",
+    linkedIn: "https://www.linkedin.com/in/lip-bu-tan-284a7846/",
+  },
+  {
+    name: "Fred Thiel",
+    title: "CEO, MARA",
+    image: "/fred.png",
+    linkedIn: "https://www.linkedin.com/in/fredthiel/",
+  },
+  {
     name: "Rajiv Khemani",
     title: "Co-founder, President & CEO",
     image: "/member1.png",
     linkedIn: "https://www.linkedin.com/in/rajivkhemani/",
   },
   {
-    name: "Rajiv Khemani",
-    title: "Co-founder, President & CEO",
-    image: "/member1.png",
-  },
-  {
-    name: "Rajiv Khemani",
-    title: "Co-founder, President & CEO",
-    image: "/member1.png",
-  },
-  {
-    name: "Rajiv Khemani",
-    title: "Co-founder, President & CEO",
-    image: "/member1.png",
-  },
+    name: "Barun Kar",
+    title: "Co-founder & Advisor",
+    image: "/barun.png",
+    linkedIn: "https://www.linkedin.com/in/barun-k-ba48b01/",
+  }
 ];
+
+let investors = [
+    {
+        name: "Celesta Capital",
+        url: "",
+        image: "/investors/celesta.png"
+    },
+    {
+        name: "Mayfield",
+        url: "",
+        image: "/investors/mayfield.png"
+    },    
+    {
+        name: "MARA",
+        url: "",
+        image: "/investors/mara.png"
+    },
+    {
+        name: "Maverick Silicon",
+        url: "",
+        image: "/investors/maverick.png"
+    },
+    {
+        name: "Stepstone",
+        url: "",
+        image: "/investors/stepstone.png"
+    },
+    {
+        name: "Premji Invest",
+        url: "",
+        image: "/investors/premji.png"
+    },
+    {
+        name: "Cota",
+        url: "",
+        image: "/investors/cota.png"
+    },
+    {
+        name: "Qualcomm ventures",
+        url: "",
+        image: "/investors/qualcomm.png"
+    },
+    {
+        name: "MVP ventures",
+        url: "",
+        image: "/investors/mvp.png"
+    }
+]
 ---
 
 <Layout title="About">
@@ -226,7 +315,7 @@ background-blend-mode: multiply;
                   class="leadership-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                 >
                   {
-                    leadershipMembers.map((member) => (
+                    boardMembers.map((member) => (
                       <Member
                         name={member.name}
                         title={member.title}
@@ -276,17 +365,17 @@ background-blend-mode: multiply;
                   class="investors-grid pl-4 md:pl-0 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6"
                 >
                 {
-                    [...Array(8)].map((inversor) => (
+                    investors.map(({name, url, image}) => (
                          <div
-                    class="inversor-item p-4 mr-4 md:mr-0 aspect-square flex items-center justify-center relative bg-[#030c35] group border-[1.2px] border-solid backdrop-filter:blur(0px) hover:[backdrop-filter:blur(48px)] hover:bg-transparent transition-all transition-500"
-                    style="border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1;"
-                  >
-                    <!--<a
-                      href=""
-                      target="_blank"
-                      class="absolute top-0 left-0 w-full h-full"></a>  -->
-                    <img src="/investors/celesta.png" alt="Celesta" />
-                  </div>
+                            class="inversor-item p-4 mr-4 md:mr-0 aspect-square flex items-center justify-center relative bg-[#030c35] group border-[1.2px] border-solid backdrop-filter:blur(0px) hover:[backdrop-filter:blur(48px)] hover:bg-transparent transition-all transition-500"
+                            style="border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1;"
+                        >
+                            <!--<a
+                            href={url}
+                            target="_blank"
+                            class="absolute top-0 left-0 w-full h-full"></a>  -->
+                            <img src={image} alt={name} />
+                        </div>
                     ))
                 }
                  
