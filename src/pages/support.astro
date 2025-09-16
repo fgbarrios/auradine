@@ -34,9 +34,9 @@ import Link from "../components/Link.astro";
     </div>
   </section>
 
-  <section class="relative">
+  <section class="relative overflow-hidden pb-30">
     <div
-      class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0051D9]"
+      class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#074C80] -translate-y-[4rem]"
       style=""
     >
       <video
@@ -49,35 +49,719 @@ import Link from "../components/Link.astro";
         webkit-playsinline
         disablepictureinpicture></video>
     </div>
-    <!-- <div
-              class="overlay absolute top-0 left-0 w-full h-full z-2"
-              style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #080C20 100%);"
-            >
-            </div> -->
+
     <div
       class="overlay absolute top-0 left-0 w-full h-full z-1"
       style="background: #2E93DD;
-background: linear-gradient(180deg, rgba(0, 0, 0, 0) 13.23%, #080C20 69.91%);"
+background: linear-gradient(180deg, rgba(0, 0, 0, 0) 13.23%, #080C20 69.91%);
+"
     >
     </div>
+    <img
+      src="/support-bottom-blur.png"
+      class="w-full h-fit object-cover absolute top-0 z-2"
+      alt=""
+    />
     <div class="mx-auto grid gap-8 relative z-2 py-20">
-      <h3 class="text-center mx-auto text-xl md:text-3xl md:max-w-[40ch] mb-20">
+      <h3
+        class="text-center mx-auto text-2xl md:text-4xl md:max-w-[40ch] my-20"
+      >
         Our Customer Success team brings decades of experience and specialize in
         delivering high performance system, software, and ASIC expertise to meet
         the most demanding customer challenges.
       </h3>
-      <div class="support-table inner-container mx-auto grid grid-cols-1 gap-8">
-        <div class="flex justify-between gap-4">
-          <p>Support Offerings</p>
-          <p>Included</p>
+      <div class="support-table inner-container mx-auto grid grid-cols-1 gap-4">
+        <div class="flex justify-between gap-4 p-4">
+          <p class="text-white opacity-100">Support Offerings</p>
+          <p class="text-white opacity-100">Included</p>
         </div>
-        <div
-          class="line flex justify-between gap-4 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
-        >
-          <p>Support Offerings</p>
-          <p>Included</p>
+
+        <div class="table-items grid">
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">Online support</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">Software releases</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">RMA replacement options</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">Software Support</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">Support Case Management</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">Expert to Expert Access</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">Enhanced Response Time</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">On-boarding Service</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">Service Manager</p>
+            <p class="flex place-content-center">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 8.48485L6.06383 14L18 1"
+                  stroke="#41BAE7"
+                  stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </p>
+          </div>
+
+          <div
+            class="line flex text-white/60 justify-between gap-4 border-b border-solid border-white/20 p-4 pr-8 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+          >
+            <p class="opacity-80">Resident Consultant</p>
+            <p class="flex place-content-center opacity-80">Optional</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="bg-[#080C20]">
+    <div class="container mx-auto grid gap-8 pb-40">
+      <h2
+        class="gradientSmallHeading text-4xl mb-16 font-medium leading-[50px] text-center mx-auto"
+      >
+        Enterprise Grade Support
+      </h2>
+      <div
+        class="enterprise-items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+      >
+        <div
+          class="items flex flex-col gap-4 relative group min-h-[11rem] place-content-center"
+        >
+          <div
+            class="overlay absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-300"
+            style="border-image-slice: 1 !important; border: 1px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);"
+          >
+          </div>
+          <div
+            class="overlay absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-300"
+            style="border-image-slice: 1 !important; background: radial-gradient(46.4% 75.18% at 46.98% 49.55%, #0A1F41 0%, #080C20 100%); border: 1px solid; border-image-source: linear-gradient(299.52deg, #093B98 4.17%, rgba(255, 255, 255, 0.05) 93.71%);"
+          >
+          </div>
+          <div class="flex flex-col gap-4 z-2 text-center pt-8 mb-auto">
+            <h5 class="font-medium text-[20px] leading-[19px] tracking-[-1px]">
+              Fast, Guided <br class="hidden md:inline" />Onboarding
+            </h5>
+            <p class="text-sm opacity-80 mx-auto">
+              Quick setup with training, <br
+                class="hidden md:inline"
+              />documentation, and dedicated support
+            </p>
+          </div>
+          <div
+            class="icon absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full flex place-content-center opacity-5 group-hover:opacity-20 transition duration-300"
+          >
+            <svg
+              width="186"
+              height="93"
+              viewBox="0 0 186 93"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M142.118 66.7213L139.498 62.0957C137.517 58.5974 136.526 56.8483 134.841 56.1508C133.156 55.4533 131.249 56.0037 127.436 57.1044L120.96 58.9604C118.525 59.5314 115.972 59.2075 113.749 58.0457L111.961 56.996C110.056 55.7541 108.59 53.923 107.778 51.7706L106.006 46.3848C104.84 42.8207 104.257 41.0386 102.87 40.0192C101.483 39 99.6399 39 95.9544 39H90.0378C86.3523 39 84.5091 39 83.1222 40.0192C81.7353 41.0386 81.1521 42.8207 79.9866 46.3848L78.2145 51.7706C77.4027 53.923 75.9366 55.7541 74.0309 56.996L72.2429 58.0457C70.0203 59.2075 67.4665 59.5314 65.0324 58.9604L58.5557 57.1044C54.743 56.0037 52.8368 55.4533 51.1511 56.1508C49.4655 56.8483 48.4749 58.5974 46.4936 62.0957L43.8737 66.7213C42.0165 70.0005 41.088 71.64 41.2682 73.3855C41.4484 75.1305 42.6915 76.5372 45.1778 79.3506L50.6503 85.575C51.9878 87.2976 52.9374 90.3 52.9374 92.9991C52.9374 95.7 51.9881 98.7015 50.6504 100.424L45.1778 106.649C42.6915 109.462 41.4484 110.869 41.2682 112.614C41.088 114.36 42.0166 115.999 43.8737 119.278L46.4935 123.903C48.4748 127.402 49.4655 129.151 51.1511 129.849C52.8368 130.546 54.7431 129.995 58.5559 128.895L65.0321 127.039C67.4667 126.467 70.021 126.792 72.2438 127.954L74.0317 129.004C75.9375 130.246 77.4027 132.077 78.2145 134.229L79.9866 139.616C81.1521 143.18 81.7353 144.961 83.1222 145.98C84.5091 147 86.3523 147 90.0378 147H95.9544C99.6399 147 101.483 147 102.87 145.98C104.257 144.961 104.84 143.18 106.006 139.616L107.778 134.229C108.59 132.077 110.055 130.246 111.961 129.004L113.748 127.954C115.971 126.792 118.525 126.467 120.96 127.039L127.436 128.895C131.249 129.995 133.155 130.546 134.841 129.849C136.526 129.151 137.517 127.402 139.499 123.904L142.118 119.278C143.976 115.999 144.904 114.36 144.724 112.614C144.544 110.869 143.301 109.462 140.814 106.649L135.342 100.424C134.004 98.7015 133.055 95.7 133.055 92.9991C133.055 90.3 134.005 87.2976 135.342 85.575L140.814 79.3506C143.301 76.5372 144.544 75.1305 144.724 73.3855C144.904 71.64 143.976 70.0005 142.118 66.7213Z"
+                stroke="url(#paint0_linear_2037_40)"
+                stroke-width="5"
+                stroke-linecap="round"></path>
+              <path
+                d="M93.0039 108.748C101.702 108.748 108.754 101.697 108.754 92.998C108.754 84.2996 101.702 77.248 93.0039 77.248C84.3054 77.248 77.2539 84.2996 77.2539 92.998C77.2539 101.697 84.3054 108.748 93.0039 108.748Z"
+                stroke="url(#paint1_linear_2037_40)"
+                stroke-width="5"></path>
+              <path
+                d="M156.004 2.99805V28.7252C139.77 12.8109 117.533 2.99805 93.0039 2.99805C43.2983 2.99805 3.00391 43.2924 3.00391 92.9981C3.00391 105.798 5.67592 117.974 10.4927 128.998M30.0039 182.998V157.271C46.2377 173.185 68.4749 182.998 93.0039 182.998C142.709 182.998 183.004 142.703 183.004 92.9981C183.004 80.1983 180.332 68.0223 175.515 56.9981"
+                stroke="url(#paint2_linear_2037_40)"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_2037_40"
+                  x1="92.996"
+                  y1="39"
+                  x2="92.996"
+                  y2="147"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0475FF"></stop>
+                  <stop offset="1" stop-color="white"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_2037_40"
+                  x1="93.0039"
+                  y1="77.248"
+                  x2="93.0039"
+                  y2="108.748"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0475FF"></stop>
+                  <stop offset="1" stop-color="white"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="paint2_linear_2037_40"
+                  x1="93.0039"
+                  y1="2.99805"
+                  x2="93.0039"
+                  y2="182.998"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0475FF"></stop>
+                  <stop offset="1" stop-color="white"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="items flex flex-col gap-4 relative group min-h-[11rem] place-content-center"
+        >
+          <div
+            class="overlay absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-300"
+            style="border-image-slice: 1 !important; border: 1px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);"
+          >
+          </div>
+          <div
+            class="overlay absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-300"
+            style="border-image-slice: 1 !important; background: radial-gradient(46.4% 75.18% at 46.98% 49.55%, #0A1F41 0%, #080C20 100%); border: 1px solid; border-image-source: linear-gradient(299.52deg, #093B98 4.17%, rgba(255, 255, 255, 0.05) 93.71%);"
+          >
+          </div>
+          <div class="flex flex-col gap-4 z-2 text-center pt-8 mb-auto">
+            <h5 class="font-medium text-[20px] leading-[19px] tracking-[-1px]">
+              Goal-Aligned <br class="hidden md:inline" />Support
+            </h5>
+            <p class="text-sm opacity-80 text-center max-w-[25ch] mx-auto">
+              Tailored guidance, regular check-ins, and expert recommendations
+              to achieve your outcomes
+            </p>
+          </div>
+          <div
+            class="icon absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full flex place-content-center opacity-5 group-hover:opacity-20 transition duration-300"
+          >
+            <svg
+              width="186"
+              height="88"
+              viewBox="0 0 186 88"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M97.5 52L75 88H111L88.5 124"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M174.099 107.252C178.796 105.959 181.145 105.313 182.072 104.078C183 102.842 183 100.854 183 96.8785V79.1224C183 75.1471 183 73.159 182.072 71.9233C181.144 70.6876 178.796 70.0414 174.099 68.7489C156.545 63.9188 145.559 45.1944 150.09 27.4013C151.335 22.508 151.958 20.0613 151.363 18.6264C150.768 17.1914 149.062 16.2025 145.647 14.2247L130.125 5.23266C126.775 3.29199 125.1 2.32161 123.597 2.52825C122.093 2.73489 120.398 4.46127 117.005 7.91412C103.872 21.282 82.1424 21.2815 69.0091 7.91322C65.6169 4.46037 63.9208 2.73399 62.4174 2.52735C60.914 2.32071 59.2389 3.29109 55.8888 5.23176L40.3666 14.2239C36.9528 16.2015 35.2458 17.1903 34.651 18.6251C34.0561 20.0599 34.6788 22.5068 35.9242 27.4006C40.4523 45.1942 29.4575 63.9191 11.9012 68.7491C7.20408 70.0414 4.85553 70.6876 3.92772 71.9233C3 73.159 3 75.1462 3 79.1224V96.8785C3 100.854 3 102.842 3.92772 104.078C4.85535 105.313 7.20399 105.959 11.9012 107.252C29.4546 112.082 40.4407 130.807 35.9105 148.6C34.6646 153.493 34.0416 155.939 34.6364 157.375C35.2313 158.809 36.9383 159.798 40.3522 161.776L55.8745 170.768C59.2249 172.709 60.9001 173.679 62.4036 173.473C63.9071 173.266 65.6029 171.539 68.9944 168.086C82.1343 154.707 103.879 154.707 117.02 168.086C120.411 171.539 122.107 173.265 123.611 173.472C125.114 173.678 126.79 172.708 130.139 170.768L145.662 161.775C149.076 159.797 150.784 158.808 151.378 157.373C151.973 155.938 151.35 153.491 150.103 148.599C145.571 130.807 156.548 112.082 174.099 107.252Z"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="items flex flex-col gap-4 relative group min-h-[11rem] place-content-center"
+        >
+          <div
+            class="overlay absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-300"
+            style="border-image-slice: 1 !important; border: 1px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);"
+          >
+          </div>
+          <div
+            class="overlay absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-300"
+            style="border-image-slice: 1 !important; background: radial-gradient(46.4% 75.18% at 46.98% 49.55%, #0A1F41 0%, #080C20 100%); border: 1px solid; border-image-source: linear-gradient(299.52deg, #093B98 4.17%, rgba(255, 255, 255, 0.05) 93.71%);"
+          >
+          </div>
+          <div class="flex flex-col gap-4 z-2 text-center pt-8 mb-auto">
+            <h5 class="font-medium text-[20px] leading-[19px] tracking-[-1px]">
+              Proactive Issue <br class="hidden md:inline" />Prevention
+            </h5>
+            <p class="text-sm opacity-80 max-w-[25ch] mx-auto">
+              Identify and resolve potential challenges before they escalate
+            </p>
+          </div>
+          <div
+            class="icon absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full flex place-content-center opacity-5 group-hover:opacity-20 transition duration-300"
+          >
+            <svg
+              width="168"
+              height="93"
+              viewBox="0 0 168 93"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M120 3V39M48 3V39"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M93 21H75C41.0588 21 24.0883 21 13.5441 31.5441C3 42.0883 3 59.0588 3 93V111C3 144.941 3 161.912 13.5441 172.456C24.0883 183 41.0588 183 75 183H93C126.941 183 143.912 183 154.456 172.456C165 161.912 165 144.941 165 111V93C165 59.0588 165 42.0883 154.456 31.5441C143.912 21 126.941 21 93 21Z"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M3 75H165"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="items flex flex-col gap-4 relative group min-h-[11rem] place-content-center"
+        >
+          <div
+            class="overlay absolute inset-0 w-full h-full opacity-100 group-hover:opacity-0 transition duration-300"
+            style="border-image-slice: 1 !important; border: 1px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);"
+          >
+          </div>
+          <div
+            class="overlay absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-300"
+            style="border-image-slice: 1 !important; background: radial-gradient(46.4% 75.18% at 46.98% 49.55%, #0A1F41 0%, #080C20 100%); border: 1px solid; border-image-source: linear-gradient(299.52deg, #093B98 4.17%, rgba(255, 255, 255, 0.05) 93.71%);"
+          >
+          </div>
+          <div class="flex flex-col gap-4 z-2 text-center pt-8 mb-auto">
+            <h5 class="font-medium text-[20px] leading-[19px] tracking-[-1px]">
+              Data-Driven <br class="hidden md:inline" />Insights
+            </h5>
+            <p class="text-sm opacity-80 max-w-[20ch] mx-auto">
+              Deliver reports and feedback that prove ROI and inform
+              improvements
+            </p>
+          </div>
+          <div
+            class="icon absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full flex place-content-center opacity-5 group-hover:opacity-20 transition duration-300"
+          >
+            <svg
+              width="168"
+              height="93"
+              viewBox="0 0 168 93"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M144.379 16.4581C127.348 7.98438 106.508 3 84 3C61.4919 3 40.6515 7.98438 23.6204 16.4581C15.2686 20.6135 11.0927 22.6913 7.0464 29.224C3 35.7569 3 42.0823 3 54.7333V86.1339C3 137.284 43.8812 165.724 67.557 177.904C74.1603 181.302 77.4615 183 84 183C90.5385 183 93.8397 181.302 100.442 177.904C124.118 165.724 165 137.284 165 86.1339V54.7333C165 42.0824 165 35.7569 160.954 29.224C156.907 22.6912 152.731 20.6135 144.379 16.4581Z"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M57 88.5C57 88.5 69.6711 90.7671 75 106.5C75 106.5 88.5 79.5 111 70.5"
+                stroke="white"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+        <!-- END items -->
+      </div>
+    </div>
+  </section>
+
+  <section class="relative flex flex-col py-30 overflow-x-hidden">
+    <div
+      class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0032a1]"
+    >
+      <video
+        src="/HB-investors.mp4"
+        preload="none"
+        class="w-full h-full object-cover opacity-60"
+        autoplay
+        loop
+        muted
+        playsinline
+        webkit-playsinline
+        disablepictureinpicture></video>
+    </div>
+    <div
+      class="overlay absolute top-0 left-0 w-full h-full z-2 bg-[#030c35] opacity-80"
+    >
+    </div>
+    <div
+      class="md:container md:mx-auto relative z-3 flex flex-col gap-8"
+      style="width: 100% !important;"
+    >
+      <div class="flex flex-col gap-12 justify-center items-center">
+        <h2
+          class="container mx-auto md:!container-none md:!mx-0 text-4xl font-medium | text-white w-fit text-center"
+        >
+          Repair Partners
+        </h2>
+        <div class="flex align-center justify-center flex-wrap gap-6">
+          <div class="fade-up">
+            <div
+              class="inversor-item h-full p-4 mr-4 md:mr-0 aspect-square flex items-center justify-center relative bg-[#030c35] group border-[1.2px] border-solid backdrop-filter:blur(0px) hover:[backdrop-filter:blur(48px)] hover:bg-transparent transition-all transition-500"
+              style="border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1;"
+            >
+              <a
+                href="https://www.revolvelabs.ai/"
+                target="_blank"
+                class="absolute top-0 left-0 w-full h-full"></a>
+              <img src="/revolve-labs.svg" alt="Revolve labs" />
+            </div>
+          </div>
+          <div class="fade-up">
+            <div
+              class="inversor-item h-full p-4 mr-4 md:mr-0 aspect-square flex items-center justify-center relative bg-[#030c35] group border-[1.2px] border-solid backdrop-filter:blur(0px) hover:[backdrop-filter:blur(48px)] hover:bg-transparent transition-all transition-500"
+              style="border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1;"
+            >
+              <a
+                href="https://hmtech.co/"
+                target="_blank"
+                class="absolute top-0 left-0 w-full h-full"></a>
+              <img src="/hm-tech.svg" alt="Revolve labs" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="fade-up-section relative flex flex-col lg:items-center lg:justify-center lg:overflow-x-hidden"
+  >
+    <div
+      class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0050D5]"
+    >
+      <video
+        src="/HB-About.mp4"
+        class="w-full h-full object-cover mix-blend-color-burn opacity-60"
+        autoplay
+        loop
+        muted
+        playsinline
+        webkit-playsinline
+        disablepictureinpicture></video>
+    </div>
+    <div
+      class="overlay absolute top-0 left-0 w-full h-full z-2"
+      style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #080C20 100%);"
+    >
+    </div>
+    <div class="container mx-auto relative z-3 grid gap-8 pt-30">
+      <div class="flex flex-col gap-8 justify-center items-center">
+        <h2
+          class="text-4xl font-semibold | gradientSmallHeading w-fit fade-up fade-up-mobile mb-15"
+        >
+          Contact Us
+        </h2>
+      </div>
+    </div>
+    <div class="inner-container mx-auto relative z-3">
+      <div class="form grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="form-group relative">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-3 text-sm"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+          />
+        </div>
+        <div class="form-group relative">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-3 text-sm"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+          />
+        </div>
+        <div class="form-group relative col-span-full">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <textarea
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-2 text-sm min-h-[6lh]"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+            name="message"
+            placeholder="Message"
+            id="message"></textarea>
+        </div>
+        <div
+          class="flex justify-between col-span-full mt-2 flex-col min-[450px]:flex-row gap-4"
+        >
+          <div class="form-group flex flex-col">
+            <a class="text-[20px]" href="mailto:support@auradine.com"
+              >support@auradine.com</a
+            >
+            <p class="opacity-60">Minimum Order 500 units</p>
+          </div>
+          <div class="form-group">
+            <div class="anim-wrapper">
+              <div class="liquidGlass-wrapper">
+                <div class="liquidGlass-effect"></div>
+                <div class="liquidGlass-tint"></div>
+                <div class="liquidGlass-shine"></div>
+                <div class="liquidGlass-text">
+                  <button
+                    class="cta flex items-center gap-2 font-base | w-fit px-5 py-[14px] rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle group"
+                    ><span>SEND MESSAGE</span>
+                    <span
+                      ><svg
+                        class="group-hover:translate-x-1 transition duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        ><path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                        ></path></svg
+                      ></span
+                    ></button
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="marquee-container relative flex overflow-x-hidden z-3 opacity-10 mt-40"
+    >
+      <div class="animate-marquee whitespace-nowrap my-20 md:mt-0">
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+      </div>
+      <div
+        class="absolute top-0 animate-marquee2 whitespace-nowrap my-20 md:mt-0"
+      >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .enterprise-items .items svg path {
+    stroke: url(#paint0_linear_2037_40) !important;
+  }
+</style>
