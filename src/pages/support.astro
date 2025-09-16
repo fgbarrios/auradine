@@ -1,0 +1,83 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "../components/Layout.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Support">
+  <!-- Support -->
+
+  <section class="hero about-hero relative">
+    <div class="overlay absolute top-0 left-0 w-full h-full z-1">
+      <img src="/support.png" class="w-full h-full object-cover" alt="" />
+      <img
+        src="/support-glow.png"
+        class="w-full h-full object-cover absolute bottom-0"
+        alt=""
+      />
+    </div>
+    <div
+      class="container mx-auto flex flex-col items-center justify-center gap-8 lg:gap-16 min-h-[500px] pt-20 md:pt-40 relative z-2"
+    >
+      <div class="gradient-container grandientHeading">
+        <h1
+          class="hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] text-center"
+        >
+          World-Class <br class="hidden sm:inline" />Customer Support
+        </h1>
+      </div>
+      <div class="breadcrumps flex items-center gap-2 mt-4 text-white/60">
+        <a href="/" class="hover:text-white transtion duration-300">Home</a>
+        <span>/</span>
+        <span>Support</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative">
+    <div
+      class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0051D9]"
+      style=""
+    >
+      <video
+        src="/HB-About.mp4"
+        class="w-full h-full object-cover mix-blend-color-burn opacity-60"
+        autoplay
+        loop
+        muted
+        playsinline
+        webkit-playsinline
+        disablepictureinpicture></video>
+    </div>
+    <!-- <div
+              class="overlay absolute top-0 left-0 w-full h-full z-2"
+              style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #080C20 100%);"
+            >
+            </div> -->
+    <div
+      class="overlay absolute top-0 left-0 w-full h-full z-1"
+      style="background: #2E93DD;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0) 13.23%, #080C20 69.91%);"
+    >
+    </div>
+    <div class="mx-auto grid gap-8 relative z-2 py-20">
+      <h3 class="text-center mx-auto text-xl md:text-3xl md:max-w-[40ch] mb-20">
+        Our Customer Success team brings decades of experience and specialize in
+        delivering high performance system, software, and ASIC expertise to meet
+        the most demanding customer challenges.
+      </h3>
+      <div class="support-table inner-container mx-auto grid grid-cols-1 gap-8">
+        <div class="flex justify-between gap-4">
+          <p>Support Offerings</p>
+          <p>Included</p>
+        </div>
+        <div
+          class="line flex justify-between gap-4 bg-transparent hover:bg-[linear-gradient(90deg,_rgba(255,255,255,0.1)_0%,_rgba(65,186,231,0.1)_100%)] transition duration-300"
+        >
+          <p>Support Offerings</p>
+          <p>Included</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
