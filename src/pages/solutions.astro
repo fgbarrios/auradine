@@ -342,6 +342,41 @@ import Link from "../components/Link.astro";
                       stroke-width="3.9375"
                       stroke-linecap="round"
                       stroke-linejoin="round"></path>
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_2037_40"
+                        x1="92.996"
+                        y1="39"
+                        x2="92.996"
+                        y2="147"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#0475FF"></stop>
+                        <stop offset="1" stop-color="white"></stop>
+                      </linearGradient>
+                      <linearGradient
+                        id="paint1_linear_2037_40"
+                        x1="93.0039"
+                        y1="77.248"
+                        x2="93.0039"
+                        y2="108.748"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#0475FF"></stop>
+                        <stop offset="1" stop-color="white"></stop>
+                      </linearGradient>
+                      <linearGradient
+                        id="paint2_linear_2037_40"
+                        x1="93.0039"
+                        y1="2.99805"
+                        x2="93.0039"
+                        y2="182.998"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#0475FF"></stop>
+                        <stop offset="1" stop-color="white"></stop>
+                      </linearGradient>
+                    </defs>
                   </svg>
                 </div>
               </div>
@@ -725,11 +760,11 @@ import Link from "../components/Link.astro";
                   style="transition: border 1000ms ease"
                 >
                   <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
+                    style="background: #ffffff05;backdrop-filter: blur(40px);"
                   >
                   </div>
-                  <div class="icon flex place-content-center">
+                  <div class="icon flex place-content-center relative z-1">
                     <svg
                       width="68"
                       height="68"
@@ -758,7 +793,7 @@ import Link from "../components/Link.astro";
                     </svg>
                   </div>
                   <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
+                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
                   >
                     <h5
                       class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
@@ -776,11 +811,11 @@ import Link from "../components/Link.astro";
                   style="transition: border 1000ms ease"
                 >
                   <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
+                    style="background: #ffffff05;backdrop-filter: blur(40px);"
                   >
                   </div>
-                  <div class="icon flex place-content-center">
+                  <div class="icon flex place-content-center relative z-1">
                     <svg
                       width="68"
                       height="68"
@@ -808,7 +843,7 @@ import Link from "../components/Link.astro";
                     </svg>
                   </div>
                   <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
+                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
                   >
                     <h5
                       class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
@@ -851,7 +886,7 @@ import Link from "../components/Link.astro";
               />
             </div>
             <div
-              class="container mx-auto relative z-3 grid gap-8 md:gap-20"
+              class="container mx-auto relative z-3 grid gap-8 md:gap-14"
               style="max-width:1000px !important;"
             >
               <div class="title flex items-center justify-between">
@@ -1070,7 +1105,7 @@ import Link from "../components/Link.astro";
               />
             </div>
             <div
-              class="container mx-auto relative z-3 grid gap-8 md:gap-20"
+              class="container mx-auto relative z-3 grid gap-8 md:gap-12"
               style="max-width:1000px !important;"
             >
               <div class="title flex items-center justify-between">
@@ -1466,6 +1501,16 @@ import Link from "../components/Link.astro";
 </Layout>
 
 <style>
+  .slide .item svg g,
+  .slide .item p {
+    transition: opacity 1000ms ease;
+  }
+  .slide .item:hover svg g,
+  .slide .item:hover p {
+    opacity: 1 !important;
+    transition: opacity 500ms ease;
+  }
+
   .about-slides {
     position: relative;
     background-color: #0f0f0f;
