@@ -67,7 +67,7 @@ import Link from "../components/Link.astro";
       <div class="content-wrapper">
         <div class="content">
           <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col py-20 md:pt-2 md:pb-0 overflow-x-hidden"
           >
             <div
               class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
@@ -91,12 +91,16 @@ import Link from "../components/Link.astro";
             >
               <div class="title flex items-center justify-between">
                 <h2
-                  class="gradientSmallHeading text-4xl font-medium leading-[50px]"
+                  class="gradientSmallHeading text-2xl md:text-4xl font-medium leading-[50px]"
                 >
                   EnergyTune™
                 </h2>
-                <div class="icon">
-                  <img src="/energy-rectangle.svg" alt="" />
+                <div class="icon max-w-[40px] md:max-w-full">
+                  <img
+                    src="/energy-rectangle.svg"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div class="items grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -296,7 +300,7 @@ import Link from "../components/Link.astro";
       <div class="content-wrapper">
         <div class="content" style="background-color: #0475FF;">
           <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col py-20 md:pt-2 md:pb-0 overflow-x-hidden"
           >
             <div
               class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
@@ -319,11 +323,14 @@ import Link from "../components/Link.astro";
               style="max-width:1000px !important;"
             >
               <div class="title flex items-center justify-between">
-                <h2 class="text-4xl font-medium leading-[50px]">
+                <h2
+                  class="text-2xl md:text-4xl leading-[30px] font-medium md:leading-[50px]"
+                >
                   Resilient Hash Board Architecture
                 </h2>
-                <div class="icon">
+                <div class="icon max-w-[40px] md:max-w-full">
                   <svg
+                    class="w-full h-full object-cover"
                     width="63"
                     height="63"
                     viewBox="0 0 63 63"
@@ -632,7 +639,7 @@ import Link from "../components/Link.astro";
       <div class="content-wrapper">
         <div class="content" style="background-color: #10173D;">
           <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col py-20 md:pt-2 md:pb-0 overflow-x-hidden"
           >
             <div
               class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
@@ -643,25 +650,26 @@ import Link from "../components/Link.astro";
                 alt=""
               />
             </div>
-            <div class="overlay absolute bottom-0 left-0 w-full h-full">
+            <div class="overlay absolute bottom-0 right-0 w-full h-full">
               <img
-                src="/solutions-glow.png"
-                class="w-fit h-full cover absolute top-1/2 left-0 transform -translate-y-1/2"
+                src="/autotemp-overlay.png"
+                class="w-fit h-full cover absolute bottom-0 right-0"
                 alt=""
               />
             </div>
             <div
-              class="container mx-auto relative z-3 grid gap-8 md:gap-20"
+              class="container mx-auto relative z-3 grid gap-8 md:gap-18 2xl:gap-20"
               style="max-width:1000px !important;"
             >
               <div class="title flex items-center justify-between">
                 <h2
-                  class="gradientSmallHeading text-4xl font-medium leading-[50px]"
+                  class="gradientSmallHeading text-2xl md:text-4xl leading-[30px] font-medium md:leading-[50px]"
                 >
                   AutoTemp
                 </h2>
-                <div class="icon">
+                <div class="icon max-w-[40px] md:max-w-full">
                   <svg
+                    class="w-full h-full object-cover"
                     width="63"
                     height="63"
                     viewBox="0 0 63 63"
@@ -867,7 +875,7 @@ import Link from "../components/Link.astro";
       <div class="content-wrapper">
         <div class="content" style="background-color: #070B1E;">
           <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col py-20 md:pt-2 md:pb-0 overflow-x-hidden"
           >
             <div
               class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
@@ -880,23 +888,24 @@ import Link from "../components/Link.astro";
             </div>
             <div class="overlay absolute bottom-0 left-0 w-full h-full">
               <img
-                src="/solutions-glow.png"
-                class="w-fit h-full cover absolute top-1/2 left-0 transform -translate-y-1/2"
+                src="/instant-overlay.png"
+                class="w-fit h-full cover absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
                 alt=""
               />
             </div>
             <div
-              class="container mx-auto relative z-3 grid gap-8 md:gap-14"
+              class="container mx-auto relative z-3 grid gap-8 md:gap-12 2xl:gap-20"
               style="max-width:1000px !important;"
             >
               <div class="title flex items-center justify-between">
                 <h2
-                  class="gradientSmallHeading text-4xl font-medium leading-[50px]"
+                  class="gradientSmallHeading text-2xl md:text-4xl leading-[30px] font-medium md:leading-[50px]"
                 >
                   Instant Deployment
                 </h2>
-                <div class="icon">
+                <div class="icon max-w-[40px] md:max-w-full">
                   <svg
+                    class="w-full h-full object-cover"
                     width="63"
                     height="63"
                     viewBox="0 0 63 63"
@@ -1086,7 +1095,7 @@ import Link from "../components/Link.astro";
       <div class="content-wrapper">
         <div class="content" style="background-color: #142957;">
           <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col py-20 md:pt-2 md:pb-0 overflow-x-hidden"
           >
             <div
               class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
@@ -1099,23 +1108,24 @@ import Link from "../components/Link.astro";
             </div>
             <div class="overlay absolute bottom-0 left-0 w-full h-full">
               <img
-                src="/solutions-glow.png"
-                class="w-fit h-full cover absolute top-1/2 left-0 transform -translate-y-1/2"
+                src="/instant-overlay.png"
+                class="w-fit h-full cover absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
                 alt=""
               />
             </div>
             <div
-              class="container mx-auto relative z-3 grid gap-8 md:gap-12"
+              class="container mx-auto relative z-3 grid gap-8 md:gap-10 2xl:gap-20"
               style="max-width:1000px !important;"
             >
               <div class="title flex items-center justify-between">
                 <h2
-                  class="gradientSmallHeading text-4xl font-medium leading-[50px]"
+                  class="gradientSmallHeading text-2xl md:text-4xl leading-[30px] font-medium md:leading-[50px]"
                 >
                   Power Management
                 </h2>
-                <div class="icon">
+                <div class="icon max-w-[40px] md:max-w-full">
                   <svg
+                    class="w-full h-full object-cover"
                     width="63"
                     height="63"
                     viewBox="0 0 63 63"
