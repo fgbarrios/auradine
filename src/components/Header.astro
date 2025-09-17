@@ -90,9 +90,28 @@ import Link from "./Link.astro";
       hamburger.classList.toggle("open");
       main.classList.toggle("open-menu");
 
+      //if menu is being opened, disable scroll
+      /*
+      if (hamburger.classList.contains("open")) {
+        lenis.stop();
+      } else {
+        lenis.play();
+      }
+        */
+
       //add aria expended
       const isExpanded = hamburger.getAttribute("aria-expanded") == "true";
       hamburger.setAttribute("aria-expanded", !isExpanded);
+    });
+
+    //if click on the body, close the menu (if open)
+    main.addEventListener("click", () => {
+      if (hamburger.classList.contains("open")) {
+        navMenu.classList.add("hidden");
+        hamburger.classList.remove("open");
+        main.classList.remove("open-menu");
+        hamburger.setAttribute("aria-expanded", false);
+      }
     });
   });
 
@@ -107,3 +126,17 @@ import Link from "./Link.astro";
     });
   });
 </script>
+
+<style>
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(13px);
+  }
+
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-13px);
+  }
+</style>
