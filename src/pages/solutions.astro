@@ -67,7 +67,538 @@ import Link from "../components/Link.astro";
       <div class="content-wrapper">
         <div class="content">
           <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-4 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
+          >
+            <div
+              class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
+            >
+              <img
+                src="/lines-carpet.svg"
+                class="w-full h-full cover -bottom-30 absolute left-0"
+                alt=""
+              />
+            </div>
+            <div class="overlay absolute bottom-0 left-0 w-full h-full">
+              <img
+                src="/solutions-glow.png"
+                class="w-fit h-full cover absolute top-1/2 left-0 transform -translate-y-1/2"
+                alt=""
+              />
+            </div>
+            <div
+              class="container mx-auto relative z-3 grid gap-8 md:gap-20"
+              style="max-width:1000px !important;"
+            >
+              <div class="title flex items-center justify-between">
+                <h2
+                  class="gradientSmallHeading text-4xl font-medium leading-[50px]"
+                >
+                  EnergyTune™
+                </h2>
+                <div class="icon">
+                  <img src="/energy-rectangle.svg" alt="" />
+                </div>
+              </div>
+              <div class="items grid grid-cols-1 md:grid-cols-4 gap-4">
+                <!-- start item -->
+                <div
+                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
+                  style="transition: border 1000ms ease"
+                >
+                  <div
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
+                    style="background: #ffffff05;backdrop-filter: blur(40px);"
+                  >
+                  </div>
+                  <div class="icon flex place-content-center relative z-1">
+                    <svg
+                      width="68"
+                      height="68"
+                      viewBox="0 0 68 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M60.4002 20.2339L59.0017 17.8068C57.944 15.9713 57.4153 15.0536 56.5154 14.6876C55.6156 14.3216 54.5978 14.6104 52.5627 15.188L49.1054 16.1618C47.8061 16.4614 46.4427 16.2914 45.2564 15.6818L44.3018 15.1311C43.2844 14.4795 42.5018 13.5187 42.0686 12.3894L41.1225 9.56345C40.5003 7.69339 40.1892 6.75836 39.4486 6.22354C38.7082 5.68872 37.7245 5.68872 35.757 5.68872H32.5984C30.6313 5.68872 29.6475 5.68872 28.9069 6.22354C28.1664 6.75836 27.8553 7.69339 27.2332 9.56345L26.287 12.3894C25.8538 13.5187 25.0713 14.4795 24.0539 15.1311L23.0994 15.6818C21.9129 16.2914 20.5497 16.4614 19.2503 16.1618L15.7929 15.188C13.7576 14.6104 12.74 14.3216 11.8402 14.6876C10.9404 15.0536 10.4116 15.9713 9.35391 17.8068L7.95543 20.2339C6.96402 21.9544 6.4683 22.8147 6.56452 23.7305C6.66071 24.6463 7.32433 25.3843 8.65155 26.8603L11.5728 30.1262C12.2868 31.03 12.7937 32.6054 12.7937 34.0217C12.7937 35.4387 12.287 37.0135 11.5729 37.9176L8.65155 41.1836C7.32433 42.6597 6.66074 43.3975 6.56452 44.3135C6.4683 45.2293 6.96402 46.0895 7.95543 47.8099L9.35388 50.2369C10.4115 52.0723 10.9404 52.9903 11.8402 53.3561C12.74 53.7222 13.7577 53.4335 15.793 52.8558L19.2501 51.8819C20.5498 51.5822 21.9133 51.7525 23.0999 52.3622L24.0542 52.913C25.0714 53.5647 25.8538 54.5252 26.2869 55.6545L27.2332 58.4808C27.8553 60.3508 28.1664 61.2858 28.9069 61.8207C29.6475 62.3554 30.6313 62.3554 32.5984 62.3554H35.757C37.7245 62.3554 38.7082 62.3554 39.4486 61.8207C40.1892 61.2858 40.5003 60.3508 41.1225 58.4808L42.0689 55.6545C42.5018 54.5252 43.2841 53.5647 44.3015 52.913L45.2558 52.3622C46.4424 51.7525 47.8058 51.5822 49.1054 51.8819L52.5627 52.8558C54.5978 53.4335 55.6156 53.7222 56.5154 53.3561C57.4153 52.9903 57.944 52.0723 59.0017 50.2369L60.4002 47.8099C61.3916 46.0895 61.8872 45.2293 61.7911 44.3135C61.6948 43.3975 61.0312 42.6597 59.7041 41.1836L56.7826 37.9176C56.0686 37.0135 55.5617 35.4387 55.5617 34.0217C55.5617 32.6054 56.0689 31.03 56.7826 30.1262L59.7041 26.8603C61.0312 25.3843 61.6948 24.6463 61.7911 23.7305C61.8872 22.8147 61.3916 21.9544 60.4002 20.2339Z"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"></path>
+                        <path
+                          d="M43.9719 34C43.9719 39.4769 39.5321 43.9167 34.0553 43.9167C28.5784 43.9167 24.1387 39.4769 24.1387 34C24.1387 28.5232 28.5784 24.0834 34.0553 24.0834C39.5321 24.0834 43.9719 28.5232 43.9719 34Z"
+                          stroke="white"
+                          stroke-width="4.25"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
+                  >
+                    <h5
+                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
+                    >
+                      Custom Power Optimization
+                    </h5>
+                    <p class="text-center md:text-left">
+                      Customize power targets per miner to balance performance
+                      and energy use
+                    </p>
+                  </div>
+                </div>
+                <!-- start item -->
+                <div
+                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
+                  style="transition: border 1000ms ease"
+                >
+                  <div
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
+                    style="background: #ffffff05;"
+                  >
+                  </div>
+                  <div class="icon flex place-content-center">
+                    <svg
+                      width="68"
+                      height="68"
+                      viewBox="0 0 68 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M34.0007 59.5C34.7917 59.5 35.5273 59.1396 36.998 58.4188L48.8201 52.6255C54.0516 50.0616 56.6673 48.7798 56.6673 46.75V21.25M34.0007 59.5C33.2096 59.5 32.474 59.1396 31.0033 58.4188L19.1811 52.6255C13.9497 50.0616 11.334 48.7798 11.334 46.75V21.25M34.0007 59.5V34"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M31.0033 9.58117C32.474 8.8604 33.2096 8.5 34.0007 8.5C34.7917 8.5 35.5273 8.8604 36.998 9.58117L48.8201 15.3747C54.0516 17.9383 56.6673 19.2201 56.6673 21.25C56.6673 23.2799 54.0516 24.5617 48.8201 27.1253L36.998 32.9188C35.5273 33.6396 34.7917 34 34.0007 34C33.2096 34 32.474 33.6396 31.0033 32.9188L19.1811 27.1253C13.9497 24.5617 11.334 23.2799 11.334 21.25C11.334 19.2201 13.9497 17.9383 19.1811 15.3747L31.0033 9.58117Z"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linejoin="round"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
+                  >
+                    <h5
+                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
+                    >
+                      Flexible Operating Modes
+                    </h5>
+                    <p class="text-center md:text-left">
+                      Choose ECO for max efficiency or Turbo for peak hashrate
+                    </p>
+                  </div>
+                </div>
+                <!-- start item -->
+                <div
+                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
+                  style="transition: border 1000ms ease"
+                >
+                  <div
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
+                    style="background: #ffffff05;"
+                  >
+                  </div>
+                  <div class="icon flex place-content-center">
+                    <svg
+                      width="68"
+                      height="68"
+                      viewBox="0 0 68 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M42.5 29.75C42.5 34.4445 38.6945 38.25 34 38.25C29.3054 38.25 25.5 34.4445 25.5 29.75C25.5 25.0556 29.3054 21.25 34 21.25C38.6945 21.25 42.5 25.0556 42.5 29.75Z"
+                          stroke="white"
+                          stroke-width="4.25"></path>
+                        <path
+                          d="M56.7049 35.1427C58.195 34.6948 58.9401 34.4707 59.2201 34.0944C59.5 33.7181 59.5 33.1129 59.5 31.9028V27.5975C59.5 26.3873 59.5 25.7822 59.2201 25.4058C58.9401 25.0295 58.195 24.8056 56.7049 24.3578C51.9934 22.9421 49.0424 18.0554 50.101 13.3275C50.45 11.768 50.6246 10.9882 50.4345 10.5602C50.2441 10.1323 49.7128 9.83243 48.6506 9.23275L44.7528 7.0327C43.7163 6.44764 43.1981 6.15513 42.7374 6.21035C42.2767 6.26554 41.7191 6.78739 40.6039 7.8311C36.9322 11.2679 31.0717 11.2678 27.4 7.83088C26.285 6.78716 25.7275 6.26532 25.2667 6.2101C24.8059 6.15487 24.2877 6.44742 23.2512 7.03244L19.3535 9.2325C18.2911 9.83214 17.76 10.1319 17.5697 10.5599C17.3794 10.9878 17.5539 11.7676 17.9029 13.3273C18.9608 18.0554 16.0076 22.9422 11.2952 24.3579C9.80498 24.8055 9.05987 25.0294 8.77993 25.4057C8.5 25.7821 8.5 26.3872 8.5 27.5975V31.9028C8.5 33.1129 8.5 33.7181 8.7799 34.0944C9.05981 34.471 9.80495 34.6948 11.2952 35.1425C16.0067 36.5583 18.9576 41.4449 17.899 46.1729C17.5499 47.7324 17.3753 48.5121 17.5656 48.9402C17.7558 49.3681 18.287 49.6678 19.3494 50.2676L23.2471 52.4677C24.2837 53.0528 24.802 53.3452 25.2628 53.29C25.7236 53.2347 26.281 52.7128 27.3958 51.669C31.0695 48.2293 36.9345 48.2291 40.6082 51.669C41.7231 52.7125 42.2804 53.2344 42.7411 53.2897C43.2021 53.3449 43.7203 53.0525 44.7567 52.4674L48.6546 50.2674C49.7171 49.6675 50.2483 49.3678 50.4384 48.9397C50.6288 48.5118 50.454 47.7321 50.1047 46.1726C49.0456 41.4449 51.9942 36.5583 56.7049 35.1427Z"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"></path>
+                        <path
+                          d="M62.3327 51C62.3327 53.635 62.3327 54.9525 62.0431 56.0334C61.2572 58.9665 58.9658 61.2578 56.0328 62.0438C54.9519 62.3333 53.6344 62.3333 50.9994 62.3333H16.9993C14.3644 62.3333 13.047 62.3333 11.966 62.0438C9.03278 61.2578 6.74161 58.9665 5.95564 56.0334C5.66602 54.9525 5.66602 53.635 5.66602 51"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
+                  >
+                    <h5
+                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
+                    >
+                      Uninterrupted Operation
+                    </h5>
+                    <p class="text-center md:text-left">
+                      Modify power settings instantly—no reboots, no downtime
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
+                  style="transition: border 1000ms ease"
+                >
+                  <div
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
+                    style="background: #ffffff05;"
+                  >
+                  </div>
+                  <div class="icon flex place-content-center">
+                    <svg
+                      width="68"
+                      height="68"
+                      viewBox="0 0 68 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M32.624 5.93089C33.5086 5.57854 34.4917 5.57854 35.3763 5.93089C38.2278 7.06646 38.7848 11.4394 42.1494 11.6828C44.5186 11.8542 46.8437 9.87914 49.2211 10.4712C50.1799 10.71 51.0081 11.3214 51.5272 12.1736C53.1172 14.785 51.065 18.6232 53.6587 20.7901C55.4607 22.2948 58.4379 22.1001 60.0045 23.9447C60.6641 24.7218 60.9882 25.7352 60.9035 26.7571C60.6528 29.797 56.7771 31.6982 57.6288 34.9743C58.2181 37.2421 60.7052 38.8365 60.9035 41.2428C60.9882 42.2648 60.6641 43.2783 60.0045 44.0552C58.0359 46.3728 53.7791 45.6095 52.5517 48.7509C51.6898 50.9558 52.7965 53.7418 51.5272 55.8263C51.0081 56.6785 50.1799 57.29 49.2211 57.5288C46.2691 58.2638 43.2728 55.0927 40.4321 56.8814C38.404 58.1581 37.6773 61.1532 35.3763 62.0689C34.4917 62.4214 33.5086 62.4214 32.624 62.0689C30.3231 61.1532 29.5963 58.1581 27.5682 56.8814C24.7627 55.1151 21.6812 58.2513 18.7792 57.5288C17.8203 57.29 16.9922 56.6785 16.4733 55.8263C14.8833 53.2151 16.9351 49.3765 14.3416 47.2098C12.54 45.705 9.5625 45.9 7.99595 44.0552C7.33626 43.2783 7.01221 42.2648 7.09667 41.2428C7.29557 38.8365 9.78197 37.2421 10.3716 34.9743C11.2147 31.7324 7.34428 29.7525 7.09667 26.7571C7.01221 25.7352 7.33626 24.7218 7.99595 23.9447C9.96432 21.6263 14.2206 22.3905 15.4486 19.2491C16.3106 17.0442 15.2041 14.2581 16.4733 12.1736C16.9922 11.3214 17.8203 10.71 18.7792 10.4712C21.1568 9.87914 23.4816 11.8543 25.8509 11.6828C29.2155 11.4394 29.7725 7.06646 32.624 5.93089Z"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M25.5 37.7777C25.5 37.7777 27.9792 37.7777 30.4583 42.5C30.4583 42.5 38.3333 30.6944 45.3333 28.3334"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
+                  >
+                    <h5
+                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
+                    >
+                      Easy Configuration
+                    </h5>
+                    <p class="text-center md:text-left">
+                      Fine-tune settings via web console or API
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide hash">
+      <div class="content-wrapper">
+        <div class="content" style="background-color: #0475FF;">
+          <section
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
+          >
+            <div
+              class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
+            >
+              <img
+                src="/lines-carpet.svg"
+                class="w-full h-full cover -bottom-30 absolute left-0"
+                style="mix-blend-mode: plus-lighter;"
+                alt=""
+              />
+            </div>
+            <div class="overlay absolute bottom-0 left-0 w-full h-full">
+              <img
+                src="/solutions-glow.png"
+                class="w-fit h-full cover absolute top-1/2 left-0 transform -translate-y-1/2"
+                alt=""
+              />
+            </div>
+            <div
+              class="container mx-auto relative z-3 grid gap-8 md:gap-16"
+              style="max-width:1000px !important;"
+            >
+              <div class="title flex items-center justify-between">
+                <h2 class="text-4xl font-medium leading-[50px]">
+                  Resilient Hash Board Architecture
+                </h2>
+                <div class="icon">
+                  <svg
+                    width="63"
+                    height="63"
+                    viewBox="0 0 63 63"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.5375 7.2225C13.8095 7.72986 11.8018 8.62725 10.2145 10.2145C8.62725 11.8018 7.72986 13.8095 7.2225 16.5375M46.4625 7.2225C49.1904 7.72986 51.1983 8.62725 52.7856 10.2145C54.3727 11.8018 55.2702 13.8095 55.7776 16.5375M36.4875 6.57549C34.9534 6.5625 33.2952 6.5625 31.5 6.5625C29.7048 6.5625 28.0466 6.5625 26.5125 6.57549M56.4244 26.5125C56.4375 28.0466 56.4375 29.7048 56.4375 31.5C56.4375 33.2952 56.4375 34.9534 56.4244 36.4878M6.57549 26.5125C6.5625 28.0466 6.5625 29.7048 6.5625 31.5C6.5625 33.2952 6.5625 34.9534 6.57552 36.4878M7.2225 46.4625C7.72986 49.1904 8.62725 51.1983 10.2145 52.7856C11.8018 54.3727 13.8095 55.2702 16.5375 55.7776M55.7776 46.4625C55.2702 49.1904 54.3727 51.1983 52.7856 52.7856C51.1983 54.3727 49.1904 55.2702 46.4625 55.7776M36.4875 56.4244C34.9534 56.4375 33.2952 56.4375 31.5 56.4375C29.705 56.4375 28.0468 56.4375 26.513 56.4244"
+                      stroke="white"
+                      stroke-width="3.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M24.0187 31.5H38.9813M51.45 31.5H56.4375M6.5625 31.5H11.55M31.5 24.0187V38.9813M31.5 6.5625V11.55M31.5 51.45V56.4375"
+                      stroke="white"
+                      stroke-width="3.9375"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="items grid grid-cols-1 md:grid-cols-4 gap-4">
+                <!-- start item -->
+                <div
+                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
+                  style="transition: border 1000ms ease;border: 1px solid;border-image-source: linear-gradient(330.52deg, rgba(9, 59, 152, 0.27) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1 !important;"
+                >
+                  <div
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
+                    style="background: #ffffff05;backdrop-filter: blur(40px);"
+                  >
+                  </div>
+                  <div class="icon flex place-content-center relative z-1">
+                    <svg
+                      width="68"
+                      height="68"
+                      viewBox="0 0 68 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M5.6665 34C5.6665 21.9792 5.6665 15.9688 8.98595 12.2344C12.3054 8.5 17.648 8.5 28.3332 8.5H39.6665C50.3516 8.5 55.6944 8.5 59.0136 12.2344C62.3332 15.9688 62.3332 21.9792 62.3332 34C62.3332 46.0207 62.3332 52.0313 59.0136 55.7657C55.6944 59.5 50.3516 59.5 39.6665 59.5H28.3332C17.648 59.5 12.3054 59.5 8.98595 55.7657C5.6665 52.0313 5.6665 46.0207 5.6665 34Z"
+                          stroke="white"
+                          stroke-width="4.25"></path>
+                        <path
+                          d="M5.6665 25.5H28.3332C36.347 25.5 40.3539 25.5 42.8435 27.9896C45.3332 30.4793 45.3332 34.4862 45.3332 42.5V59.5"
+                          stroke="white"
+                          stroke-width="4.25"></path>
+                        <path
+                          d="M28.3335 59.5V25.5"
+                          stroke="white"
+                          stroke-width="4.25"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
+                  >
+                    <h5
+                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
+                    >
+                      S.M.A.R.T.
+                    </h5>
+                    <p class="text-center md:text-left">
+                      Scalable Miner Architecture for Resilience and Fault
+                      Tolerance
+                    </p>
+                  </div>
+                </div>
+                <!-- start item -->
+                <div
+                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
+                  style="transition: border 1000ms ease;border: 1px solid;border-image-source: linear-gradient(330.52deg, rgba(9, 59, 152, 0.27) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1 !important;"
+                >
+                  <div
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
+                    style="background: #ffffff05;backdrop-filter: blur(40px);"
+                  >
+                  </div>
+                  <div class="icon flex place-content-center relative z-1">
+                    <svg
+                      width="68"
+                      height="68"
+                      viewBox="0 0 68 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M7.0835 34C7.0835 21.3114 7.0835 14.9671 11.0253 11.0252C14.9672 7.08337 21.3115 7.08337 34.0002 7.08337C46.6887 7.08337 53.0331 7.08337 56.9751 11.0252C60.9168 14.9671 60.9168 21.3114 60.9168 34C60.9168 46.6886 60.9168 53.033 56.9751 56.975C53.0331 60.9167 46.6887 60.9167 34.0002 60.9167C21.3115 60.9167 14.9672 60.9167 11.0253 56.975C7.0835 53.033 7.0835 46.6886 7.0835 34Z"
+                          stroke="white"
+                          stroke-width="4.25"></path>
+                        <path
+                          d="M7.0835 25.5H60.9168"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M36.8335 36.8334H48.1668"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M36.8335 48.1666H42.5002"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M19.8335 17H19.8589"
+                          stroke="white"
+                          stroke-width="5.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M31.1665 17H31.192"
+                          stroke="white"
+                          stroke-width="5.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M25.5 25.5V60.9167"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
+                  >
+                    <h5
+                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
+                    >
+                      Patented Hash Board Design
+                    </h5>
+                    <p class="text-center md:text-left">
+                      Prevents one ASIC failure from taking down the whole board
+                    </p>
+                  </div>
+                </div>
+                <!-- start item -->
+                <div
+                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
+                  style="transition: border 1000ms ease;border: 1px solid;border-image-source: linear-gradient(330.52deg, rgba(9, 59, 152, 0.27) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1 !important;"
+                >
+                  <div
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
+                    style="background: #ffffff05;backdrop-filter: blur(40px);"
+                  >
+                  </div>
+                  <div class="icon flex place-content-center relative z-1">
+                    <svg
+                      width="68"
+                      height="68"
+                      viewBox="0 0 68 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M59.5 59.5H28.3333C18.9838 59.5 14.309 59.5 11.4045 56.5955C8.5 53.6908 8.5 49.0161 8.5 39.6667V8.5"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"></path>
+                        <path
+                          d="M17 17H17.0254M25.4949 17H25.5203M33.9898 17H34.0153M42.4847 17H42.5102M50.9796 17H51.0051M59.4745 17H59.5"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M53.8335 59.5C53.8335 40.7224 46.2223 25.5 36.8335 25.5C27.4447 25.5 19.8335 40.7224 19.8335 59.5"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linejoin="round"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
+                  >
+                    <h5
+                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
+                    >
+                      Maximum Uptime
+                    </h5>
+                    <p class="text-center md:text-left">
+                      Mining continues seamlessly despite multiple chip failures
+                    </p>
+                  </div>
+                </div>
+                <!-- start item -->
+                <div
+                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
+                  style="transition: border 1000ms ease;border: 1px solid;border-image-source: linear-gradient(330.52deg, rgba(9, 59, 152, 0.27) 4.17%, rgba(255, 255, 255, 0.05) 93.71%); border-image-slice: 1 !important;"
+                >
+                  <div
+                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
+                    style="background: #ffffff05;backdrop-filter: blur(40px);"
+                  >
+                  </div>
+                  <div class="icon flex place-content-center relative z-1">
+                    <svg
+                      width="68"
+                      height="68"
+                      viewBox="0 0 68 68"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M7.0835 34C7.0835 21.3114 7.0835 14.9671 11.0253 11.0252C14.9672 7.08337 21.3115 7.08337 34.0002 7.08337C46.6887 7.08337 53.0331 7.08337 56.9751 11.0252C60.9168 14.9671 60.9168 21.3114 60.9168 34C60.9168 46.6888 60.9168 53.0329 56.9751 56.9749C53.0331 60.9166 46.6887 60.9167 34.0002 60.9167C21.3115 60.9167 14.9672 60.9166 11.0253 56.9749C7.0835 53.0329 7.0835 46.6888 7.0835 34Z"
+                          stroke="white"
+                          stroke-width="4.25"></path>
+                        <path
+                          d="M7.0835 25.5H60.9168"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M19.8335 17H19.8589"
+                          stroke="white"
+                          stroke-width="5.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M31.1665 17H31.192"
+                          stroke="white"
+                          stroke-width="5.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                        <path
+                          d="M48.1668 48.1667C48.1668 40.3427 41.8241 34 34.0002 34C26.1761 34 19.8335 40.3427 19.8335 48.1667"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"></path>
+                        <path
+                          d="M36.0035 43.3301L31.9966 47.337"
+                          stroke="white"
+                          stroke-width="4.25"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
+                  >
+                    <h5
+                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
+                    >
+                      Minimal Performance Loss™
+                    </h5>
+                    <p class="text-center md:text-left">
+                      Multiple failed chips results in minimal performance loss
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide autotemp">
+      <div class="content-wrapper">
+        <div class="content" style="background-color: #10173D;">
+          <section
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
           >
             <div
               class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
@@ -240,11 +771,11 @@ import Link from "../components/Link.astro";
       </div>
     </div>
 
-    <div class="slide tune" style="background-color: black;">
+    <div class="slide instant">
       <div class="content-wrapper">
-        <div class="content">
+        <div class="content" style="background-color: #070B1E;">
           <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-4 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
           >
             <div
               class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
@@ -417,365 +948,11 @@ import Link from "../components/Link.astro";
       </div>
     </div>
 
-    <div class="slide tune">
+    <div class="slide power">
       <div class="content-wrapper">
-        <div class="content">
+        <div class="content" style="background-color: #142957;">
           <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-4 overflow-x-hidden"
-          >
-            <div
-              class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
-            >
-              <img
-                src="/lines-carpet.svg"
-                class="w-full h-full cover -bottom-30 absolute left-0"
-                alt=""
-              />
-            </div>
-            <div class="overlay absolute bottom-0 left-0 w-full h-full">
-              <img
-                src="/solutions-glow.png"
-                class="w-fit h-full cover absolute top-1/2 left-0 transform -translate-y-1/2"
-                alt=""
-              />
-            </div>
-            <div
-              class="container mx-auto relative z-3 grid gap-8 md:gap-20"
-              style="max-width:1000px !important;"
-            >
-              <div class="title flex items-center justify-between">
-                <h2
-                  class="gradientSmallHeading text-4xl font-medium leading-[50px]"
-                >
-                  EnergyTune™
-                </h2>
-                <div class="icon">
-                  <img src="/energy-rectangle.svg" alt="" />
-                </div>
-              </div>
-              <div class="items grid grid-cols-1 md:grid-cols-4 gap-4">
-                <!-- start item -->
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
-                    style="background: #ffffff05;backdrop-filter: blur(40px);"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center relative z-1">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>
-                <!-- start item -->
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>
-                <!-- start item
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d] md:col-start-2 md:col-end-4"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>-->
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide tune">
-      <div class="content-wrapper">
-        <div class="content">
-          <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-4 overflow-x-hidden"
-          >
-            <div
-              class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
-            >
-              <img
-                src="/lines-carpet.svg"
-                class="w-full h-full cover -bottom-30 absolute left-0"
-                alt=""
-              />
-            </div>
-            <div class="overlay absolute bottom-0 left-0 w-full h-full">
-              <img
-                src="/solutions-glow.png"
-                class="w-fit h-full cover absolute top-1/2 left-0 transform -translate-y-1/2"
-                alt=""
-              />
-            </div>
-            <div
-              class="container mx-auto relative z-3 grid gap-8 md:gap-20"
-              style="max-width:1000px !important;"
-            >
-              <div class="title flex items-center justify-between">
-                <h2
-                  class="gradientSmallHeading text-4xl font-medium leading-[50px]"
-                >
-                  EnergyTune™
-                </h2>
-                <div class="icon">
-                  <img src="/energy-rectangle.svg" alt="" />
-                </div>
-              </div>
-              <div class="items grid grid-cols-1 md:grid-cols-4 gap-4">
-                <!-- start item -->
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px] z-0"
-                    style="background: #ffffff05;backdrop-filter: blur(40px);"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center relative z-1">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content relative z-1 flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>
-                <!-- start item -->
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>
-                <!-- start item
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d] md:col-start-2 md:col-end-4"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>-->
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="item p-8 grid grid-cols-1 md:grid-cols-4 md:col-span-2 gap-4 relative overflow-hidden rounded-[3px] border border-[#ffffff14] hover:border-[#ffffff3d]"
-                  style="transition: border 1000ms ease"
-                >
-                  <div
-                    class="overlay absolute inset-0 w-full h-full rounded-[3px]"
-                    style="background: #ffffff05;"
-                  >
-                  </div>
-                  <div class="icon flex place-content-center">
-                    <img src="/settings-01.svg" alt="" />
-                  </div>
-                  <div
-                    class="inner-content flex flex-col md:col-span-3 gap-4 md:gap-0"
-                  >
-                    <h5
-                      class="font-medium text-[20px] tracking-[-1px] leading-[25px] md:leading-[32px] text-center md:text-left"
-                    >
-                      Custom Power Optimization
-                    </h5>
-                    <p class="text-center md:text-left">
-                      Customize power targets per miner to balance performance
-                      and energy use
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide tune">
-      <div class="content-wrapper">
-        <div class="content">
-          <section
-            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-4 overflow-x-hidden"
+            class="fade-up-section lg:min-h-[600px] lg:max-h-[800px] relative flex flex-col pt-2 overflow-x-hidden"
           >
             <div
               class="overlay absolute bottom-0 overflow-hidden left-0 w-full h-full"
@@ -974,7 +1151,7 @@ import Link from "../components/Link.astro";
         <h2
           class="text-4xl font-semibold | gradientSmallHeading w-fit fade-up fade-up-mobile mb-15"
         >
-          Contact Us
+          Build smarter. Scale faster.
         </h2>
       </div>
     </div>
@@ -1063,7 +1240,7 @@ import Link from "../components/Link.astro";
     </div>
 
     <div
-      class="marquee-container relative flex overflow-x-hidden z-3 opacity-10 mt-10 md:mt-40"
+      class="marquee-container relative flex overflow-x-hidden z-3 opacity-10 mt-10 md:mt-40 md:mb-20"
     >
       <div class="animate-marquee whitespace-nowrap my-20 md:mt-0">
         <span
@@ -1124,12 +1301,6 @@ import Link from "../components/Link.astro";
 </Layout>
 
 <style>
-  @media (min-width: 1100px) and (max-width: 1600px) {
-    .marquee-container {
-      padding-bottom: 20rem;
-    }
-  }
-
   .about-slides {
     position: relative;
     background-color: #0f0f0f;
@@ -1155,95 +1326,6 @@ import Link from "../components/Link.astro";
   }
 </style>
 <script is:inline>
-  function aboutSlides() {
-    // Run only if viewport is wider than 800px
-    if (window.innerWidth < 1100) {
-      return;
-    }
-
-    const slidesContainer = document.querySelector(".solution-slides");
-
-    if (!slidesContainer) return;
-
-    const slides = slidesContainer.querySelectorAll(".slide");
-
-    // Hide all .fade-up elements initially
-    /*
-    slides.forEach((slide) => {
-      const fadeUpItems = slide.querySelectorAll(".fade-up");
-      gsap.set(fadeUpItems, { opacity: 0, y: 50 });
-    });
-    */
-
-    setTimeout(() => {
-      /*
-      slides.forEach((slide) => {
-        const contentWrapper = slide.querySelector(".content-wrapper");
-        //const fadeUpItems = slide.querySelectorAll(".fade-up");
-
-        // Pin the slide
-        ScrollTrigger.create({
-          trigger: slide,
-          pin: contentWrapper,
-          start: "top top",
-          //end: "+=" + window.innerHeight,
-          end: "bottom bottom",
-          markers: true, // optional: turn on for debugging
-        });
-
-        // Trigger fade-up once when slide enters
-        ScrollTrigger.create({
-          trigger: slide,
-          start: "top 20%", // adjust as needed
-          once: true, // only trigger once
-          onEnter: () => {
-            
-            gsap.to(fadeUpItems, {
-              opacity: 1,
-              y: 0,
-              duration: 0.6,
-              stagger: 0.1,
-              ease: "power2.out",
-            });
-            
-          },
-        });
-      });
-      */
-
-      //const slides = document.querySelectorAll(".mwg_effect031 .slide");
-
-      slides.forEach((slide) => {
-        const contentWrapper = slide.querySelector(".content-wrapper");
-        const content = slide.querySelector(".content");
-
-        gsap.to(content, {
-          ease: "power1.in", // Starts gradually
-          scrollTrigger: {
-            pin: contentWrapper, // contentWrapper is pinned during the animation
-            trigger: slide, // Listens to the slide’s position
-            start: "top 0%", // Starts when its top reaches the top of the viewport
-            end: "+=" + window.innerHeight, // Ends 100vh later
-            scrub: true, // Progresses with the scroll
-          },
-        });
-
-        gsap.to(content, {
-          ///autoAlpha: 0, // Ends at opacity: 0 and visibility: hidden
-          ease: "power1.in", // Starts gradually
-          scrollTrigger: {
-            trigger: content, // Listens to the position of content
-            start: "top -80%", // Starts when the top exceeds 80% of the viewport
-            end: "+=" + 0.2 * window.innerHeight, // Ends 20% later
-            scrub: true, // Progresses with the scroll
-          },
-        });
-      });
-    }, 200);
-  }
-
-  //aboutSlides();
-
   function solutionSlides() {
     // Run this only if viewport is larger than 1000px
     if (window.innerWidth < 1000) {
@@ -1254,10 +1336,10 @@ import Link from "../components/Link.astro";
       const slidesContainer = document.querySelector(".solution-slides");
       const slides = slidesContainer.querySelectorAll(".slide");
 
-      let slideHeights = [70, 65, 60, 55, 45];
-      if (window.innerWidth < 1800) {
+      let slideHeights = [80, 75, 70, 65, 60];
+      /*if (window.innerWidth < 1800) {
         slideHeights = [75, 70, 65, 60, 55];
-      }
+      }*/
 
       slides.forEach((slide, index) => {
         slide.style.height = `${slideHeights[index]}vh`;
@@ -1269,7 +1351,7 @@ import Link from "../components/Link.astro";
           content.querySelectorAll(".right p, .right a")
         );
 
-        let startPosition = index === 0 ? "top 0%" : `top ${index * 8}%`;
+        let startPosition = index === 0 ? "top 0%" : `top ${index * 10}%`;
         /*if (window.innerWidth < 1800) {
           startPosition = index === 0 ? "top 9%" : `top ${(index + 1) * 10}%`;
         }
@@ -1295,6 +1377,9 @@ import Link from "../components/Link.astro";
                 opacity: 1,
               });
             }
+          },
+          onStart: () => {
+            console.log("slide started", slide);
           },
         });
 
