@@ -948,6 +948,179 @@ import Link from "../components/Link.astro";
       </div>
     </div>
   </div><!-- close solutions slides -->
+  <section
+    class="fade-up-section relative flex flex-col lg:items-center lg:justify-center lg:overflow-x-hidden"
+  >
+    <div
+      class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0050D5]"
+    >
+      <video
+        src="/HB-About.mp4"
+        class="w-full h-full object-cover mix-blend-color-burn opacity-60"
+        autoplay
+        loop
+        muted
+        playsinline
+        webkit-playsinline
+        disablepictureinpicture></video>
+    </div>
+    <div
+      class="overlay absolute top-0 left-0 w-full h-full z-2"
+      style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #080C20 100%);"
+    >
+    </div>
+    <div class="container mx-auto relative z-3 grid gap-8 pt-30">
+      <div class="flex flex-col gap-8 justify-center items-center">
+        <h2
+          class="text-4xl font-semibold | gradientSmallHeading w-fit fade-up fade-up-mobile mb-15"
+        >
+          Contact Us
+        </h2>
+      </div>
+    </div>
+    <div class="inner-container mx-auto relative z-3">
+      <div class="form grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="form-group relative">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-3 text-sm"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+          />
+        </div>
+        <div class="form-group relative">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-3 text-sm"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+          />
+        </div>
+        <div class="form-group relative col-span-full">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <textarea
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-2 text-sm min-h-[6lh]"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+            name="message"
+            placeholder="Message"
+            id="message"></textarea>
+        </div>
+        <div
+          class="flex justify-between col-span-full mt-2 flex-col min-[450px]:flex-row gap-4"
+        >
+          <div class="form-group flex flex-col">
+            <a class="text-[20px]" href="mailto:support@auradine.com"
+              >support@auradine.com</a
+            >
+            <p class="opacity-60">Minimum Order 500 units</p>
+          </div>
+          <div class="form-group">
+            <div class="anim-wrapper">
+              <div class="liquidGlass-wrapper">
+                <div class="liquidGlass-effect"></div>
+                <div class="liquidGlass-tint"></div>
+                <div class="liquidGlass-shine"></div>
+                <div class="liquidGlass-text">
+                  <button
+                    class="cta flex items-center gap-2 font-base | w-fit px-5 py-[14px] rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle group"
+                    ><span>SEND MESSAGE</span>
+                    <span
+                      ><svg
+                        class="group-hover:translate-x-1 transition duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        ><path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                        ></path></svg
+                      ></span
+                    ></button
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="marquee-container relative flex overflow-x-hidden z-3 opacity-10 mt-10 md:mt-40"
+    >
+      <div class="animate-marquee whitespace-nowrap my-20 md:mt-0">
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+      </div>
+      <div
+        class="absolute top-0 animate-marquee2 whitespace-nowrap my-20 md:mt-0"
+      >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>

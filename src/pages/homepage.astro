@@ -506,11 +506,11 @@ const categoryClass = {
         Featured News & Insights
       </h2>
       <div
-        class="posts-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        class="posts-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-16"
       >
         {
           posts.map((post) => (
-            <div class="post-item | grid grid-rows-[1fr_150px] md:grid-rows-[1fr_250px] gap-4">
+            <div class="post-item | grid grid-rows-[1fr_150px] md:grid-rows-[1fr_fit-content] gap-4">
               <div class="image-wrapper | overflow-hidden relative border border-white/10">
                 <a href={post.link} class="relative group block">
                   {post.category == "Video" ? (
