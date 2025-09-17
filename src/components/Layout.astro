@@ -4,7 +4,7 @@ import "../styles/starwind.css";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 
-const { title = "Homepage" } = Astro.props;
+const { title = "Homepage", id } = Astro.props;
 ---
 
 <html lang="en">
@@ -110,7 +110,7 @@ const { title = "Homepage" } = Astro.props;
       </filter>
     </svg>
     <Header />
-    <main class="overflow-hidden">
+    <main class="overflow-hidden" id={id}>
       <slot />
     </main>
     <Footer />
