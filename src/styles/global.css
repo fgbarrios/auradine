@@ -12,7 +12,9 @@ main.open-menu { filter: blur(4px); }
 
 
 @media(min-width:800px){
-    .gradient-overline{  position:relative;}
+    .gradient-overline{  
+        position:relative;
+    }
     .gradient-overline::after{
     content: '';
     position: absolute;
@@ -27,7 +29,8 @@ main.open-menu { filter: blur(4px); }
     transition: width 0.5s ease-in-out; 
     }
     .gradient-overline.current{opacity: 1;}
-    .gradient-overline:hover::after, .gradient-overline.current::after{  width: 100%; }
+    .gradient-overline:hover::after, 
+    .gradient-overline.current::after{  width: 100%; }
 }
 
 
@@ -54,8 +57,8 @@ main.open-menu { filter: blur(4px); }
 .filters button:hover::after,
 .filters button.active::after{  width: 100%; }
 
-.pagination a, span{  opacity: .8;}
-.pagination a:hover, span.active{ opacity: 1; }
+.pagination a, .pagination  span{  opacity: .8;}
+.pagination a:hover, .pagination span.active{ opacity: 1; }
 
 .pagination a{
     position: relative;

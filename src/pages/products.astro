@@ -1,0 +1,353 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "../components/Layout.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Products" id="products">
+  <!-- Products Sections -->
+
+  <section class="hero products-hero relative">
+    <div class="overlay absolute top-0 left-0 w-full h-full z-1">
+      <img src="/products-hero.png" class="w-full h-full object-cover" alt="" />
+    </div>
+    <div
+      class="container mx-auto flex flex-col items-center justify-center gap-8 min-h-[500px] pt-20 md:pt-40 relative z-2"
+    >
+      <div class="gradient-container grandientHeading">
+        <h1
+          class="hero clamp-h1 font-medium leading-[99%] tracking-[-1.04px] text-center"
+        >
+          Auradine Teraflux™ Bitcoin <br class="hidden sm:inline" />Mining
+          Solutions
+        </h1>
+      </div>
+
+      <div class="notice flex items-center gap-4">
+        <p class="text-[20px]">Designed and Engineered in the USA</p><svg
+          width="23"
+          height="17"
+          viewBox="0 0 23 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_595_250)">
+            <path d="M0 0H22.6667V17H0" fill="#BD3D44"></path>
+            <path
+              d="M0 1.95856H22.6667H0ZM0 4.56877H22.6667H0ZM0 7.1896H22.6667H0ZM0 9.81043H22.6667H0ZM0 12.4313H22.6667H0ZM0 15.0521H22.6667H0Z"
+              fill="black"></path>
+            <path
+              d="M0 1.30334V2.61376H22.6667V1.30334H0ZM0 3.91355V5.22397H22.6667V3.91355H0ZM0 6.53439V7.8448H22.6667V6.53439H0ZM0 9.15522V10.4656H22.6667V9.15522H0ZM0 11.7761V13.0865H22.6667V11.7761H0ZM0 14.3969V15.7073H22.6667V14.3969H0Z"
+              fill="white"></path>
+            <path d="M0 0H12.92V9.15521H0" fill="#192F5D"></path>
+            <path
+              d="M11.8292 7.72084L12.1479 8.67709L11.3333 8.07501H12.325L11.5104 8.67709L11.8292 7.72084ZM9.70415 7.72084L10.0229 8.67709L9.20832 8.07501H10.2L9.3854 8.67709L9.70415 7.72084ZM7.54373 7.72084L7.86248 8.67709L7.0479 8.07501H8.03957L7.22498 8.67709L7.54373 7.72084ZM5.38332 7.72084L5.70207 8.67709L4.88748 8.07501H5.87915L5.06457 8.67709L5.38332 7.72084ZM3.2229 7.72084L3.54165 8.67709L2.72707 8.07501H3.71873L2.90415 8.67709L3.2229 7.72084ZM1.06248 7.72084L1.38123 8.67709L0.56665 8.07501H1.55832L0.743734 8.67709L1.06248 7.72084ZM10.7667 6.8L11.0854 7.75625L10.2708 7.15417H11.2625L10.4479 7.75625L10.7667 6.8ZM8.60623 6.8L8.92498 7.75625L8.1104 7.15417H9.10207L8.28748 7.75625L8.60623 6.8ZM6.48123 6.8L6.79998 7.75625L5.9854 7.15417H6.97707L6.16248 7.75625L6.48123 6.8ZM4.32082 6.8L4.63957 7.75625L3.82498 7.15417H4.81665L4.00207 7.75625L4.32082 6.8ZM2.1604 6.8L2.47915 7.75625L1.66457 7.15417H2.65623L1.84165 7.75625L2.1604 6.8ZM11.8292 5.87917L12.1479 6.83542L11.3333 6.23334H12.325L11.5104 6.83542L11.8292 5.87917ZM9.70415 5.87917L10.0229 6.83542L9.20832 6.23334H10.2L9.3854 6.83542L9.70415 5.87917ZM7.54373 5.87917L7.86248 6.83542L7.0479 6.23334H8.03957L7.22498 6.83542L7.54373 5.87917ZM5.38332 5.87917L5.70207 6.83542L4.88748 6.23334H5.87915L5.06457 6.83542L5.38332 5.87917ZM3.2229 5.87917L3.54165 6.83542L2.72707 6.23334H3.71873L2.90415 6.83542L3.2229 5.87917ZM1.06248 5.87917L1.38123 6.83542L0.56665 6.23334H1.55832L0.743734 6.83542L1.06248 5.87917ZM10.7667 4.99375L11.0854 5.95L10.2708 5.34792H11.2625L10.4479 5.95L10.7667 4.99375ZM8.60623 4.99375L8.92498 5.95L8.1104 5.34792H9.10207L8.28748 5.95L8.60623 4.99375ZM6.48123 4.99375L6.79998 5.95L5.9854 5.34792H6.97707L6.16248 5.95L6.48123 4.99375ZM4.32082 4.99375L4.63957 5.95L3.82498 5.34792H4.81665L4.00207 5.95L4.32082 4.99375ZM2.1604 4.99375L2.47915 5.95L1.66457 5.34792H2.65623L1.84165 5.95L2.1604 4.99375ZM11.8292 4.07292L12.1479 5.02917L11.3333 4.42709H12.325L11.5104 5.02917L11.8292 4.07292ZM9.70415 4.07292L10.0229 5.02917L9.20832 4.42709H10.2L9.3854 5.02917L9.70415 4.07292ZM7.54373 4.07292L7.86248 5.02917L7.0479 4.42709H8.03957L7.22498 5.02917L7.54373 4.07292ZM5.38332 4.07292L5.70207 5.02917L4.88748 4.42709H5.87915L5.06457 5.02917L5.38332 4.07292ZM3.2229 4.07292L3.54165 5.02917L2.72707 4.42709H3.71873L2.90415 5.02917L3.2229 4.07292ZM1.06248 4.07292L1.38123 5.02917L0.56665 4.42709H1.55832L0.743734 5.02917L1.06248 4.07292ZM10.7667 3.15209L11.0854 4.10834L10.2708 3.50625H11.2625L10.4479 4.10834L10.7667 3.15209ZM8.60623 3.15209L8.92498 4.10834L8.1104 3.50625H9.10207L8.28748 4.10834L8.60623 3.15209ZM6.48123 3.15209L6.79998 4.10834L5.9854 3.50625H6.97707L6.16248 4.10834L6.48123 3.15209ZM4.32082 3.15209L4.63957 4.10834L3.82498 3.50625H4.81665L4.00207 4.10834L4.32082 3.15209ZM2.1604 3.15209L2.47915 4.10834L1.66457 3.50625H2.65623L1.84165 4.10834L2.1604 3.15209ZM11.8292 2.23125L12.1479 3.1875L11.3333 2.58542H12.325L11.5104 3.1875L11.8292 2.23125ZM9.70415 2.23125L10.0229 3.1875L9.20832 2.58542H10.2L9.3854 3.1875L9.70415 2.23125ZM7.54373 2.23125L7.86248 3.1875L7.0479 2.58542H8.03957L7.22498 3.1875L7.54373 2.23125ZM5.38332 2.23125L5.70207 3.1875L4.88748 2.58542H5.87915L5.06457 3.1875L5.38332 2.23125ZM3.2229 2.23125L3.54165 3.1875L2.72707 2.58542H3.71873L2.90415 3.1875L3.2229 2.23125ZM1.06248 2.23125L1.38123 3.1875L0.56665 2.58542H1.55832L0.743734 3.1875L1.06248 2.23125ZM10.7667 1.31042L11.0854 2.26667L10.2708 1.66459H11.2625L10.4479 2.26667L10.7667 1.31042ZM8.60623 1.31042L8.92498 2.26667L8.1104 1.66459H9.10207L8.28748 2.26667L8.60623 1.31042ZM6.48123 1.31042L6.79998 2.26667L5.9854 1.66459H6.97707L6.16248 2.26667L6.48123 1.31042ZM4.32082 1.31042L4.63957 2.26667L3.82498 1.66459H4.81665L4.00207 2.26667L4.32082 1.31042ZM2.1604 1.31042L2.47915 2.26667L1.66457 1.66459H2.65623L1.84165 2.26667L2.1604 1.31042ZM11.8292 0.389587L12.1479 1.34584L11.3333 0.743754H12.325L11.5104 1.34584L11.8292 0.389587ZM9.70415 0.389587L10.0229 1.34584L9.20832 0.743754H10.2L9.3854 1.34584L9.70415 0.389587ZM7.54373 0.389587L7.86248 1.34584L7.0479 0.743754H8.03957L7.22498 1.34584L7.54373 0.389587ZM5.38332 0.389587L5.70207 1.34584L4.88748 0.743754H5.87915L5.06457 1.34584L5.38332 0.389587ZM3.2229 0.389587L3.54165 1.34584L2.72707 0.743754H3.71873L2.90415 1.34584L3.2229 0.389587ZM1.06248 0.389587L1.38123 1.34584L0.56665 0.743754H1.55832L0.743734 1.34584L1.06248 0.389587Z"
+              fill="white"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_595_250">
+              <rect width="22.6667" height="17" fill="white"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <div class="breadcrumps flex items-center gap-2 mt-4 text-white/60">
+        <a href="/" class="hover:text-white transtion duration-300">Home</a>
+        <span>/</span>
+        <span>Products</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="min-h-dvh"></section>
+
+  <section
+    class="fade-up-section relative flex flex-col lg:items-center lg:justify-center lg:overflow-x-hidden"
+  >
+    <div
+      class="videoContainer z-1 absolute top-0 left-0 w-full h-full bg-[#0050D5]"
+    >
+      <video
+        src="/HB-About.mp4"
+        class="w-full h-full object-cover mix-blend-color-burn opacity-60"
+        autoplay
+        loop
+        muted
+        playsinline
+        webkit-playsinline
+        disablepictureinpicture></video>
+    </div>
+    <div
+      class="overlay absolute top-0 left-0 w-full h-full z-2"
+      style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #080C20 100%);"
+    >
+    </div>
+    <div class="container mx-auto relative z-3 grid gap-8 pt-30">
+      <div class="flex flex-col gap-8 justify-center items-center">
+        <h2
+          class="text-4xl font-semibold | gradientSmallHeading w-fit fade-up fade-up-mobile mb-15"
+        >
+          Build smarter. Scale faster.
+        </h2>
+      </div>
+    </div>
+    <div class="inner-container mx-auto relative z-3">
+      <div class="form grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="form-group relative">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-3 text-sm"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+          />
+        </div>
+        <div class="form-group relative">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-3 text-sm"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+          />
+        </div>
+        <div class="form-group relative col-span-full">
+          <div
+            class="overlay bg-white absolute inset-0 w-full h-full opacity-[.1] transition duration-300 filter-blur-[40px]"
+          >
+          </div>
+          <textarea
+            class="w-full relative z-2 placeholder:text-white/50 bg-transparent px-4 py-2 text-sm min-h-[6lh]"
+            style="backdrop-filter: blur(48px);border: 1.2px solid; border-image-source: linear-gradient(299.52deg, rgba(9, 59, 152, 0.5) 4.17%, rgba(255, 255, 255, 0.05) 93.71%);border-image-slice: 1 !important;"
+            name="message"
+            placeholder="Message"
+            id="message"></textarea>
+        </div>
+        <div
+          class="flex justify-between col-span-full mt-2 flex-col min-[450px]:flex-row gap-4"
+        >
+          <div class="form-group flex flex-col">
+            <a class="text-[20px]" href="mailto:support@auradine.com"
+              >support@auradine.com</a
+            >
+            <p class="opacity-60">Minimum Order 500 units</p>
+          </div>
+          <div class="form-group">
+            <div class="anim-wrapper">
+              <div class="liquidGlass-wrapper">
+                <div class="liquidGlass-effect"></div>
+                <div class="liquidGlass-tint"></div>
+                <div class="liquidGlass-shine"></div>
+                <div class="liquidGlass-text">
+                  <button
+                    class="cta flex items-center gap-2 font-base | w-fit px-5 py-[14px] rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle group"
+                    ><span>SEND MESSAGE</span>
+                    <span
+                      ><svg
+                        class="group-hover:translate-x-1 transition duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        ><path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                        ></path></svg
+                      ></span
+                    ></button
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="marquee-container relative flex overflow-x-hidden z-3 opacity-10 mt-10 md:mt-40 md:mb-20"
+    >
+      <div class="animate-marquee whitespace-nowrap my-20 md:mt-0">
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+      </div>
+      <div
+        class="absolute top-0 animate-marquee2 whitespace-nowrap my-20 md:mt-0"
+      >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >High Performance.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Low Power.</span
+        >
+        <span
+          class="mx-2 text-3xl md:text-5xl lg:text-7xl uppercase tracking-[-1.04px] leading-[99%]"
+          >Built For Blockchain & AI.</span
+        >
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .slide .item svg g,
+  .slide .item p {
+    transition: opacity 1000ms ease;
+  }
+  .slide .item:hover svg g,
+  .slide .item:hover p {
+    opacity: 1 !important;
+    transition: opacity 500ms ease;
+  }
+
+  .about-slides {
+    position: relative;
+    background-color: #0f0f0f;
+  }
+
+  @media (max-width: 1100px) {
+    .about-slides .slide {
+      height: 100%;
+      max-height: 100%;
+    }
+  }
+  .about-slides .slide .content-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 1100px) {
+    .about-slides .slide .content {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+      transform-origin: 50% 10%;
+    }
+  }
+</style>
+<script is:inline>
+  function solutionSlides() {
+    // Run this only if viewport is larger than 1000px
+    if (window.innerWidth < 1000) {
+      return;
+    }
+
+    setTimeout(() => {
+      const slidesContainer = document.querySelector(".solution-slides");
+      const slides = slidesContainer.querySelectorAll(".slide");
+
+      let slideHeights = [75, 72, 70, 65, 60];
+
+      if (window.innerWidth > 1800) {
+        slideHeights = [50, 50, 50, 50, 50];
+      }
+
+      slides.forEach((slide, index) => {
+        slide.style.height = `${slideHeights[index]}vh`;
+        slide.zIndex = index + 20;
+
+        const contentWrapper = slide.querySelector(".content-wrapper");
+        const content = slide.querySelector(".content");
+
+        const contentRightItems = Array.from(
+          content.querySelectorAll(".right p, .right a")
+        );
+
+        let startPosition = index === 0 ? "top 0%" : `top ${index * 10}%`;
+        /*if (window.innerWidth < 1800) {
+          startPosition = index === 0 ? "top 9%" : `top ${(index + 1) * 10}%`;
+        }
+        */
+        // Opacity on the .slide
+        gsap.to(slide, {
+          //opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: slide,
+            start: startPosition,
+            end: "+=" + (window.innerHeight + 500),
+            scrub: true,
+          },
+          onUpdate: () => {
+            //if opacity is > 0.5, hide the inner content
+            if (slide.style.opacity < 0.8) {
+              gsap.to(contentRightItems, {
+                opacity: 0,
+              });
+            } else {
+              gsap.to(contentRightItems, {
+                opacity: 1,
+              });
+            }
+          },
+          onStart: () => {
+            console.log("slide started", slide);
+          },
+        });
+
+        // Scale and rotation on the .content
+        gsap.to(content, {
+          autoAlpha: 1,
+          //scale: 0.8,
+          //rotationX: 40,
+          ease: "power1.in",
+          scrollTrigger: {
+            trigger: slide,
+            pin: contentWrapper,
+            start: startPosition,
+            end: "+=" + (window.innerHeight + 2500),
+            scrub: true,
+          },
+        });
+      });
+    }, 500);
+  }
+
+  solutionSlides();
+</script>
