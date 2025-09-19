@@ -387,11 +387,13 @@ header .anim-wrapper,
 }
 
 
-.line-container, .products-line-container{
+.line-container, 
+.products-line-container{
     opacity: 0;
     transition: opacity 500ms ease;
 }
-.line-container.active, .products-line-container.active{
+.line-container.active, 
+.products-line-container.active{
     opacity: 1;
     transition: opacity 1000ms ease;
 }
@@ -439,7 +441,8 @@ header .anim-wrapper,
 }
 
 .products-line-container {
-      transition: all 1000ms ease;
+    opacity: 0;
+      transition: opacity 1000ms ease !important;
 }
 .products-line-container .circle {
     height: 0%;
@@ -451,7 +454,7 @@ header .anim-wrapper,
     left: 2vw;
     z-index: 50;
     opacity: 1;
-    transition: all 1000ms ease;
+    transition: opacity 1000ms ease !important;
 }
 .products-line-container-items {
     position: absolute;

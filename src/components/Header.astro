@@ -35,12 +35,6 @@ import Link from "./Link.astro";
           class="hidden absolute bg-[#080C20] md:bg-transparent top-[4rem] p-6 md:p-0 left-0 w-full h-auto md:h-auto md:w-auto md:static md:flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
           id="nav-menu"
         >
-          <li class="flex">
-            <a
-              class="gradient-overline text-white opacity-100 md:opacity-80 hover:opacity-100 py-2 mb-4 border-b-1 border-[#ffffff36] w-full md:border-0 md:p-0 md:m-0"
-              href="/about/">About</a
-            >
-          </li>
           <li class="relative group flex flex-col md:flex-row">
             <a
               href="#"
@@ -101,23 +95,186 @@ import Link from "./Link.astro";
             </ul>
           </li>
 
-          <li class="flex">
+          <li class="relative group flex flex-col md:flex-row">
             <a
-              class="gradient-overline text-white opacity-100 md:opacity-80 hover:opacity-100 py-2 mb-4 border-b-1 border-[#ffffff36] w-full md:border-0 md:p-0 md:m-0"
-              href="/resources/">Resources</a
+              href="/"
+              class="has-children gradient-overline text-white opacity-100 md:opacity-80 hover:opacity-100 relative py-2 mb-4 border-b border-[#ffffff36] w-full md:border-0 md:p-0 md:m-0"
             >
+              Resources
+            </a>
+            <ul
+              class="children md:absolute bg-transparent md:border md:border-[#ffffff36] rounded-[6px] md:top-[2rem] md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto h-auto flex-col flex md:hidden group-hover:flex"
+            >
+              <div
+                class="hidden md:block overlay absolute inset-0 w-full h-full rounded-[6px] z-0"
+                style="backdrop-filter: blur(10px);"
+              >
+              </div>
+              <li class="relative flex flex-col md:flex-row z-1">
+                <a
+                  href="/resources/"
+                  class="group/child flex items-center gap-2 font-base | w-fit p-4 pr-8 rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle hover:opacity-100"
+                  ><span class="group-hover/child:opacity-100">News</span>
+                  <span
+                    ><svg
+                      class="hidden md:block group-hover/child:translate-x-2 transition-all duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      ><path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      ></path></svg
+                    ></span
+                  ></a
+                >
+              </li>
+              <li class="relative flex flex-col md:flex-row z-1">
+                <a
+                  href="/resources/"
+                  class="group/child flex items-center gap-2 font-base | w-fit p-4 pr-8 rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle hover:opacity-100"
+                  ><span class="group-hover/child:opacity-100">Blogs</span>
+                  <span
+                    ><svg
+                      class="hidden md:block group-hover/child:translate-x-2 transition-all duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      ><path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      ></path></svg
+                    ></span
+                  ></a
+                >
+              </li>
+              <li class="relative flex flex-col md:flex-row z-1">
+                <a
+                  href="/resources/"
+                  class="group/child flex items-center gap-2 font-base | w-fit p-4 pr-8 rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle hover:opacity-100"
+                  ><span class="group-hover/child:opacity-100">Documents</span>
+                  <span
+                    ><svg
+                      class="hidden md:block group-hover/child:translate-x-2 transition-all duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      ><path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      ></path></svg
+                    ></span
+                  ></a
+                >
+              </li>
+              <li class="relative flex flex-col md:flex-row z-1">
+                <a
+                  href="/resources/"
+                  class="group/child flex items-center gap-2 font-base | w-fit p-4 pr-8 rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle hover:opacity-100"
+                  ><span class="group-hover/child:opacity-100">Videos</span>
+                  <span
+                    ><svg
+                      class="hidden md:block group-hover/child:translate-x-2 transition-all duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      ><path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      ></path></svg
+                    ></span
+                  ></a
+                >
+              </li>
+            </ul>
           </li>
-          <li class="flex">
+          <li class="relative group flex flex-col md:flex-row">
             <a
-              class="gradient-overline text-white opacity-100 md:opacity-80 hover:opacity-100 py-2 mb-4 border-b-1 border-[#ffffff36] w-full md:border-0 md:p-0 md:m-0"
-              href="/careers/">Careers</a
+              href="#"
+              class="has-children gradient-overline text-white opacity-100 md:opacity-80 hover:opacity-100 relative py-2 mb-4 border-b border-[#ffffff36] w-full md:border-0 md:p-0 md:m-0"
             >
-          </li>
-          <li class="flex">
-            <a
-              class="gradient-overline text-white opacity-100 md:opacity-80 hover:opacity-100 py-2 mb-4 border-b-1 border-[#ffffff36] w-full md:border-0 md:p-0 md:m-0"
-              href="/support/">Support</a
+              About
+            </a>
+            <ul
+              class="children md:absolute bg-transparent md:border md:border-[#ffffff36] rounded-[6px] md:top-[2rem] md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto h-auto flex-col flex md:hidden group-hover:flex"
             >
+              <div
+                class="hidden md:block overlay absolute inset-0 w-full h-full rounded-[6px] z-0"
+                style="backdrop-filter: blur(10px);"
+              >
+              </div>
+              <li class="relative flex flex-col md:flex-row z-1">
+                <a
+                  href="/team/"
+                  class="group/child flex items-center gap-2 font-base | w-fit p-4 pr-8 rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle hover:opacity-100"
+                  ><span class="group-hover/child:opacity-100">Team</span>
+                  <span
+                    ><svg
+                      class="hidden md:block group-hover/child:translate-x-2 transition-all duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      ><path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      ></path></svg
+                    ></span
+                  ></a
+                >
+              </li>
+              <li class="relative flex flex-col md:flex-row z-1">
+                <a
+                  href="/careers/"
+                  class="group/child flex items-center gap-2 font-base | w-fit p-4 pr-8 rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle hover:opacity-100"
+                  ><span class="group-hover/child:opacity-100">Careers</span>
+                  <span
+                    ><svg
+                      class="hidden md:block group-hover/child:translate-x-2 transition-all duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      ><path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      ></path></svg
+                    ></span
+                  ></a
+                >
+              </li>
+              <li class="relative flex flex-col md:flex-row z-1">
+                <a
+                  href="/support/"
+                  class="group/child flex items-center gap-2 font-base | w-fit p-4 pr-8 rounded-full h-fit font-normal text-[14px] leading-[19.6px] tracking-[0] text-center align-middle hover:opacity-100"
+                  ><span class="group-hover/child:opacity-100">Support</span>
+                  <span
+                    ><svg
+                      class="hidden md:block group-hover/child:translate-x-2 transition-all duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      ><path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      ></path></svg
+                    ></span
+                  ></a
+                >
+              </li>
+            </ul>
           </li>
           <div class="block md:hidden mt-4 mb-8">
             <Link href="/" text="Contact" />
