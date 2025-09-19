@@ -120,7 +120,7 @@ let partners = [
 
   <div class="products-slides relative startLine overflow-hidden">
     <div
-      class="line-container | absolute top-1/2 -translate-y-1/2 left-[2rem] w-[5px] h-full max-h-[300px] hidden md:block"
+      class="products-line-container | absolute top-1/2 -translate-y-1/2 left-[2rem] w-[5px] h-full max-h-[300px] hidden md:block"
     >
       <div class="line"></div>
       <div class="circle">
@@ -135,8 +135,8 @@ let partners = [
           <circle cx="3.5" cy="4.42383" r="3.5" fill="white"></circle>
         </svg>
       </div>
-      <ul class="line-container-items flex flex-col gap-8">
-        <li class="active" data-item="products">Products</li>
+      <ul class="products-line-container-items flex flex-col gap-8">
+        <li class="" data-item="products">Products</li>
         <li data-item="containers">Containers</li>
         <li data-item="software">Software</li>
         <li data-item="partners">Partners</li>
@@ -742,7 +742,7 @@ let partners = [
           FluxVision™ Management <br class="hidden sm:inline" />Software
         </h2>
         <div
-          class="enterprise-items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full"
+          class="enterprise-items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full lg:pl-12"
         >
           <div
             class="items flex flex-col gap-4 relative group min-h-[15rem] md:min-h-[12rem] place-content-center"
@@ -763,12 +763,12 @@ let partners = [
               <h5
                 class="font-medium text-[20px] leading-[19px] tracking-[-1px]"
               >
-                Fast, Guided <br class="hidden md:inline" />Onboarding
+                Centralized <br class="hidden md:inline" />Command Center
               </h5>
               <p class="text-sm opacity-80 max-w-[25ch] mx-auto">
-                Quick setup with training, <br
+                Manage your entire fleet from one <br
                   class="hidden md:inline"
-                />documentation, and dedicated support
+                />platform with intuitive, real-time control
               </p>
             </div>
             <div
@@ -854,11 +854,11 @@ let partners = [
               <h5
                 class="font-medium text-[20px] leading-[19px] tracking-[-1px]"
               >
-                Goal-Aligned <br class="hidden md:inline" />Support
+                Dynamic Hash & <br class="hidden md:inline" />Power Control
               </h5>
               <p class="text-sm opacity-80 text-center max-w-[25ch] mx-auto">
-                Tailored guidance, regular check-ins, and expert recommendations
-                to achieve your outcomes
+                Adjust hash rate and power instantly for optimized energy use
+                and demand response
               </p>
             </div>
             <div
@@ -905,10 +905,11 @@ let partners = [
               <h5
                 class="font-medium text-[20px] leading-[19px] tracking-[-1px]"
               >
-                Proactive Issue <br class="hidden md:inline" />Prevention
+                Scheduled <br class="hidden md:inline" />Curtailment
               </h5>
               <p class="text-sm opacity-80 max-w-[25ch] mx-auto">
-                Identify and resolve potential challenges before they escalate
+                Automate recurring curtailment events to align with grid and
+                energy market needs
               </p>
             </div>
             <div
@@ -962,11 +963,11 @@ let partners = [
               <h5
                 class="font-medium text-[20px] leading-[19px] tracking-[-1px]"
               >
-                Data-Driven <br class="hidden md:inline" />Insights
+                Secure Pool <br class="hidden md:inline" />Configurations
               </h5>
               <p class="text-sm opacity-80 max-w-[20ch] mx-auto">
-                Deliver reports and feedback that prove ROI and inform
-                improvements
+                Enables whitelisting of pool configurations to prevent
+                unauthorized changes
               </p>
             </div>
             <div
@@ -1014,12 +1015,11 @@ let partners = [
               <h5
                 class="font-medium text-[20px] leading-[19px] tracking-[-1px]"
               >
-                Fast, Guided <br class="hidden md:inline" />Onboarding
+                Fleet-Wide Updates
               </h5>
               <p class="text-sm opacity-80 max-w-[25ch] mx-auto">
-                Quick setup with training, <br
-                  class="hidden md:inline"
-                />documentation, and dedicated support
+                Roll out software upgrades across all machines with a single
+                command
               </p>
             </div>
             <div
@@ -1105,11 +1105,11 @@ let partners = [
               <h5
                 class="font-medium text-[20px] leading-[19px] tracking-[-1px]"
               >
-                Goal-Aligned <br class="hidden md:inline" />Support
+                Seamless <br class="hidden md:inline" />Deployment
               </h5>
               <p class="text-sm opacity-80 text-center max-w-[25ch] mx-auto">
-                Tailored guidance, regular check-ins, and expert recommendations
-                to achieve your outcomes
+                Simplified onboarding with auto registration and pre-configured
+                pool hashing on boot
               </p>
             </div>
             <div
@@ -1156,10 +1156,11 @@ let partners = [
               <h5
                 class="font-medium text-[20px] leading-[19px] tracking-[-1px]"
               >
-                Proactive Issue <br class="hidden md:inline" />Prevention
+                Cloud-Enabled <br class="hidden md:inline" />Scalability
               </h5>
               <p class="text-sm opacity-80 max-w-[25ch] mx-auto">
-                Identify and resolve potential challenges before they escalate
+                Cloud-based APIs reduce overhead and simplify scaling from one
+                site to hundreds
               </p>
             </div>
             <div
@@ -1213,11 +1214,10 @@ let partners = [
               <h5
                 class="font-medium text-[20px] leading-[19px] tracking-[-1px]"
               >
-                Data-Driven <br class="hidden md:inline" />Insights
+                FluxVision™ <br class="hidden md:inline" />Mobile App
               </h5>
               <p class="text-sm opacity-80 max-w-[20ch] mx-auto">
-                Deliver reports and feedback that prove ROI and inform
-                improvements
+                Instant access to alerts, key metrics, and fleet performance
               </p>
             </div>
             <div
@@ -1274,13 +1274,11 @@ let partners = [
     >
     </div>
     <div
-      class="md:container md:mx-auto relative z-3 flex flex-col gap-8"
+      class="container mx-auto relative z-3 flex flex-col gap-8 lg:pl-12"
       style="width: 100% !important;"
     >
       <div class="flex flex-col gap-12 justify-center">
-        <h2
-          class="container mx-auto md:!container-none md:!mx-0 text-4xl font-medium | text-white w-fit"
-        >
+        <h2 class="text-4xl font-medium | text-white w-fit">
           Ecosystem Partners
         </h2>
         <div
@@ -1516,36 +1514,6 @@ let partners = [
         transform-origin: 50% 10%;
       }
     }
-
-    .line-container {
-      transition: opacity 500ms ease;
-    }
-    .line-container.fixed-line {
-      position: fixed !important;
-      top: 50%;
-      /*transform: translateY(-50%);*/
-      left: 2vw;
-      z-index: 50;
-      opacity: 1;
-      transition: opacity 1000ms ease;
-    }
-    .line-container-items {
-      position: absolute;
-      top: 25%;
-      left: 1rem;
-    }
-    .line-container-items li {
-      font-size: 14px;
-      line-height: 103%;
-      letter-spacing: -1.04px;
-
-      opacity: 0.5;
-      transition: opacity 500ms ease;
-    }
-    .line-container-items li.active {
-      opacity: 1;
-      transition: opacity 1000ms ease;
-    }
   </style>
   <script is:inline>
     function productsSlides() {
@@ -1558,15 +1526,15 @@ let partners = [
         const slidesContainer = document.querySelector(".products-slides");
         const slides = slidesContainer.querySelectorAll(".slide");
 
-        //let slideHeights = [90, 90, 90, 90];
+        let slideHeights = [80, 80, 80, 80, 80];
 
-        /*if (window.innerWidth > 1800) {
+        if (window.innerWidth > 1800) {
           slideHeights = [50, 50, 50, 50, 50];
         }
-        */
+
         slides.forEach((slide, index) => {
-          //slide.style.height = `${slideHeights[index]}vh`;
-          slide.style.height = `80vh`;
+          slide.style.height = `${slideHeights[index]}vh`;
+          // slide.style.height = `80vh`;
           slide.zIndex = index + 20;
 
           const contentWrapper = slide.querySelector(".content-wrapper");
@@ -1715,16 +1683,30 @@ let partners = [
     }
 
     function showLine() {
-      const line = document.querySelector(".line-container");
-      line.classList.add("fixed-line");
+      const line = document.querySelector(".products-line-container");
+      const circle = line.querySelector(".circle");
+      gsap.to(circle, {
+        onUpdate: function () {
+          if (this.progress() > 0.5) {
+            line.classList.add("fixed-line");
+          }
+        },
+      });
     }
     function hideLine() {
-      const line = document.querySelector(".line-container");
-      line.classList.remove("fixed-line");
+      const line = document.querySelector(".products-line-container");
+      const circle = line.querySelector(".circle");
+      gsap.to(circle, {
+        onUpdate: function () {
+          if (this.progress() > 0.5) {
+            line.classList.remove("fixed-line");
+          }
+        },
+      });
     }
 
     function moveTheLine() {
-      const line = document.querySelector(".line-container");
+      const line = document.querySelector(".products-line-container");
       const circle = line.querySelector(".circle");
       const startSection = document.querySelector(".startLine");
       const endSection = document.querySelector(".endLine");
@@ -1745,7 +1727,7 @@ let partners = [
         // Hide the line when we pass the end section
         ScrollTrigger.create({
           trigger: endSection,
-          start: "80% center",
+          start: "70% center",
           onEnter: () => {
             hideLine();
           },
@@ -1754,23 +1736,80 @@ let partners = [
           },
         });
       }
+    }
 
-      //update the circle height with the correspond section
-      let sectionsAndLineHeight = [
-        {
-          products: 33,
-          containers: 36,
-          software: 40,
-          partners: 50,
+    function animateCircleOnSectionsEnter() {
+      const line = document.querySelector(".products-line-container");
+      const circle = line?.querySelector(".circle");
+
+      let lineItems = line?.querySelectorAll(
+        ".products-line-container-items li"
+      );
+
+      if (!circle) return;
+
+      const sectionProducts = document.querySelector(
+        "section[data-item='products']"
+      );
+      const sectionContainers = document.querySelector(
+        "section[data-item='containers']"
+      );
+      const sectionSoftware = document.querySelector(
+        "section[data-item='software']"
+      );
+      const sectionPartners = document.querySelector(
+        "section[data-item='partners']"
+      );
+
+      const sectionsToAnimateCircle = [
+        { element: sectionProducts, height: 30 },
+        { element: sectionContainers, height: 45 },
+        { element: sectionSoftware, height: 60 },
+        { element: sectionPartners, height: 76 },
+      ].filter(({ element }) => element); // filter out nulls
+
+      ScrollTrigger.create({
+        trigger: document.body,
+        start: "top top",
+        end: "bottom bottom",
+        onUpdate: () => {
+          let scrollY = window.scrollY;
+
+          // Find the last section above the scroll position
+          let current = null;
+          for (let i = 0; i < sectionsToAnimateCircle.length; i++) {
+            const { element } = sectionsToAnimateCircle[i];
+            const offsetTop = element.offsetTop;
+            if (scrollY >= offsetTop - window.innerHeight / 2) {
+              current = sectionsToAnimateCircle[i];
+            } else {
+              break;
+            }
+          }
+
+          if (current) {
+            gsap.to(circle, {
+              height: `${current.height}%`,
+              duration: 1.2,
+              ease: "power2.out",
+              onUpdate: function () {
+                if (this.progress() > 0.5) {
+                  lineItems?.forEach((li) => {
+                    li.classList.remove("active");
+                    if (li.dataset.item === current.element.dataset.item) {
+                      li.classList.add("active");
+                    }
+                  });
+                }
+              },
+            });
+          }
         },
-      ];
-
-      //check the data-item of each section in the page.
-      //When the user enters a valid section,
-      // update the circle height on the percentage
+      });
     }
 
     moveTheLine();
+    animateCircleOnSectionsEnter();
     productsSlides();
   </script>
 </Layout>
